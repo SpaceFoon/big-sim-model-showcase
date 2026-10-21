@@ -4,7 +4,19 @@ This archive contains renders and a gallery page. It does not contain the raw so
 
 ## Original Big Sim models
 
-Armor, wings, horse tack, kopia, saddle weapons, the olive artillery and caisson, village buildings, terrain, and the procedural scenery, fieldwork, and player-item kits were authored for Big Sim. The battlefield scene also uses CC0 surface textures from Poly Haven; source maps and licenses are recorded in `art/battlefield/textures/cc0/manifest.json` in the project repository.
+Armor, wings, horse tack, kopia, saddle weapons, the olive artillery and caisson, village and period-town buildings, the Hercules fountain, oil street lantern, presentation-only interiors, terrain, and the procedural scenery, fieldwork, and player-item kits were authored for Big Sim. The 55 cataloged placeable-prop models and their embedded PBR maps are also original Big Sim work. The battlefield scene uses CC0 surface textures from Poly Haven; source maps and licenses are recorded in `art/battlefield/textures/cc0/manifest.json` in the project repository.
+
+The Hercules fountain is an original Big Sim model informed by the City of Heidelberg's public history of the Marktplatz fountain. It is a generic period-inspired interpretation rather than a scan or replica.
+
+## CC0 town textures
+
+Town building and city-edge previews use six 1K PBR materials from Poly Haven: [Plastered Wall 04](https://polyhaven.com/a/plastered_wall_04), [Old Stone Wall](https://polyhaven.com/a/old_stone_wall), [Clay Roof Tiles](https://polyhaven.com/a/clay_roof_tiles), [Wood Planks](https://polyhaven.com/a/wood_planks), [Wood Floor](https://polyhaven.com/a/wood_floor), and [Cobblestone Floor 001](https://polyhaven.com/a/cobblestone_floor_001). All are CC0. Their color, OpenGL normal, roughness, and displacement downloads, source URLs, and SHA-256 hashes are recorded in `art/city_buildings/textures/cc0/manifest.json`.
+
+The oil lantern's limestone uses the CC0 Old Stone Wall maps above. Its cast iron and brass use six original tileable Big Sim detail maps for diffuse variation, roughness, and OpenGL tangent-space normals; the PNG sources are in `art/city_buildings/textures/lamp_generated/` and are embedded in the GLB.
+
+## CC0 battlefield textures
+
+Battlefield prop and material previews use nine 1K CC0 material sets from Poly Haven: Sparse Grass, Brown Mud, Wood Planks, Plastered Wall 04, Roof Tiles, Old Stone Wall, Hessian 230, Metal Plate 02, and Brown Leather. Diffuse, OpenGL normal, roughness, and displacement sources are recorded with download URLs and SHA-256 hashes in `art/battlefield/textures/cc0/manifest.json`; Metal Plate 02 also includes metalness.
 
 ## Adapted CC BY 4.0 models
 
@@ -18,9 +30,10 @@ Armor, wings, horse tack, kopia, saddle weapons, the olive artillery and caisson
 - **Fri13Day**, [Wagon](https://sketchfab.com/3d-models/wagon-6f6a0d8816c44f8f90993e1c68ae4e09): licensed wagon source used in battlefield dressing.
 - **Nicholas-3D**, [Tents Model Free](https://sketchfab.com/3d-models/tents-model-free-af039b90cb0a4a28ab60bc42662e5946): tent source used in battlefield dressing.
 
-All listed Sketchfab source models are licensed under [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/). Raw source files are not included in this public gallery; source and license records are maintained with the Big Sim project.
+All listed Sketchfab source models are licensed under [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/). Their source files and license records are retained in `art/battlefield/imports/`; project changes are described in `art/battlefield/THIRD_PARTY.md` and `art/winged_hussar/RIDER_ATTRIBUTION.md`.
 
 ## Showcase scope
 
-The collection groups alternate LODs and repeated exports under their model family. It includes Blender source renders, not a claim that every source model has passed Unity runtime or performance review. The five mounted loops are Blender source previews. The infantry volley and cannon discharge are Unity inspection captures; they show presentation clips, not authoritative battlefield outcomes.
+The cannon card layers a browser-rendered orange flash, fire, and sparks over the Unity capture. The captured smoke remains a separate layer.
 
+The collection groups alternate LODs and repeated exports under their model family. It includes Blender source renders, not a claim that every source model has passed Unity runtime or performance review. The five mounted loops are Blender source previews. The infantry volley and cannon discharge are Unity inspection captures; they show presentation clips, not authoritative battlefield outcomes.

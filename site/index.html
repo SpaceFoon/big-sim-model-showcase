@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="The Big Sim model collection: Winged Hussars, Napoleonic soldiers, horses, artillery, weapons, battlefield kits and terrain.">
+<meta name="description" content="The Big Sim model collection: Napoleonic soldiers, artillery, a historic town edge, furnished building interiors, and 55 textured placeable battlefield props.">
 <title>The Big Sim model collection</title>
 <style>
 :root{--bg:#0d1316;--panel:#172023;--panel-2:#1d282a;--ink:#f0e8d5;--muted:#aeb6ad;--gold:#d0ae6c;--red:#8d383a;--line:#3b4543}
@@ -14,6 +14,9 @@ a{color:inherit}
 .shell{width:min(1480px,calc(100% - 44px));margin:auto}
 .topline{display:flex;justify-content:space-between;align-items:center;padding:22px 0;border-bottom:1px solid var(--line);font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
 .topline a{text-decoration:none;color:var(--muted);letter-spacing:.08em}
+.category-nav{display:flex;gap:8px;flex-wrap:wrap;padding:13px 0 20px;border-bottom:1px solid var(--line)}
+.category-nav a{border:1px solid var(--line);border-radius:3px;padding:8px 12px;color:var(--muted);font-size:.83rem;text-decoration:none;white-space:nowrap}
+.category-nav a:hover,.category-nav a[aria-current=page]{border-color:var(--gold);color:var(--ink);background:#d0ae6c18}
 .hero{display:grid;grid-template-columns:.86fr 1.14fr;gap:48px;align-items:center;padding:54px 0 44px}
 .kicker,.eyebrow{color:var(--gold);font-size:.74rem;letter-spacing:.16em;text-transform:uppercase}
 h1,h2,h3,p{margin-top:0}
@@ -54,154 +57,376 @@ h1{font:clamp(3.4rem,7vw,7rem)/.94 Georgia,serif;letter-spacing:-.045em;margin:1
 .motion-section{margin:76px 0 80px;padding:32px;background:linear-gradient(120deg,#202a29,#151c1d);border:1px solid #45504a}
 .motion-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:26px}
 .motion-card{background:#0d1316;border:1px solid var(--line);align-self:start}.motion-card img{width:100%;aspect-ratio:1.35;object-fit:contain;display:block;background:#080b0d}.motion-card.infantry-volley img{aspect-ratio:.78}.motion-card.cannon-firing img{filter:brightness(1.16) contrast(1.06)}.motion-card div{padding:12px}.motion-card h3{font-size:1rem;margin:4px 0}
+.motion-card.cannon-firing .cannon-stage{position:relative;overflow:hidden;padding:0;background:#080b0d}
+.motion-card.cannon-firing picture{display:block}
+.motion-card.cannon-firing .cannon-shot-canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;mix-blend-mode:screen}
 .note-box{display:grid;grid-template-columns:1fr 1fr;gap:32px;padding:30px;margin:50px 0;background:#131b1d;border-left:3px solid var(--red)}
 .note-box h2{font:1.8rem Georgia,serif}.note-box p,.note-box li{color:var(--muted)}.note-box ul{padding-left:20px}
 .credits{padding:30px 0 56px;border-top:1px solid var(--line)}.credits h2{font:2rem Georgia,serif}.credits a{color:var(--gold)}.credits p{color:var(--muted);max-width:75rem}
 footer{padding:18px 0 30px;border-top:1px solid var(--line);color:#87918c;font-size:.75rem;display:flex;justify-content:space-between;gap:20px}
 @media(max-width:1120px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.motion-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:760px){.hero{grid-template-columns:1fr;gap:26px;padding-top:36px}.hero-art{order:-1}.hero-art img{height:60vh}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.battle-grid,.motion-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.note-box{grid-template-columns:1fr}.section-head{display:block}.stats{margin-bottom:42px}}
-@media(max-width:480px){.shell{width:min(100% - 24px,1480px)}.grid,.battle-grid,.motion-grid{grid-template-columns:1fr}.topline{font-size:.63rem}.stat{padding:14px 10px}.stat strong{font-size:1.5rem}.motion-section{padding:18px}footer{display:block}}
+@media(max-width:480px){.shell{width:min(100% - 24px,1480px)}.grid,.battle-grid,.motion-grid{grid-template-columns:1fr}.topline{font-size:.63rem}.category-nav{overflow-x:auto;flex-wrap:nowrap}.stat{padding:14px 10px}.stat strong{font-size:1.5rem}.motion-section{padding:18px}footer{display:block}}
 </style>
 </head>
 <body>
 <div class="shell">
   <div class="topline"><span>Big Sim / Model atlas</span><a href="CREDITS.md">Credits and source notes ↗</a></div>
+  <nav class="category-nav" aria-label="Showcase categories"><a href="index.html" aria-current="page">All models</a><a href="people-horses.html">People &amp; horses</a><a href="weapons-artillery.html">Weapons &amp; artillery</a><a href="world-battlefield.html">World &amp; battlefield</a><a href="field-props.html">Field props</a><a href="animations.html">Animations</a></nav>
   <header class="hero">
     <div>
       <div class="kicker">A battlefield assembled in detail</div>
       <h1>The model collection.</h1>
-      <p class="intro">From the Winged Hussar and his mount to the village, artillery, field kits, and terrain around them.</p>
+      <p class="intro">From the Winged Hussar and his mount to the town edge, furnished interiors, and 55 textured placeable props for camps, farms, markets, and battlefields.</p>
       <p class="hero-note">A visual index of the distinct model families in the project, with source and adapted work credited on each card.</p>
-      <div class="hero-actions"><a class="button primary" href="#models">Browse 20 model groups</a><a class="button" href="#battle">View the battle</a><a class="button" href="#motion">Watch animations</a></div>
+      <div class="hero-actions"><a class="button primary" href="#models">Browse 56 model groups</a><a class="button" href="#battle">View the battle</a><a class="button" href="animations.html">Watch all animations</a></div>
     </div>
     <div class="hero-art"><img src="images/gallery/winged-hussar.webp" alt="Textured Winged Hussar mounted on an armored horse with raised wings and kopia lance"><span class="hero-label">Featured study · Winged Hussar</span></div>
   </header>
-  <div class="stats" aria-label="Showcase totals"><div class="stat"><strong>20</strong><span>model groups and scene kits</span></div><div class="stat"><strong>7</strong><span>animation clips</span></div><div class="stat"><strong>4</strong><span>battlefield views</span></div></div>
+  <div class="stats" aria-label="Showcase totals"><div class="stat"><strong>56</strong><span>model groups and scene kits</span></div><div class="stat"><strong>7</strong><span>animation clips</span></div><div class="stat"><strong>4</strong><span>battlefield views</span></div></div>
   <main id="models">
     <div class="section-head"><div><div class="kicker">Browse the collection</div><h2>Models and model families</h2></div><p>LOD versions, exports, and pieces that belong to the same kit are grouped together. Select a card to open its full size image.</p></div>
-    <div class="filters" role="group" aria-label="Filter model gallery"><button class="active" type="button" data-filter="all" aria-pressed="true">All 20</button>
+    <div class="filters" role="group" aria-label="Filter model gallery"><button class="active" type="button" data-filter="all" aria-pressed="true">All 56</button>
         <button type="button" data-filter="People" aria-pressed="false">People</button>
         <button type="button" data-filter="Hussar" aria-pressed="false">Hussar</button>
         <button type="button" data-filter="Guns &amp; gear" aria-pressed="false">Guns &amp; gear</button>
-        <button type="button" data-filter="World" aria-pressed="false">World</button></div>
-    <div class="grid"><article class="card" data-category="People">
+        <button type="button" data-filter="World" aria-pressed="false">World</button>
+        <button type="button" data-filter="Placeable props" aria-pressed="false">Placeable props</button>
+        <button type="button" data-filter="details" aria-pressed="false">Close-ups</button></div>
+    <div class="grid"><article class="card" data-category="People" data-detail="false">
   <a class="image" href="images/gallery/winged-hussar.webp" aria-label="Open full size image: Winged Hussar">
     <img src="images/gallery/winged-hussar.webp" alt="Winged Hussar — Mounted hero study · rider, horse, armor, wings, and arms" loading="lazy">
     <span class="number">01</span>
   </a>
   <div class="caption"><div class="eyebrow">People</div><h3>Winged Hussar</h3><p>Mounted hero study · rider, horse, armor, wings, and arms</p><span class="credit">Original armor and tack; adapted head, hands, and horse</span></div>
-</article><article class="card" data-category="People">
+</article><article class="card" data-category="People" data-detail="false">
   <a class="image" href="images/gallery/winged-formation.webp" aria-label="Open full size image: Winged Hussar formation">
     <img src="images/gallery/winged-formation.webp" alt="Winged Hussar formation — Nine mounted riders in a ceremonial formation" loading="lazy">
     <span class="number">02</span>
   </a>
   <div class="caption"><div class="eyebrow">People</div><h3>Winged Hussar formation</h3><p>Nine mounted riders in a ceremonial formation</p><span class="credit">Big Sim assembly · Blender source render</span></div>
-</article><article class="card" data-category="People">
+</article><article class="card" data-category="People" data-detail="false">
   <a class="image" href="images/gallery/napoleonic-infantry.webp" aria-label="Open full size image: Napoleonic infantry">
     <img src="images/gallery/napoleonic-infantry.webp" alt="Napoleonic infantry — Textured British infantry source model" loading="lazy">
     <span class="number">03</span>
   </a>
   <div class="caption"><div class="eyebrow">People</div><h3>Napoleonic infantry</h3><p>Textured British infantry source model</p><span class="credit">Andy Woodhead · adapted under CC BY 4.0</span></div>
-</article><article class="card" data-category="People">
+</article><article class="card" data-category="People" data-detail="false">
   <a class="image" href="images/gallery/napoleonic-hussar.webp" aria-label="Open full size image: Napoleonic light hussar">
     <img src="images/gallery/napoleonic-hussar.webp" alt="Napoleonic light hussar — Separate from the early-modern Winged Hussar" loading="lazy">
     <span class="number">04</span>
   </a>
   <div class="caption"><div class="eyebrow">People</div><h3>Napoleonic light hussar</h3><p>Separate from the early-modern Winged Hussar</p><span class="credit">Andy Woodhead · adapted under CC BY 4.0</span></div>
-</article><article class="card" data-category="People">
+</article><article class="card" data-category="People" data-detail="false">
   <a class="image" href="images/gallery/artillery-crew.webp" aria-label="Open full size image: Artillery crewman">
     <img src="images/gallery/artillery-crew.webp" alt="Artillery crewman — 1815 artillery crew source model" loading="lazy">
     <span class="number">05</span>
   </a>
   <div class="caption"><div class="eyebrow">People</div><h3>Artillery crewman</h3><p>1815 artillery crew source model</p><span class="credit">Andy Woodhead · adapted under CC BY 4.0</span></div>
-</article><article class="card" data-category="People">
+</article><article class="card" data-category="People" data-detail="false">
   <a class="image" href="images/gallery/horse.webp" aria-label="Open full size image: War horse">
     <img src="images/gallery/horse.webp" alt="War horse — Textured source horse model" loading="lazy">
     <span class="number">06</span>
   </a>
   <div class="caption"><div class="eyebrow">People</div><h3>War horse</h3><p>Textured source horse model</p><span class="credit">abhayexe · adapted under CC BY 4.0</span></div>
-</article><article class="card" data-category="Hussar">
+</article><article class="card" data-category="Hussar" data-detail="false">
   <a class="image" href="images/gallery/rider-armor.webp" aria-label="Open full size image: Hussar rider armor">
     <img src="images/gallery/rider-armor.webp" alt="Hussar rider armor — Standalone cuirass, helmet, shoulder plates, wings, and textile layers" loading="lazy">
     <span class="number">07</span>
   </a>
   <div class="caption"><div class="eyebrow">Hussar</div><h3>Hussar rider armor</h3><p>Standalone cuirass, helmet, shoulder plates, wings, and textile layers</p><span class="credit">Big Sim original armor study</span></div>
-</article><article class="card" data-category="Hussar">
-  <a class="image" href="images/gallery/horse-armor.webp" aria-label="Open full size image: Horse armor and tack">
-    <img src="images/gallery/horse-armor.webp" alt="Horse armor and tack — Face guard, breast protection, bridle, saddle, and cloth" loading="lazy">
+</article><article class="card" data-category="Hussar" data-detail="true">
+  <a class="image" href="images/gallery/hussar-armor-closeup.webp" aria-label="Open full size image: Winged Hussar armor close-up">
+    <img src="images/gallery/hussar-armor-closeup.webp" alt="Winged Hussar armor close-up — Helmet, breastplate, articulated arm plates, lance grip, and horse barding at rider height" loading="lazy">
     <span class="number">08</span>
   </a>
-  <div class="caption"><div class="eyebrow">Hussar</div><h3>Horse armor and tack</h3><p>Face guard, breast protection, bridle, saddle, and cloth</p><span class="credit">Big Sim original tack study fitted to an attributed horse</span></div>
-</article><article class="card" data-category="Hussar">
-  <a class="image" href="images/gallery/kopia.webp" aria-label="Open full size image: Kopia and saddle weapons">
-    <img src="images/gallery/kopia.webp" alt="Kopia and saddle weapons — Long kopia lance, pennon, sabre, and sheathed koncerz" loading="lazy">
+  <div class="caption"><div class="eyebrow">Hussar</div><h3>Winged Hussar armor close-up</h3><p>Helmet, breastplate, articulated arm plates, lance grip, and horse barding at rider height</p><span class="credit">Big Sim original armor and tack; attributed source horse</span></div>
+</article><article class="card" data-category="Hussar" data-detail="true">
+  <a class="image" href="images/gallery/horse-armor.webp" aria-label="Open full size image: Horse armor and tack">
+    <img src="images/gallery/horse-armor.webp" alt="Horse armor and tack — Face guard, breast protection, bridle, saddle, and cloth" loading="lazy">
     <span class="number">09</span>
   </a>
-  <div class="caption"><div class="eyebrow">Hussar</div><h3>Kopia and saddle weapons</h3><p>Long kopia lance, pennon, sabre, and sheathed koncerz</p><span class="credit">Big Sim original weapon study</span></div>
-</article><article class="card" data-category="Guns &amp; gear">
-  <a class="image" href="images/gallery/blucher-sabre.webp" aria-label="Open full size image: Blücher sabre">
-    <img src="images/gallery/blucher-sabre.webp" alt="Blücher sabre — Textured Prussian cavalry sidearm source model" loading="lazy">
+  <div class="caption"><div class="eyebrow">Hussar</div><h3>Horse armor and tack</h3><p>Face guard, breast protection, bridle, saddle, and cloth</p><span class="credit">Big Sim original tack study fitted to an attributed horse</span></div>
+</article><article class="card" data-category="Hussar" data-detail="true">
+  <a class="image" href="images/gallery/kopia.webp" aria-label="Open full size image: Kopia and saddle weapons">
+    <img src="images/gallery/kopia.webp" alt="Kopia and saddle weapons — Long kopia lance, pennon, sabre, and sheathed koncerz" loading="lazy">
     <span class="number">10</span>
   </a>
-  <div class="caption"><div class="eyebrow">Guns &amp; gear</div><h3>Blücher sabre</h3><p>Textured Prussian cavalry sidearm source model</p><span class="credit">Timothy Hsu · adapted under CC BY 4.0</span></div>
-</article><article class="card" data-category="Guns &amp; gear">
-  <a class="image" href="images/gallery/olive-artillery.webp" aria-label="Open full size image: Olive artillery battery">
-    <img src="images/gallery/olive-artillery.webp" alt="Olive artillery battery — Field cannon and four-wheel ammunition cart" loading="lazy">
+  <div class="caption"><div class="eyebrow">Hussar</div><h3>Kopia and saddle weapons</h3><p>Long kopia lance, pennon, sabre, and sheathed koncerz</p><span class="credit">Big Sim original weapon study</span></div>
+</article><article class="card" data-category="Guns &amp; gear" data-detail="false">
+  <a class="image" href="images/gallery/blucher-sabre.webp" aria-label="Open full size image: Blücher sabre">
+    <img src="images/gallery/blucher-sabre.webp" alt="Blücher sabre — Textured Prussian cavalry sidearm source model" loading="lazy">
     <span class="number">11</span>
   </a>
-  <div class="caption"><div class="eyebrow">Guns &amp; gear</div><h3>Olive artillery battery</h3><p>Field cannon and four-wheel ammunition cart</p><span class="credit">Big Sim original models</span></div>
-</article><article class="card" data-category="Guns &amp; gear">
-  <a class="image" href="images/gallery/olive-cannon.webp" aria-label="Open full size image: Olive field cannon">
-    <img src="images/gallery/olive-cannon.webp" alt="Olive field cannon — Close study of the refined cannon master" loading="lazy">
+  <div class="caption"><div class="eyebrow">Guns &amp; gear</div><h3>Blücher sabre</h3><p>Textured Prussian cavalry sidearm source model</p><span class="credit">Timothy Hsu · adapted under CC BY 4.0</span></div>
+</article><article class="card" data-category="Guns &amp; gear" data-detail="false">
+  <a class="image" href="images/gallery/olive-artillery.webp" aria-label="Open full size image: Olive artillery battery">
+    <img src="images/gallery/olive-artillery.webp" alt="Olive artillery battery — Field cannon and four-wheel ammunition cart" loading="lazy">
     <span class="number">12</span>
   </a>
-  <div class="caption"><div class="eyebrow">Guns &amp; gear</div><h3>Olive field cannon</h3><p>Close study of the refined cannon master</p><span class="credit">Big Sim original model</span></div>
-</article><article class="card" data-category="Guns &amp; gear">
-  <a class="image" href="images/gallery/gribeauval-cannon.webp" aria-label="Open full size image: Gribeauval cannon">
-    <img src="images/gallery/gribeauval-cannon.webp" alt="Gribeauval cannon — Source cannon and carriage assembly" loading="lazy">
+  <div class="caption"><div class="eyebrow">Guns &amp; gear</div><h3>Olive artillery battery</h3><p>Field cannon and four-wheel ammunition cart</p><span class="credit">Big Sim original models</span></div>
+</article><article class="card" data-category="Guns &amp; gear" data-detail="true">
+  <a class="image" href="images/gallery/olive-cannon.webp" aria-label="Open full size image: Olive field cannon">
+    <img src="images/gallery/olive-cannon.webp" alt="Olive field cannon — Close study of the refined cannon master" loading="lazy">
     <span class="number">13</span>
   </a>
-  <div class="caption"><div class="eyebrow">Guns &amp; gear</div><h3>Gribeauval cannon</h3><p>Source cannon and carriage assembly</p><span class="credit">perceval-66 · adapted under CC BY 4.0</span></div>
-</article><article class="card" data-category="Guns &amp; gear">
-  <a class="image" href="images/gallery/caisson.webp" aria-label="Open full size image: Ammunition caisson">
-    <img src="images/gallery/caisson.webp" alt="Ammunition caisson — Covered battery supply wagon" loading="lazy">
+  <div class="caption"><div class="eyebrow">Guns &amp; gear</div><h3>Olive field cannon</h3><p>Close study of the refined cannon master</p><span class="credit">Big Sim original model</span></div>
+</article><article class="card" data-category="Guns &amp; gear" data-detail="false">
+  <a class="image" href="images/gallery/gribeauval-cannon.webp" aria-label="Open full size image: Gribeauval cannon">
+    <img src="images/gallery/gribeauval-cannon.webp" alt="Gribeauval cannon — Source cannon and carriage assembly" loading="lazy">
     <span class="number">14</span>
   </a>
-  <div class="caption"><div class="eyebrow">Guns &amp; gear</div><h3>Ammunition caisson</h3><p>Covered battery supply wagon</p><span class="credit">Big Sim original model</span></div>
-</article><article class="card" data-category="World">
-  <a class="image" href="images/gallery/scenery-kit.webp" aria-label="Open full size image: Camp and village kit">
-    <img src="images/gallery/scenery-kit.webp" alt="Camp and village kit — Wagons, carts, tents, furniture, barrels, and laundry" loading="lazy">
+  <div class="caption"><div class="eyebrow">Guns &amp; gear</div><h3>Gribeauval cannon</h3><p>Source cannon and carriage assembly</p><span class="credit">perceval-66 · adapted under CC BY 4.0</span></div>
+</article><article class="card" data-category="Guns &amp; gear" data-detail="false">
+  <a class="image" href="images/gallery/caisson.webp" aria-label="Open full size image: Ammunition caisson">
+    <img src="images/gallery/caisson.webp" alt="Ammunition caisson — Covered battery supply wagon" loading="lazy">
     <span class="number">15</span>
   </a>
-  <div class="caption"><div class="eyebrow">World</div><h3>Camp and village kit</h3><p>Wagons, carts, tents, furniture, barrels, and laundry</p><span class="credit">Big Sim procedural masters; source props retained with attribution</span></div>
-</article><article class="card" data-category="World">
-  <a class="image" href="images/gallery/fieldworks.webp" aria-label="Open full size image: Fieldworks and farm props">
-    <img src="images/gallery/fieldworks.webp" alt="Fieldworks and farm props — Gates, walls, gabions, fascines, stakes, well, and trough" loading="lazy">
+  <div class="caption"><div class="eyebrow">Guns &amp; gear</div><h3>Ammunition caisson</h3><p>Covered battery supply wagon</p><span class="credit">Big Sim original model</span></div>
+</article><article class="card" data-category="World" data-detail="false">
+  <a class="image" href="images/gallery/scenery-kit.webp" aria-label="Open full size image: Camp and village kit">
+    <img src="images/gallery/scenery-kit.webp" alt="Camp and village kit — Wagons, carts, tents, furniture, barrels, and laundry" loading="lazy">
     <span class="number">16</span>
   </a>
-  <div class="caption"><div class="eyebrow">World</div><h3>Fieldworks and farm props</h3><p>Gates, walls, gabions, fascines, stakes, well, and trough</p><span class="credit">Big Sim original procedural kit</span></div>
-</article><article class="card" data-category="World">
-  <a class="image" href="images/gallery/player-kit.webp" aria-label="Open full size image: Player field kit">
-    <img src="images/gallery/player-kit.webp" alt="Player field kit — Musket, pistol, sabre, tools, signals, medical, and utility gear" loading="lazy">
+  <div class="caption"><div class="eyebrow">World</div><h3>Camp and village kit</h3><p>Wagons, carts, tents, furniture, barrels, and laundry</p><span class="credit">Big Sim procedural masters; source props retained with attribution</span></div>
+</article><article class="card" data-category="Placeable props" data-detail="true">
+  <a class="image" href="images/gallery/scenery-barrel-closeup.webp" aria-label="Open full size image: Coopered field barrel">
+    <img src="images/gallery/scenery-barrel-closeup.webp" alt="Coopered field barrel — Close view of fitted timber staves, a five-piece head, and four iron hoops" loading="lazy">
     <span class="number">17</span>
   </a>
-  <div class="caption"><div class="eyebrow">World</div><h3>Player field kit</h3><p>Musket, pistol, sabre, tools, signals, medical, and utility gear</p><span class="credit">Big Sim original procedural kit</span></div>
-</article><article class="card" data-category="World">
-  <a class="image" href="images/gallery/village.webp" aria-label="Open full size image: Village buildings">
-    <img src="images/gallery/village.webp" alt="Village buildings — Twenty-two detailed buildings with street and yard dressing" loading="lazy">
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Coopered field barrel</h3><p>Close view of fitted timber staves, a five-piece head, and four iron hoops</p><span class="credit">Big Sim original · embedded PBR materials</span></div>
+</article><article class="card" data-category="Placeable props" data-detail="true">
+  <a class="image" href="images/gallery/scenery-wagon-closeup.webp" aria-label="Open full size image: Covered supply wagon">
+    <img src="images/gallery/scenery-wagon-closeup.webp" alt="Covered supply wagon — Close view of timber bodywork, covered hoops, running gear, and cargo" loading="lazy">
     <span class="number">18</span>
   </a>
-  <div class="caption"><div class="eyebrow">World</div><h3>Village buildings</h3><p>Twenty-two detailed buildings with street and yard dressing</p><span class="credit">Big Sim buildings and materials · mixed-source props</span></div>
-</article><article class="card" data-category="People">
-  <a class="image" href="images/gallery/ground-view.webp" aria-label="Open full size image: Troops at ground level">
-    <img src="images/gallery/ground-view.webp" alt="Troops at ground level — View of the formation from a soldier&#x27;s height" loading="lazy">
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Covered supply wagon</h3><p>Close view of timber bodywork, covered hoops, running gear, and cargo</p><span class="credit">Big Sim original · embedded PBR materials</span></div>
+</article><article class="card" data-category="Placeable props" data-detail="true">
+  <a class="image" href="images/gallery/scenery-white-tent-closeup.webp" aria-label="Open full size image: Natural canvas wedge tent">
+    <img src="images/gallery/scenery-white-tent-closeup.webp" alt="Natural canvas wedge tent — Closed rear gable, narrow entry, gathered side cloth, and fitted guy lines" loading="lazy">
     <span class="number">19</span>
   </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Natural canvas wedge tent</h3><p>Closed rear gable, narrow entry, gathered side cloth, and fitted guy lines</p><span class="credit">Big Sim visual variant · CampTent kind</span></div>
+</article><article class="card" data-category="Placeable props" data-detail="true">
+  <a class="image" href="images/gallery/scenery-red-tent-closeup.webp" aria-label="Open full size image: Red canvas wedge tent">
+    <img src="images/gallery/scenery-red-tent-closeup.webp" alt="Red canvas wedge tent — Earlier A-frame silhouette with a clear entrance and fitted guy lines" loading="lazy">
+    <span class="number">20</span>
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Red canvas wedge tent</h3><p>Earlier A-frame silhouette with a clear entrance and fitted guy lines</p><span class="credit">Big Sim visual variant · CampTent kind</span></div>
+</article><article class="card" data-category="Placeable props" data-detail="false">
+  <a class="image" href="images/gallery/placeable-props-catalog.webp" aria-label="Open full size image: Placeable prop catalog">
+    <img src="images/gallery/placeable-props-catalog.webp" alt="Placeable prop catalog — All 55 cataloged town, camp, farm, and battlefield prop types" loading="lazy">
+    <span class="number">21</span>
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Placeable prop catalog</h3><p>All 55 cataloged town, camp, farm, and battlefield prop types</p><span class="credit">Big Sim original models · embedded tileable PBR materials</span></div>
+</article><article class="card" data-category="Placeable props" data-detail="true">
+  <a class="image" href="images/gallery/placeable-square-campaign-tent.webp" aria-label="Open full size image: Square campaign tent">
+    <img src="images/gallery/placeable-square-campaign-tent.webp" alt="Square campaign tent — Striped roof and walls, stitched hanging panels, fitted entry flaps, and guy lines" loading="lazy">
+    <span class="number">22</span>
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Square campaign tent</h3><p>Striped roof and walls, stitched hanging panels, fitted entry flaps, and guy lines</p><span class="credit">Big Sim original model · CampTent kind</span></div>
+</article><article class="card" data-category="Placeable props" data-detail="true">
+  <a class="image" href="images/gallery/placeable-market-stall.webp" aria-label="Open full size image: Town market stall">
+    <img src="images/gallery/placeable-market-stall.webp" alt="Town market stall — Striped canvas awning, timber counter, side supports, and displayed goods" loading="lazy">
+    <span class="number">23</span>
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Town market stall</h3><p>Striped canvas awning, timber counter, side supports, and displayed goods</p><span class="credit">Big Sim original model · embedded PBR materials</span></div>
+</article><article class="card" data-category="Placeable props" data-detail="true">
+  <a class="image" href="images/gallery/placeable-field-lantern.webp" aria-label="Open full size image: Field lantern">
+    <img src="images/gallery/placeable-field-lantern.webp" alt="Field lantern — Protected light chamber, glass panels, and metal frame in close view" loading="lazy">
+    <span class="number">24</span>
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Field lantern</h3><p>Protected light chamber, glass panels, and metal frame in close view</p><span class="credit">Big Sim original model · embedded PBR materials</span></div>
+</article><article class="card" data-category="Placeable props" data-detail="true">
+  <a class="image" href="images/gallery/placeable-field-chest.webp" aria-label="Open full size image: Planked field chest">
+    <img src="images/gallery/placeable-field-chest.webp" alt="Planked field chest — Close view of timber grain, fitted lid boards, and iron hardware" loading="lazy">
+    <span class="number">25</span>
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Planked field chest</h3><p>Close view of timber grain, fitted lid boards, and iron hardware</p><span class="credit">Big Sim original model · embedded PBR materials</span></div>
+</article><article class="card" data-category="Placeable props" data-detail="true">
+  <a class="image" href="images/gallery/placeable-wicker-basket.webp" aria-label="Open full size image: Wicker market basket">
+    <img src="images/gallery/placeable-wicker-basket.webp" alt="Wicker market basket — Woven wicker body with a reinforced rim and timber handle" loading="lazy">
+    <span class="number">26</span>
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Wicker market basket</h3><p>Woven wicker body with a reinforced rim and timber handle</p><span class="credit">Big Sim original model · embedded PBR materials</span></div>
+</article><article class="card" data-category="World" data-detail="false">
+  <a class="image" href="images/gallery/fieldworks.webp" aria-label="Open full size image: Fieldworks and farm props">
+    <img src="images/gallery/fieldworks.webp" alt="Fieldworks and farm props — Gates, walls, gabions, fascines, stakes, well, and trough" loading="lazy">
+    <span class="number">27</span>
+  </a>
+  <div class="caption"><div class="eyebrow">World</div><h3>Fieldworks and farm props</h3><p>Gates, walls, gabions, fascines, stakes, well, and trough</p><span class="credit">Big Sim original procedural kit</span></div>
+</article><article class="card" data-category="World" data-detail="false">
+  <a class="image" href="images/gallery/player-kit.webp" aria-label="Open full size image: Player field kit">
+    <img src="images/gallery/player-kit.webp" alt="Player field kit — Musket, pistol, sabre, tools, signals, medical, and utility gear" loading="lazy">
+    <span class="number">28</span>
+  </a>
+  <div class="caption"><div class="eyebrow">World</div><h3>Player field kit</h3><p>Musket, pistol, sabre, tools, signals, medical, and utility gear</p><span class="credit">Big Sim original procedural kit</span></div>
+</article><article class="card" data-category="World" data-detail="false">
+  <a class="image" href="images/gallery/village.webp" aria-label="Open full size image: Existing town and city edge">
+    <img src="images/gallery/village.webp" alt="Existing town and city edge — The existing settlement joined to the period city quarter on its east end" loading="lazy">
+    <span class="number">29</span>
+  </a>
+  <div class="caption"><div class="eyebrow">World</div><h3>Existing town and city edge</h3><p>The existing settlement joined to the period city quarter on its east end</p><span class="credit">Big Sim buildings and materials · mixed-source props</span></div>
+</article><article class="card" data-category="World" data-detail="false">
+  <a class="image" href="images/gallery/town-edge-integration.webp" aria-label="Open full size image: Town joins the city at its short side">
+    <img src="images/gallery/town-edge-integration.webp" alt="Town joins the city at its short side — The 90 m city face meets the old settlement; the 180 m district runs east toward the battlefield edge" loading="lazy">
+    <span class="number">30</span>
+  </a>
+  <div class="caption"><div class="eyebrow">World</div><h3>Town joins the city at its short side</h3><p>The 90 m city face meets the old settlement; the 180 m district runs east toward the battlefield edge</p><span class="credit">Big Sim original layout and building models</span></div>
+</article><article class="card" data-category="World" data-detail="false">
+  <a class="image" href="images/gallery/city-edge-layout.webp" aria-label="Open full size image: City edge and market square">
+    <img src="images/gallery/city-edge-layout.webp" alt="City edge and market square — 180 × 90 m district with 22 building placements, five roads, market square, outer wall, gate, and breach" loading="lazy">
+    <span class="number">31</span>
+  </a>
+  <div class="caption"><div class="eyebrow">World</div><h3>City edge and market square</h3><p>180 × 90 m district with 22 building placements, five roads, market square, outer wall, gate, and breach</p><span class="credit">Big Sim original layout and building models</span></div>
+</article><article class="card" data-category="World" data-detail="true">
+  <a class="image" href="images/gallery/market-square-detail.webp" aria-label="Open full size image: Market square close-up">
+    <img src="images/gallery/market-square-detail.webp" alt="Market square close-up — Twenty-metre cobbled square with the fountain, four oil lamps, and market-day stalls" loading="lazy">
+    <span class="number">32</span>
+  </a>
+  <div class="caption"><div class="eyebrow">World</div><h3>Market square close-up</h3><p>Twenty-metre cobbled square with the fountain, four oil lamps, and market-day stalls</p><span class="credit">Big Sim original layout and landmarks</span></div>
+</article><article class="card" data-category="World" data-detail="true">
+  <a class="image" href="images/gallery/oil-street-lantern.webp" aria-label="Open full size image: Oil street lantern">
+    <img src="images/gallery/oil-street-lantern.webp" alt="Oil street lantern — Four-sided glass oil lamp, forged scroll brackets, turned post, service door, and limestone foot" loading="lazy">
+    <span class="number">33</span>
+  </a>
+  <div class="caption"><div class="eyebrow">World</div><h3>Oil street lantern</h3><p>Four-sided glass oil lamp, forged scroll brackets, turned post, service door, and limestone foot</p><span class="credit">Big Sim original · documented early street-lighting form</span></div>
+</article><article class="card" data-category="World" data-detail="true">
+  <a class="image" href="images/gallery/oil-lantern-materials.webp" aria-label="Open full size image: Oil lantern materials">
+    <img src="images/gallery/oil-lantern-materials.webp" alt="Oil lantern materials — Close view of textured cast iron and brass, clear glazing, and the visible wick" loading="lazy">
+    <span class="number">34</span>
+  </a>
+  <div class="caption"><div class="eyebrow">World</div><h3>Oil lantern materials</h3><p>Close view of textured cast iron and brass, clear glazing, and the visible wick</p><span class="credit">Big Sim original · generated metal surface maps</span></div>
+</article><article class="card" data-category="World" data-detail="true">
+  <a class="image" href="images/gallery/city-wall-crossings.webp" aria-label="Open full size image: City wall gate and breach">
+    <img src="images/gallery/city-wall-crossings.webp" alt="City wall gate and breach — The road gate and a separate passable breach through the town wall" loading="lazy">
+    <span class="number">35</span>
+  </a>
+  <div class="caption"><div class="eyebrow">World</div><h3>City wall gate and breach</h3><p>The road gate and a separate passable breach through the town wall</p><span class="credit">Big Sim original layout and terrain features</span></div>
+</article><article class="card" data-category="World" data-detail="false">
+  <a class="image" href="images/gallery/hercules-fountain.webp" aria-label="Open full size image: Hercules fountain">
+    <img src="images/gallery/hercules-fountain.webp" alt="Hercules fountain — Carved red sandstone basin, column-mounted figure, shield, club, and four forged water outlets" loading="lazy">
+    <span class="number">36</span>
+  </a>
+  <div class="caption"><div class="eyebrow">World</div><h3>Hercules fountain</h3><p>Carved red sandstone basin, column-mounted figure, shield, club, and four forged water outlets</p><span class="credit">Big Sim original · Heidelberg Baroque reference</span></div>
+</article><article class="card" data-category="World" data-detail="true">
+  <a class="image" href="images/gallery/hercules-statue-detail.webp" aria-label="Open full size image: Hercules statue close-up">
+    <img src="images/gallery/hercules-statue-detail.webp" alt="Hercules statue close-up — Lion-skin mantle, carved face, raised club, and shield viewed at figure height" loading="lazy">
+    <span class="number">37</span>
+  </a>
+  <div class="caption"><div class="eyebrow">World</div><h3>Hercules statue close-up</h3><p>Lion-skin mantle, carved face, raised club, and shield viewed at figure height</p><span class="credit">Big Sim original · Heidelberg Baroque reference</span></div>
+</article><article class="card" data-category="World" data-detail="true">
+  <a class="image" href="images/gallery/hercules-waterworks-detail.webp" aria-label="Open full size image: Fountain capital and waterworks">
+    <img src="images/gallery/hercules-waterworks-detail.webp" alt="Fountain capital and waterworks — Acanthus capital, fluted sandstone shaft, and wrought-iron spouts in close view" loading="lazy">
+    <span class="number">38</span>
+  </a>
+  <div class="caption"><div class="eyebrow">World</div><h3>Fountain capital and waterworks</h3><p>Acanthus capital, fluted sandstone shaft, and wrought-iron spouts in close view</p><span class="credit">Big Sim original · textured sandstone and forged fittings</span></div>
+</article><article class="card" data-category="World" data-detail="false">
+  <a class="image" href="images/gallery/period-town-buildings.webp" aria-label="Open full size image: Early-19th-century town buildings">
+    <img src="images/gallery/period-town-buildings.webp" alt="Early-19th-century town buildings — Fourteen reusable plaster, masonry, timber, and tiled-roof models used across 22 city placements" loading="lazy">
+    <span class="number">39</span>
+  </a>
+  <div class="caption"><div class="eyebrow">World</div><h3>Early-19th-century town buildings</h3><p>Fourteen reusable plaster, masonry, timber, and tiled-roof models used across 22 city placements</p><span class="credit">Big Sim original building models</span></div>
+</article><article class="card" data-category="World" data-detail="true">
+  <a class="image" href="images/gallery/apothecary-shopfront-detail.webp" aria-label="Open full size image: Apothecary shopfront">
+    <img src="images/gallery/apothecary-shopfront-detail.webp" alt="Apothecary shopfront — Divided shop windows, shutters, stone doorway, and projecting trade sign at street level" loading="lazy">
+    <span class="number">40</span>
+  </a>
+  <div class="caption"><div class="eyebrow">World</div><h3>Apothecary shopfront</h3><p>Divided shop windows, shutters, stone doorway, and projecting trade sign at street level</p><span class="credit">Big Sim original building detail</span></div>
+</article><article class="card" data-category="World" data-detail="true">
+  <a class="image" href="images/gallery/inn-entry-detail.webp" aria-label="Open full size image: Inn entrance and sign">
+    <img src="images/gallery/inn-entry-detail.webp" alt="Inn entrance and sign — Covered entry, masonry surround, and projecting inn sign at close range" loading="lazy">
+    <span class="number">41</span>
+  </a>
+  <div class="caption"><div class="eyebrow">World</div><h3>Inn entrance and sign</h3><p>Covered entry, masonry surround, and projecting inn sign at close range</p><span class="credit">Big Sim original building detail</span></div>
+</article><article class="card" data-category="World" data-detail="true">
+  <a class="image" href="images/gallery/smithy-work-bay-detail.webp" aria-label="Open full size image: Smithy work bay">
+    <img src="images/gallery/smithy-work-bay-detail.webp" alt="Smithy work bay — Wide plank work doors, stone lower walls, and forge-side timber details" loading="lazy">
+    <span class="number">42</span>
+  </a>
+  <div class="caption"><div class="eyebrow">World</div><h3>Smithy work bay</h3><p>Wide plank work doors, stone lower walls, and forge-side timber details</p><span class="credit">Big Sim original building detail</span></div>
+</article><article class="card" data-category="World" data-detail="false">
+  <a class="image" href="images/gallery/town-texture-samples.webp" aria-label="Open full size image: Town material library">
+    <img src="images/gallery/town-texture-samples.webp" alt="Town material library — Six free CC0 PBR packs for plaster, masonry, fired tile, timber, floors, and cobbled roads" loading="lazy">
+    <span class="number">43</span>
+  </a>
+  <div class="caption"><div class="eyebrow">World</div><h3>Town material library</h3><p>Six free CC0 PBR packs for plaster, masonry, fired tile, timber, floors, and cobbled roads</p><span class="credit">Poly Haven · CC0 · complete 1K PBR maps</span></div>
+</article><article class="card" data-category="World" data-detail="false">
+  <a class="image" href="images/gallery/battlefield-texture-samples.webp" aria-label="Open full size image: Battlefield material library">
+    <img src="images/gallery/battlefield-texture-samples.webp" alt="Battlefield material library — Close views of timber, plaster, stone, roof tile, canvas, leather, iron, brass, grass, and earth" loading="lazy">
+    <span class="number">44</span>
+  </a>
+  <div class="caption"><div class="eyebrow">World</div><h3>Battlefield material library</h3><p>Close views of timber, plaster, stone, roof tile, canvas, leather, iron, brass, grass, and earth</p><span class="credit">Poly Haven · CC0 · 1K source maps</span></div>
+</article><article class="card" data-category="World" data-detail="false">
+  <a class="image" href="images/gallery/period-town-floor-plans.webp" aria-label="Open full size image: Town building floor plans">
+    <img src="images/gallery/period-town-floor-plans.webp" alt="Town building floor plans — Every modeled ground and upper floor, labeled by building and level" loading="lazy">
+    <span class="number">45</span>
+  </a>
+  <div class="caption"><div class="eyebrow">World</div><h3>Town building floor plans</h3><p>Every modeled ground and upper floor, labeled by building and level</p><span class="credit">Big Sim original presentation geometry</span></div>
+</article><article class="card" data-category="World" data-detail="true">
+  <a class="image" href="images/gallery/interior-row-house-stube.webp" aria-label="Open full size image: Row house Stube">
+    <img src="images/gallery/interior-row-house-stube.webp" alt="Row house Stube — Masonry hearth, table, chairs, storage cabinet, and connecting stair" loading="lazy">
+    <span class="number">46</span>
+  </a>
+  <div class="caption"><div class="eyebrow">World</div><h3>Row house Stube</h3><p>Masonry hearth, table, chairs, storage cabinet, and connecting stair</p><span class="credit">Big Sim original presentation geometry</span></div>
+</article><article class="card" data-category="World" data-detail="true">
+  <a class="image" href="images/gallery/interior-inn-taproom.webp" aria-label="Open full size image: Inn taproom">
+    <img src="images/gallery/interior-inn-taproom.webp" alt="Inn taproom — Dining tables and benches, kitchen hearth, serving counter, and stair" loading="lazy">
+    <span class="number">47</span>
+  </a>
+  <div class="caption"><div class="eyebrow">World</div><h3>Inn taproom</h3><p>Dining tables and benches, kitchen hearth, serving counter, and stair</p><span class="credit">Big Sim original presentation geometry</span></div>
+</article><article class="card" data-category="World" data-detail="true">
+  <a class="image" href="images/gallery/interior-apothecary-shop.webp" aria-label="Open full size image: Apothecary shop floor">
+    <img src="images/gallery/interior-apothecary-shop.webp" alt="Apothecary shop floor — Display counter, stocked shelves, ceramic jars, and back store" loading="lazy">
+    <span class="number">48</span>
+  </a>
+  <div class="caption"><div class="eyebrow">World</div><h3>Apothecary shop floor</h3><p>Display counter, stocked shelves, ceramic jars, and back store</p><span class="credit">Big Sim original presentation geometry</span></div>
+</article><article class="card" data-category="World" data-detail="true">
+  <a class="image" href="images/gallery/interior-smithy-forge.webp" aria-label="Open full size image: Smithy forge bay">
+    <img src="images/gallery/interior-smithy-forge.webp" alt="Smithy forge bay — Masonry forge, anvil, workbench, quench tub, and tool rack" loading="lazy">
+    <span class="number">49</span>
+  </a>
+  <div class="caption"><div class="eyebrow">World</div><h3>Smithy forge bay</h3><p>Masonry forge, anvil, workbench, quench tub, and tool rack</p><span class="credit">Big Sim original presentation geometry</span></div>
+</article><article class="card" data-category="World" data-detail="true">
+  <a class="image" href="images/gallery/interior-chapel-nave.webp" aria-label="Open full size image: Chapel nave">
+    <img src="images/gallery/interior-chapel-nave.webp" alt="Chapel nave — Pews, central aisle, altar, candle stands, and sacristy press" loading="lazy">
+    <span class="number">50</span>
+  </a>
+  <div class="caption"><div class="eyebrow">World</div><h3>Chapel nave</h3><p>Pews, central aisle, altar, candle stands, and sacristy press</p><span class="credit">Big Sim original presentation geometry</span></div>
+</article><article class="card" data-category="World" data-detail="true">
+  <a class="image" href="images/gallery/interior-town-hall-council.webp" aria-label="Open full size image: Town hall council room">
+    <img src="images/gallery/interior-town-hall-council.webp" alt="Town hall council room — Council table, backed chairs, clerk desks, and document cabinets" loading="lazy">
+    <span class="number">51</span>
+  </a>
+  <div class="caption"><div class="eyebrow">World</div><h3>Town hall council room</h3><p>Council table, backed chairs, clerk desks, and document cabinets</p><span class="credit">Big Sim original presentation geometry</span></div>
+</article><article class="card" data-category="World" data-detail="true">
+  <a class="image" href="images/gallery/town-hall-lantern.webp" aria-label="Open full size image: Town hall roof lantern">
+    <img src="images/gallery/town-hall-lantern.webp" alt="Town hall roof lantern — Close view of the open lantern stage and tiled roof rider" loading="lazy">
+    <span class="number">52</span>
+  </a>
+  <div class="caption"><div class="eyebrow">World</div><h3>Town hall roof lantern</h3><p>Close view of the open lantern stage and tiled roof rider</p><span class="credit">Big Sim original building detail</span></div>
+</article><article class="card" data-category="World" data-detail="true">
+  <a class="image" href="images/gallery/chapel-bellcote.webp" aria-label="Open full size image: Chapel bellcote">
+    <img src="images/gallery/chapel-bellcote.webp" alt="Chapel bellcote — Open arched bell stage beneath a compact tiled cap" loading="lazy">
+    <span class="number">53</span>
+  </a>
+  <div class="caption"><div class="eyebrow">World</div><h3>Chapel bellcote</h3><p>Open arched bell stage beneath a compact tiled cap</p><span class="credit">Big Sim original building detail</span></div>
+</article><article class="card" data-category="World" data-detail="true">
+  <a class="image" href="images/gallery/cottage-roof-detail.webp" aria-label="Open full size image: Cottage roof and joinery">
+    <img src="images/gallery/cottage-roof-detail.webp" alt="Cottage roof and joinery — Close view of roof tiles, chimney, shutters, and timber details" loading="lazy">
+    <span class="number">54</span>
+  </a>
+  <div class="caption"><div class="eyebrow">World</div><h3>Cottage roof and joinery</h3><p>Close view of roof tiles, chimney, shutters, and timber details</p><span class="credit">Big Sim original building detail</span></div>
+</article><article class="card" data-category="People" data-detail="false">
+  <a class="image" href="images/gallery/ground-view.webp" aria-label="Open full size image: Troops at ground level">
+    <img src="images/gallery/ground-view.webp" alt="Troops at ground level — View of the formation from a soldier&#x27;s height" loading="lazy">
+    <span class="number">55</span>
+  </a>
   <div class="caption"><div class="eyebrow">People</div><h3>Troops at ground level</h3><p>View of the formation from a soldier&#x27;s height</p><span class="credit">Big Sim source-scene render</span></div>
-</article><article class="card" data-category="World">
+</article><article class="card" data-category="World" data-detail="false">
   <a class="image" href="images/gallery/panorama.webp" aria-label="Open full size image: Battlefield overview">
     <img src="images/gallery/panorama.webp" alt="Battlefield overview — Aerial panorama of the landscape and battlefield placement" loading="lazy">
-    <span class="number">20</span>
+    <span class="number">56</span>
   </a>
   <div class="caption"><div class="eyebrow">World</div><h3>Battlefield overview</h3><p>Aerial panorama of the landscape and battlefield placement</p><span class="credit">Big Sim source-scene render</span></div>
 </article></div>
@@ -209,11 +434,11 @@ footer{padding:18px 0 30px;border-top:1px solid var(--line);color:#87918c;font-s
   <section class="battle-section" id="battle">
     <div class="section-head"><div><div class="kicker">Across the field</div><h2>Battlefield views.</h2></div><p>Four full-HD Blender renders show two elevated panoramas with the large powder-smoke banks hidden, an infantry-line view at ground level, and a low view across the grass. The closer shots retain scene smoke.</p></div>
     <div class="battle-grid"><article class="battle-card">
-  <a href="images/gallery/battle-west-panorama-clear.webp" aria-label="Open full size image: Western battlefield panorama"><img src="images/gallery/battle-west-panorama-clear.webp" alt="Western battlefield panorama — Elevated panorama across the battlefield, formations, and village" loading="lazy"></a>
-  <div><span class="eyebrow">Battlefield view</span><h3>Western battlefield panorama</h3><p>Elevated panorama across the battlefield, formations, and village</p></div>
+  <a href="images/gallery/battle-west-panorama-clear.webp" aria-label="Open full size image: Western battlefield panorama"><img src="images/gallery/battle-west-panorama-clear.webp" alt="Western battlefield panorama — A clear, elevated sweep over the western formations and village" loading="lazy"></a>
+  <div><span class="eyebrow">Battlefield view</span><h3>Western battlefield panorama</h3><p>A clear, elevated sweep over the western formations and village</p></div>
 </article><article class="battle-card">
-  <a href="images/gallery/battle-east-panorama-clear.webp" aria-label="Open full size image: Eastern battlefield panorama"><img src="images/gallery/battle-east-panorama-clear.webp" alt="Eastern battlefield panorama — Elevated panorama of the eastern formations and village approach" loading="lazy"></a>
-  <div><span class="eyebrow">Battlefield view</span><h3>Eastern battlefield panorama</h3><p>Elevated panorama of the eastern formations and village approach</p></div>
+  <a href="images/gallery/battle-east-panorama-clear.webp" aria-label="Open full size image: Eastern battlefield panorama"><img src="images/gallery/battle-east-panorama-clear.webp" alt="Eastern battlefield panorama — An elevated sweep across the eastern formations and village approach" loading="lazy"></a>
+  <div><span class="eyebrow">Battlefield view</span><h3>Eastern battlefield panorama</h3><p>An elevated sweep across the eastern formations and village approach</p></div>
 </article><article class="battle-card">
   <a href="images/gallery/battle-ground-line.webp" aria-label="Open full size image: Along the infantry line"><img src="images/gallery/battle-ground-line.webp" alt="Along the infantry line — A near-ground view from the open flank, looking along the formation" loading="lazy"></a>
   <div><span class="eyebrow">Battlefield view</span><h3>Along the infantry line</h3><p>A near-ground view from the open flank, looking along the formation</p></div>
@@ -223,7 +448,7 @@ footer{padding:18px 0 30px;border-top:1px solid var(--line);color:#87918c;font-s
 </article></div>
   </section>
   <section class="motion-section" id="motion">
-    <div class="section-head"><div><div class="kicker">Movement and action</div><h2>Seven animation captures.</h2></div><p>Five mounted Blender source loops sit beside Unity inspection captures of an infantry musket volley and cannon discharge. They show presentation motion, not authoritative combat outcomes.</p></div>
+    <div class="section-head"><div><div class="kicker">Movement and action</div><h2>Seven animation captures.</h2></div><p>Five mounted Blender source loops sit beside a Unity infantry volley capture and a cannon capture with browser-rendered flash, fire, and sparks. The muzzle effect is layered separately from the captured smoke; these clips show presentation motion, not authoritative combat outcomes.</p></div>
     <div class="motion-grid"><article class="motion-card idle">
   <img src="motion/idle.gif" alt="Looping mounted idle presentation capture" loading="lazy">
   <div><span class="eyebrow">Mounted animation</span><h3>Mounted idle</h3><span class="credit">Blender source preview</span></div>
@@ -243,12 +468,15 @@ footer{padding:18px 0 30px;border-top:1px solid var(--line);color:#87918c;font-s
   <img src="motion/infantry-volley.gif" alt="Looping infantry musket volley presentation capture" loading="lazy">
   <div><span class="eyebrow">Infantry animation</span><h3>Infantry musket volley</h3><span class="credit">Unity inspection capture</span></div>
 </article><article class="motion-card cannon-firing">
-  <img src="motion/cannon-firing.gif" alt="Looping cannon firing presentation capture" loading="lazy">
-  <div><span class="eyebrow">Artillery animation</span><h3>Cannon firing</h3><span class="credit">Unity inspection capture</span></div>
+  <div class="cannon-stage">
+  <picture><source srcset="motion/cannon-firing-poster.webp" media="(prefers-reduced-motion: reduce)"><img src="motion/cannon-firing.gif" alt="Looping cannon firing presentation capture" loading="lazy"></picture>
+  <canvas class="cannon-shot-canvas" aria-hidden="true"></canvas>
+</div>
+  <div><span class="eyebrow">Artillery animation</span><h3>Cannon firing</h3><span class="credit">Unity capture + web muzzle effect</span></div>
 </article></div>
   </section>
   <section class="note-box" aria-label="Collection notes">
-    <div><div class="kicker">More of the model shelf</div><h2>Built for one shared battlefield.</h2><p>The model families include the procedural infantry tiers; authored cavalry and horse; Gribeauval and Olive artillery; caissons, carts, and wagons; 22 village buildings; oak and ground cover; and reusable fieldwork, scenery, and player-item kits.</p></div>
+    <div><div class="kicker">More of the model shelf</div><h2>Built for one shared battlefield.</h2><p>The model families include the procedural infantry tiers; authored cavalry and horse; Gribeauval and Olive artillery; caissons, carts, and wagons; 22 battlefield village buildings; twenty-two town-edge building placements from fourteen reusable models with floor plans and furnished room close-ups; 55 cataloged town, camp, farm, and battlefield props with embedded PBR materials; oak and ground cover; and reusable fieldwork and player-item kits.</p></div>
     <div><div class="kicker">Source and runtime</div><h2>Renders show asset appearance.</h2><p>Most cards are Blender source renders. Some base models and village props adapt licensed source work, while the project’s armor, weapons, artillery, terrain, and procedural kits include original Big Sim models. Runtime behavior and performance remain tied to each asset’s Unity review.</p></div>
   </section>
   <section class="credits" id="credits"><div class="kicker">Credits</div><h2>Share the source with the image.</h2><p>The combined Winged Hussar uses adapted head and hand geometry by Andy Woodhead and a horse model by abhayexe. Battlefield portraits also show adapted models by Andy Woodhead, perceval-66, and Timothy Hsu. Village and camp source dressing includes work by Booba Booba, Fri13Day, and Nicholas-3D. The full CC BY 4.0 credits and asset notes are in <a href="CREDITS.md">CREDITS.md</a>.</p></section>
@@ -261,8 +489,13 @@ filters.forEach(button => button.addEventListener('click', () => {
   filters.forEach(item => { item.classList.remove('active'); item.setAttribute('aria-pressed', 'false'); });
   button.classList.add('active'); button.setAttribute('aria-pressed', 'true');
   const filter = button.dataset.filter;
-  cards.forEach(card => { card.hidden = filter !== 'all' && card.dataset.category !== filter; });
+  cards.forEach(card => {
+    card.hidden = filter === 'details'
+      ? card.dataset.detail !== 'true'
+      : filter !== 'all' && card.dataset.category !== filter;
+  });
 }));
 </script>
+<script src="cannon-shot-effect.js"></script>
 </body>
 </html>

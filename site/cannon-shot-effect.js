@@ -15,9 +15,10 @@
   let width = 0;
   let height = 0;
   let pixelRatio = 1;
-  let epoch = null;
   let animationFrame = 0;
   let inView = true;
+  let epoch = null;
+  let hadBeenOutOfView = false;
 
   function resize() {
     const box = stage.getBoundingClientRect();
@@ -30,14 +31,15 @@
     if (reducedMotion.matches && image.naturalWidth) drawStaticBurst();
   }
 
-  function frameGeometry() {
+  function frameGeometry(sourceX = 279, sourceY = 331) {
     const naturalRatio = image.naturalWidth / image.naturalHeight;
     const frameWidth = Math.min(width, height * naturalRatio);
     const frameHeight = frameWidth / naturalRatio;
+    const scale = frameWidth / image.naturalWidth;
     return {
-      x: (width - frameWidth) / 2 + frameWidth * 0.278,
-      y: (height - frameHeight) / 2 + frameHeight * 0.49,
-      scale: frameWidth / 960,
+      x: (width - frameWidth) / 2 + sourceX * scale,
+      y: (height - frameHeight) / 2 + sourceY * scale,
+      scale,
     };
   }
 
@@ -50,23 +52,25 @@
     if (!image.naturalWidth || !width || !height) return;
     context.clearRect(0, 0, width, height);
     const muzzle = frameGeometry();
-    drawBurst(0.055, muzzle.x, muzzle.y, muzzle.scale);
+    drawBurst(0.04, muzzle.x, muzzle.y, muzzle.scale);
   }
 
   function drawBurst(age, x, y, scale) {
     context.save();
     context.globalCompositeOperation = "lighter";
 
-    if (age < 0.2) {
-      const fade = Math.max(0, 1 - age / 0.2);
-      const pulse = 0.78 + 0.22 * Math.sin(Math.min(1, age / 0.055) * Math.PI);
-      const glow = context.createRadialGradient(x - 48 * scale, y, 0, x - 48 * scale, y, 182 * scale * pulse);
-      glow.addColorStop(0, `rgba(255,244,194,${0.92 * fade})`);
-      glow.addColorStop(0.22, `rgba(255,183,54,${0.84 * fade})`);
-      glow.addColorStop(0.56, `rgba(255,85,5,${0.48 * fade})`);
+    if (age < 0.19) {
+      const fade = Math.pow(Math.max(0, 1 - age / 0.19), 1.18);
+      const pulse = 1.08 - 0.22 * Math.min(1, age / 0.055);
+      const glow = context.createRadialGradient(x - 44 * scale, y, 0, x - 44 * scale, y, 222 * scale * pulse);
+      glow.addColorStop(0, `rgba(255,255,247,${fade})`);
+      glow.addColorStop(0.11, `rgba(255,250,207,${0.98 * fade})`);
+      glow.addColorStop(0.28, `rgba(255,190,45,${0.94 * fade})`);
+      glow.addColorStop(0.58, `rgba(255,78,2,${0.63 * fade})`);
+      glow.addColorStop(0.84, `rgba(255,39,0,${0.24 * fade})`);
       glow.addColorStop(1, "rgba(255,48,0,0)");
       context.fillStyle = glow;
-      context.fillRect(x - 252 * scale, y - 165 * scale, 258 * scale, 330 * scale);
+      context.fillRect(x - 306 * scale, y - 218 * scale, 314 * scale, 436 * scale);
 
       const flame = context.createLinearGradient(x - 188 * scale, y, x + 12 * scale, y);
       flame.addColorStop(0, `rgba(231,45,0,${0.72 * fade})`);
@@ -83,10 +87,10 @@
       context.fillStyle = flame;
       context.fill();
 
-      const hotCore = context.createLinearGradient(x - 130 * scale, y, x + 6 * scale, y);
-      hotCore.addColorStop(0, `rgba(255,166,27,${0.66 * fade})`);
-      hotCore.addColorStop(0.45, `rgba(255,226,103,${0.95 * fade})`);
-      hotCore.addColorStop(1, `rgba(255,255,225,${0.98 * fade})`);
+      const hotCore = context.createLinearGradient(x - 142 * scale, y, x + 8 * scale, y);
+      hotCore.addColorStop(0, `rgba(255,132,13,${0.82 * fade})`);
+      hotCore.addColorStop(0.48, `rgba(255,229,99,${fade})`);
+      hotCore.addColorStop(1, `rgba(255,255,255,${fade})`);
       context.beginPath();
       context.moveTo(x + 5 * scale, y - 4 * scale);
       context.quadraticCurveTo(x - 28 * scale, y - 18 * scale, x - 69 * scale, y - 10 * scale);
@@ -136,38 +140,41 @@
       }
     }
 
-    for (let spark = 0; spark < 22; spark += 1) {
-      const launch = hash(spark, 0) * 0.052;
-      const life = 0.24 + hash(spark, 1) * 0.28;
+    for (let spark = 0; spark < 10; spark += 1) {
+      const launch = hash(spark, 0) * 0.045;
+      const life = 0.34 + hash(spark, 1) * 0.28;
       const travel = age - launch;
       if (travel < 0 || travel >= life) continue;
 
       const spread = hash(spark, 2) * 2 - 1;
-      const speed = (142 + hash(spark, 4) * 175) * scale;
-      const vx = -speed;
-      const vy = spread * speed * 0.42 + (hash(spark, 3) - 0.5) * 65 * scale;
+      const speed = (360 + hash(spark, 4) * 200) * scale;
+      const angle = Math.PI + spread * 0.68;
+      const vx = Math.cos(angle) * speed;
+      const vy = Math.sin(angle) * speed + (hash(spark, 3) - 0.5) * 24 * scale;
       const startX = x - (5 + hash(spark, 6) * 17) * scale;
       const startY = y + (hash(spark, 5) - 0.5) * 10 * scale;
       const sparkX = startX + vx * travel;
-      const sparkY = startY + vy * travel + 160 * scale * travel * travel;
-      const tail = Math.min(0.045, travel);
-      const tailX = sparkX - vx * tail;
-      const tailY = sparkY - vy * tail - 160 * scale * tail * tail;
-      const opacity = Math.pow(1 - travel / life, 1.15);
+      const gravity = 170 * scale;
+      const sparkY = startY + vy * travel + gravity * travel * travel;
+      const tail = Math.min(0.085, travel);
+      const tailAge = Math.max(0, travel - tail);
+      const tailX = startX + vx * tailAge;
+      const tailY = startY + vy * tailAge + gravity * tailAge * tailAge;
+      const opacity = Math.pow(1 - travel / life, 0.72);
 
       const sparkScale = Math.max(scale, 0.85);
-      context.lineWidth = (2.2 + hash(spark, 7) * 1.8) * sparkScale;
-      context.strokeStyle = `rgba(255,126,18,${0.98 * opacity})`;
-      context.shadowColor = "rgba(255,126,16,.96)";
-      context.shadowBlur = 10 * sparkScale;
+      context.lineWidth = (1.8 + hash(spark, 7) * 1.5) * sparkScale;
+      context.strokeStyle = `rgba(255,105,8,${opacity})`;
+      context.shadowColor = "rgba(255,78,0,.98)";
+      context.shadowBlur = 5 * sparkScale;
       context.beginPath();
       context.moveTo(sparkX, sparkY);
       context.lineTo(tailX, tailY);
       context.stroke();
       context.shadowBlur = 0;
-      context.fillStyle = `rgba(255,236,163,${opacity})`;
+      context.fillStyle = `rgba(255,243,187,${opacity})`;
       context.beginPath();
-      context.arc(sparkX, sparkY, (1.5 + hash(spark, 8) * 1.2) * sparkScale, 0, Math.PI * 2);
+      context.arc(sparkX, sparkY, (1.4 + hash(spark, 8)) * sparkScale, 0, Math.PI * 2);
       context.fill();
     }
 
@@ -179,7 +186,7 @@
     if (!image.naturalWidth || !width || !height) return;
     context.clearRect(0, 0, width, height);
     if (epoch !== null) {
-      const phase = (now - epoch) % cycleMs;
+      const phase = ((now - epoch) % cycleMs + cycleMs) % cycleMs;
       const age = (phase - dischargeMs) / 1000;
       if (age >= 0 && age < 0.58) {
         const muzzle = frameGeometry();
@@ -193,11 +200,24 @@
 
   function startLoop() {
     if (reducedMotion.matches || !inView || document.hidden) return;
-    epoch = performance.now();
+    if (epoch === null) epoch = performance.now();
     if (!animationFrame) animationFrame = requestAnimationFrame(render);
   }
 
+  function loadCaptureGif(restart = false) {
+    const source = image.dataset.captureSource;
+    if (!source) return;
+    if (restart) image.removeAttribute("src");
+    image.src = source;
+  }
+
+  function stopLoop() {
+    if (animationFrame) cancelAnimationFrame(animationFrame);
+    animationFrame = 0;
+  }
+
   function onImageLoad() {
+    epoch = performance.now();
     resize();
     if (reducedMotion.matches) {
       drawStaticBurst();
@@ -207,7 +227,12 @@
   }
 
   image.addEventListener("load", onImageLoad);
-  if (image.complete && image.naturalWidth) onImageLoad();
+  if (reducedMotion.matches) {
+    if (image.complete && image.naturalWidth) onImageLoad();
+  } else {
+    // Load the capture only after the timing listener is attached, so its first frame anchors the overlay.
+    loadCaptureGif();
+  }
 
   if ("ResizeObserver" in window) new ResizeObserver(resize).observe(stage);
   else window.addEventListener("resize", resize, { passive: true });
@@ -215,31 +240,32 @@
   if ("IntersectionObserver" in window) {
     new IntersectionObserver(([entry]) => {
       inView = entry.isIntersecting;
-      if (!inView && animationFrame) {
-        cancelAnimationFrame(animationFrame);
-        animationFrame = 0;
-      } else if (inView && !reducedMotion.matches && image.complete) {
-        startLoop();
+      if (!inView) {
+        hadBeenOutOfView = true;
+        stopLoop();
+      } else if (!reducedMotion.matches && image.complete) {
+        if (hadBeenOutOfView) {
+          hadBeenOutOfView = false;
+          loadCaptureGif(true);
+        } else {
+          startLoop();
+        }
       }
     }).observe(card);
   }
 
   document.addEventListener("visibilitychange", () => {
-    if (document.hidden && animationFrame) {
-      cancelAnimationFrame(animationFrame);
-      animationFrame = 0;
-    } else if (!document.hidden && !reducedMotion.matches && inView && image.complete) {
-      startLoop();
+    if (document.hidden) {
+      stopLoop();
+    } else if (!reducedMotion.matches && inView && image.complete) {
+      loadCaptureGif(true);
     }
   });
 
   reducedMotion.addEventListener("change", () => {
-    if (animationFrame) {
-      cancelAnimationFrame(animationFrame);
-      animationFrame = 0;
-    }
-    epoch = null;
+    stopLoop();
     if (reducedMotion.matches) drawStaticBurst();
-    else if (image.complete) startLoop();
+    else loadCaptureGif(true);
   });
 })();
+

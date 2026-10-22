@@ -1,0 +1,648 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A close-up studio render and source path for every exported GLB and glTF model under art/.">
+<title>Every model close-up · Big Sim model collection</title>
+<style>
+:root{color-scheme:dark;--bg:#0d1316;--panel:#172023;--ink:#f0e8d5;--muted:#aeb6ad;--gold:#d0ae6c;--line:#3b4543}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(ellipse at 85% 5%,#202a2b 0,#0d1316 48rem);color:var(--ink);font:16px/1.5 Segoe UI,Arial,sans-serif}
+a{color:inherit}
+.shell{width:min(1480px,calc(100% - 44px));margin:auto}
+.topline{padding:20px 0 14px;color:var(--gold);font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;border-bottom:1px solid var(--line)}
+.category-nav{display:flex;gap:8px;flex-wrap:wrap;padding:13px 0 20px;border-bottom:1px solid var(--line)}
+.category-nav a{border:1px solid var(--line);border-radius:3px;padding:8px 12px;color:var(--muted);font-size:.83rem;text-decoration:none;white-space:nowrap}
+.category-nav a:hover,.category-nav a[aria-current=page]{border-color:var(--gold);color:var(--ink);background:#d0ae6c18}
+.kicker,.eyebrow{color:var(--gold);font-size:.72rem;letter-spacing:.15em;text-transform:uppercase}
+h1,h2,h3,p{margin-top:0}
+.page-head{padding:52px 0 28px;max-width:850px}
+h1{font:clamp(2.8rem,6vw,5.4rem)/1 Georgia,serif;letter-spacing:-.035em;margin:8px 0 14px}
+.page-head p{max-width:700px;color:#c6cbc2;font:1.12rem/1.6 Georgia,serif;margin-bottom:0}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin:24px 0 20px}
+.section-head h2{font:clamp(1.8rem,3.4vw,2.8rem) Georgia,serif;margin:4px 0}
+.section-head p{max-width:640px;color:var(--muted);margin:0}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.card,.battle-card,.motion-card{background:var(--panel);border:1px solid #2f3937;min-width:0}
+.image,.battle-image{display:block;aspect-ratio:1.4;background:#090e10;overflow:hidden}
+.image img,.battle-image img{display:block;width:100%;height:100%;object-fit:contain}
+.caption{padding:14px 15px 17px}
+.caption h3,.battle-card h3,.motion-card h3{font:1.25rem Georgia,serif;margin:5px 0 8px}
+.caption p,.battle-card p{color:#c6cbc2;font-size:.9rem;margin-bottom:12px}
+.credit{font-size:.75rem;color:var(--gold)}
+.battle-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.battle-image{aspect-ratio:1.72}.battle-image img{object-fit:cover}
+.battle-card>div{padding:15px}
+.motion-section{margin:4px 0 48px}
+.motion-group{margin:30px 0 38px}
+.motion-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.motion-card img{display:block;width:100%;aspect-ratio:1.35;object-fit:contain;background:#080b0d}
+.motion-card.infantry-volley img{aspect-ratio:.78}
+.motion-card.cannon-firing img{filter:brightness(1.16) contrast(1.06)}
+.motion-card>div:not(.cannon-stage){padding:12px}
+.motion-card h3{font-size:1.1rem;margin:4px 0 7px}
+.cannon-stage{position:relative;overflow:hidden;background:#080b0d}
+.cannon-stage picture{display:block}
+.cannon-stage canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;mix-blend-mode:screen}
+footer{padding:20px 0 34px;border-top:1px solid var(--line);color:#87918c;font-size:.78rem}
+footer a{color:var(--gold)}
+.source{display:block;margin-top:8px;color:var(--muted);font-size:.69rem;overflow-wrap:anywhere}
+@media(max-width:1100px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:760px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.motion-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.battle-grid{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:8px}}
+@media(max-width:480px){.shell{width:calc(100% - 24px)}.grid,.motion-grid{grid-template-columns:1fr}.page-head{padding-top:35px}.category-nav{overflow-x:auto;flex-wrap:nowrap}.topline{font-size:.65rem}}
+</style>
+</head>
+<body><div class="shell">
+  <div class="topline">Big Sim / Model atlas</div>
+  <nav class="category-nav" aria-label="Showcase categories"><a href="index.html">All models</a><a href="people-horses.html">People &amp; horses</a><a href="weapons-artillery.html">Weapons &amp; artillery</a><a href="world-battlefield.html">World &amp; battlefield</a><a href="field-props.html">Field props</a><a href="model-closeups.html" aria-current="page">Every model close-up</a><a href="animations.html">Animations</a></nav>
+  <header class="page-head"><div class="kicker">Browse the collection</div><h1>Every model close-up.</h1><p>A close-up studio render and source path for every exported GLB and glTF model under art/.</p></header>
+  <main><section>
+  <div class="section-head"><div><div class="kicker">Selected collection</div><h2>Every model close-up</h2></div><p>116 individual model files. Each card identifies its source and opens a full-size image.</p></div>
+  <div class="grid"><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-battlefield-close-infantry-british-redcoat-close.webp" aria-label="Open full size image: British Redcoat Close">
+    <img src="images/gallery/model-closeup-art-battlefield-close-infantry-british-redcoat-close.webp" alt="British Redcoat Close — Close-up studio render of the exported British Redcoat Close model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Infantry models</div><h3>British Redcoat Close</h3><p>Close-up studio render of the exported British Redcoat Close model.</p><span class="credit">Andy Woodhead · adapted under CC BY 4.0</span><code class="source">art/battlefield/close_infantry/BritishRedcoatClose.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-battlefield-imports-blucher-sabre-scene.webp" aria-label="Open full size image: Blücher Sabre Source">
+    <img src="images/gallery/model-closeup-art-battlefield-imports-blucher-sabre-scene.webp" alt="Blücher Sabre Source — Close-up studio render of the exported Blücher Sabre Source model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Imported models</div><h3>Blücher Sabre Source</h3><p>Close-up studio render of the exported Blücher Sabre Source model.</p><span class="credit">Timothy Hsu · adapted under CC BY 4.0</span><code class="source">art/battlefield/imports/blucher-sabre/scene.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-battlefield-imports-cannon-gribeauval-scene.webp" aria-label="Open full size image: Gribeauval Cannon Source">
+    <img src="images/gallery/model-closeup-art-battlefield-imports-cannon-gribeauval-scene.webp" alt="Gribeauval Cannon Source — Close-up studio render of the exported Gribeauval Cannon Source model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Imported models</div><h3>Gribeauval Cannon Source</h3><p>Close-up studio render of the exported Gribeauval Cannon Source model.</p><span class="credit">perceval-66 · adapted under CC BY 4.0</span><code class="source">art/battlefield/imports/cannon-gribeauval/scene.gltf</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-battlefield-imports-horse-scene.webp" aria-label="Open full size image: War Horse Source">
+    <img src="images/gallery/model-closeup-art-battlefield-imports-horse-scene.webp" alt="War Horse Source — Close-up studio render of the exported War Horse Source model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Imported models</div><h3>War Horse Source</h3><p>Close-up studio render of the exported War Horse Source model.</p><span class="credit">abhayexe · adapted under CC BY 4.0</span><code class="source">art/battlefield/imports/horse/scene.gltf</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-battlefield-imports-tents-scene.webp" aria-label="Open full size image: Battlefield Tents Source">
+    <img src="images/gallery/model-closeup-art-battlefield-imports-tents-scene.webp" alt="Battlefield Tents Source — Close-up studio render of the exported Battlefield Tents Source model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Imported models</div><h3>Battlefield Tents Source</h3><p>Close-up studio render of the exported Battlefield Tents Source model.</p><span class="credit">Nicholas-3D · adapted under CC BY 4.0</span><code class="source">art/battlefield/imports/tents/scene.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-battlefield-imports-village-furniture-scene.webp" aria-label="Open full size image: Village Furniture Source">
+    <img src="images/gallery/model-closeup-art-battlefield-imports-village-furniture-scene.webp" alt="Village Furniture Source — Close-up studio render of the exported Village Furniture Source model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Imported models</div><h3>Village Furniture Source</h3><p>Close-up studio render of the exported Village Furniture Source model.</p><span class="credit">Booba Booba · adapted under CC BY 4.0</span><code class="source">art/battlefield/imports/village-furniture/scene.gltf</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-battlefield-imports-wagon-scene.webp" aria-label="Open full size image: Battlefield Wagon Source">
+    <img src="images/gallery/model-closeup-art-battlefield-imports-wagon-scene.webp" alt="Battlefield Wagon Source — Close-up studio render of the exported Battlefield Wagon Source model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Imported models</div><h3>Battlefield Wagon Source</h3><p>Close-up studio render of the exported Battlefield Wagon Source model.</p><span class="credit">Fri13Day · adapted under CC BY 4.0</span><code class="source">art/battlefield/imports/wagon/scene.gltf</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-battlefield-imports-woodhead-artillery-crew-scene.webp" aria-label="Open full size image: Artillery Crew Source">
+    <img src="images/gallery/model-closeup-art-battlefield-imports-woodhead-artillery-crew-scene.webp" alt="Artillery Crew Source — Close-up studio render of the exported Artillery Crew Source model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Imported models</div><h3>Artillery Crew Source</h3><p>Close-up studio render of the exported Artillery Crew Source model.</p><span class="credit">Andy Woodhead · adapted under CC BY 4.0</span><code class="source">art/battlefield/imports/woodhead-artillery-crew/scene.gltf</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-battlefield-imports-woodhead-hussar-scene.webp" aria-label="Open full size image: Napoleonic Hussar Source">
+    <img src="images/gallery/model-closeup-art-battlefield-imports-woodhead-hussar-scene.webp" alt="Napoleonic Hussar Source — Close-up studio render of the exported Napoleonic Hussar Source model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Imported models</div><h3>Napoleonic Hussar Source</h3><p>Close-up studio render of the exported Napoleonic Hussar Source model.</p><span class="credit">Andy Woodhead · adapted under CC BY 4.0</span><code class="source">art/battlefield/imports/woodhead-hussar/scene.gltf</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-battlefield-imports-woodhead-infantry-scene.webp" aria-label="Open full size image: Napoleonic Infantry Source">
+    <img src="images/gallery/model-closeup-art-battlefield-imports-woodhead-infantry-scene.webp" alt="Napoleonic Infantry Source — Close-up studio render of the exported Napoleonic Infantry Source model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Imported models</div><h3>Napoleonic Infantry Source</h3><p>Close-up studio render of the exported Napoleonic Infantry Source model.</p><span class="credit">Andy Woodhead · adapted under CC BY 4.0</span><code class="source">art/battlefield/imports/woodhead-infantry/scene.gltf</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-city-buildings-interiors-apothecary-first.webp" aria-label="Open full size image: Apothecary First">
+    <img src="images/gallery/model-closeup-art-city-buildings-interiors-apothecary-first.webp" alt="Apothecary First — Close-up studio render of the exported Apothecary First model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Town interiors</div><h3>Apothecary First</h3><p>Close-up studio render of the exported Apothecary First model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/city_buildings/interiors/apothecary_first.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-city-buildings-interiors-apothecary-ground.webp" aria-label="Open full size image: Apothecary Ground">
+    <img src="images/gallery/model-closeup-art-city-buildings-interiors-apothecary-ground.webp" alt="Apothecary Ground — Close-up studio render of the exported Apothecary Ground model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Town interiors</div><h3>Apothecary Ground</h3><p>Close-up studio render of the exported Apothecary Ground model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/city_buildings/interiors/apothecary_ground.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-city-buildings-interiors-bakers-shop-first.webp" aria-label="Open full size image: Bakers Shop First">
+    <img src="images/gallery/model-closeup-art-city-buildings-interiors-bakers-shop-first.webp" alt="Bakers Shop First — Close-up studio render of the exported Bakers Shop First model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Town interiors</div><h3>Bakers Shop First</h3><p>Close-up studio render of the exported Bakers Shop First model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/city_buildings/interiors/bakers_shop_first.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-city-buildings-interiors-bakers-shop-ground.webp" aria-label="Open full size image: Bakers Shop Ground">
+    <img src="images/gallery/model-closeup-art-city-buildings-interiors-bakers-shop-ground.webp" alt="Bakers Shop Ground — Close-up studio render of the exported Bakers Shop Ground model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Town interiors</div><h3>Bakers Shop Ground</h3><p>Close-up studio render of the exported Bakers Shop Ground model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/city_buildings/interiors/bakers_shop_ground.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-city-buildings-interiors-chapel-first.webp" aria-label="Open full size image: Chapel First">
+    <img src="images/gallery/model-closeup-art-city-buildings-interiors-chapel-first.webp" alt="Chapel First — Close-up studio render of the exported Chapel First model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Town interiors</div><h3>Chapel First</h3><p>Close-up studio render of the exported Chapel First model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/city_buildings/interiors/chapel_first.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-city-buildings-interiors-chapel-ground.webp" aria-label="Open full size image: Chapel Ground">
+    <img src="images/gallery/model-closeup-art-city-buildings-interiors-chapel-ground.webp" alt="Chapel Ground — Close-up studio render of the exported Chapel Ground model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Town interiors</div><h3>Chapel Ground</h3><p>Close-up studio render of the exported Chapel Ground model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/city_buildings/interiors/chapel_ground.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-city-buildings-interiors-cloth-merchants-house-first.webp" aria-label="Open full size image: Cloth Merchants House First">
+    <img src="images/gallery/model-closeup-art-city-buildings-interiors-cloth-merchants-house-first.webp" alt="Cloth Merchants House First — Close-up studio render of the exported Cloth Merchants House First model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Town interiors</div><h3>Cloth Merchants House First</h3><p>Close-up studio render of the exported Cloth Merchants House First model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/city_buildings/interiors/cloth_merchants_house_first.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-city-buildings-interiors-cloth-merchants-house-ground.webp" aria-label="Open full size image: Cloth Merchants House Ground">
+    <img src="images/gallery/model-closeup-art-city-buildings-interiors-cloth-merchants-house-ground.webp" alt="Cloth Merchants House Ground — Close-up studio render of the exported Cloth Merchants House Ground model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Town interiors</div><h3>Cloth Merchants House Ground</h3><p>Close-up studio render of the exported Cloth Merchants House Ground model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/city_buildings/interiors/cloth_merchants_house_ground.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-city-buildings-interiors-cloth-merchants-house-second.webp" aria-label="Open full size image: Cloth Merchants House Second">
+    <img src="images/gallery/model-closeup-art-city-buildings-interiors-cloth-merchants-house-second.webp" alt="Cloth Merchants House Second — Close-up studio render of the exported Cloth Merchants House Second model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Town interiors</div><h3>Cloth Merchants House Second</h3><p>Close-up studio render of the exported Cloth Merchants House Second model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/city_buildings/interiors/cloth_merchants_house_second.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-city-buildings-interiors-cottage-first.webp" aria-label="Open full size image: Cottage First">
+    <img src="images/gallery/model-closeup-art-city-buildings-interiors-cottage-first.webp" alt="Cottage First — Close-up studio render of the exported Cottage First model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Town interiors</div><h3>Cottage First</h3><p>Close-up studio render of the exported Cottage First model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/city_buildings/interiors/cottage_first.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-city-buildings-interiors-cottage-ground.webp" aria-label="Open full size image: Cottage Ground">
+    <img src="images/gallery/model-closeup-art-city-buildings-interiors-cottage-ground.webp" alt="Cottage Ground — Close-up studio render of the exported Cottage Ground model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Town interiors</div><h3>Cottage Ground</h3><p>Close-up studio render of the exported Cottage Ground model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/city_buildings/interiors/cottage_ground.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-city-buildings-interiors-granary-first.webp" aria-label="Open full size image: Granary First">
+    <img src="images/gallery/model-closeup-art-city-buildings-interiors-granary-first.webp" alt="Granary First — Close-up studio render of the exported Granary First model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Town interiors</div><h3>Granary First</h3><p>Close-up studio render of the exported Granary First model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/city_buildings/interiors/granary_first.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-city-buildings-interiors-granary-ground.webp" aria-label="Open full size image: Granary Ground">
+    <img src="images/gallery/model-closeup-art-city-buildings-interiors-granary-ground.webp" alt="Granary Ground — Close-up studio render of the exported Granary Ground model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Town interiors</div><h3>Granary Ground</h3><p>Close-up studio render of the exported Granary Ground model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/city_buildings/interiors/granary_ground.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-city-buildings-interiors-inn-first.webp" aria-label="Open full size image: Inn First">
+    <img src="images/gallery/model-closeup-art-city-buildings-interiors-inn-first.webp" alt="Inn First — Close-up studio render of the exported Inn First model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Town interiors</div><h3>Inn First</h3><p>Close-up studio render of the exported Inn First model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/city_buildings/interiors/inn_first.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-city-buildings-interiors-inn-ground.webp" aria-label="Open full size image: Inn Ground">
+    <img src="images/gallery/model-closeup-art-city-buildings-interiors-inn-ground.webp" alt="Inn Ground — Close-up studio render of the exported Inn Ground model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Town interiors</div><h3>Inn Ground</h3><p>Close-up studio render of the exported Inn Ground model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/city_buildings/interiors/inn_ground.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-city-buildings-interiors-merchant-house-first.webp" aria-label="Open full size image: Merchant House First">
+    <img src="images/gallery/model-closeup-art-city-buildings-interiors-merchant-house-first.webp" alt="Merchant House First — Close-up studio render of the exported Merchant House First model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Town interiors</div><h3>Merchant House First</h3><p>Close-up studio render of the exported Merchant House First model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/city_buildings/interiors/merchant_house_first.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-city-buildings-interiors-merchant-house-ground.webp" aria-label="Open full size image: Merchant House Ground">
+    <img src="images/gallery/model-closeup-art-city-buildings-interiors-merchant-house-ground.webp" alt="Merchant House Ground — Close-up studio render of the exported Merchant House Ground model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Town interiors</div><h3>Merchant House Ground</h3><p>Close-up studio render of the exported Merchant House Ground model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/city_buildings/interiors/merchant_house_ground.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-city-buildings-interiors-row-house-first.webp" aria-label="Open full size image: Row House First">
+    <img src="images/gallery/model-closeup-art-city-buildings-interiors-row-house-first.webp" alt="Row House First — Close-up studio render of the exported Row House First model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Town interiors</div><h3>Row House First</h3><p>Close-up studio render of the exported Row House First model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/city_buildings/interiors/row_house_first.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-city-buildings-interiors-row-house-ground.webp" aria-label="Open full size image: Row House Ground">
+    <img src="images/gallery/model-closeup-art-city-buildings-interiors-row-house-ground.webp" alt="Row House Ground — Close-up studio render of the exported Row House Ground model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Town interiors</div><h3>Row House Ground</h3><p>Close-up studio render of the exported Row House Ground model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/city_buildings/interiors/row_house_ground.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-city-buildings-interiors-row-house-west-variant-first.webp" aria-label="Open full size image: Row House West Variant First">
+    <img src="images/gallery/model-closeup-art-city-buildings-interiors-row-house-west-variant-first.webp" alt="Row House West Variant First — Close-up studio render of the exported Row House West Variant First model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Town interiors</div><h3>Row House West Variant First</h3><p>Close-up studio render of the exported Row House West Variant First model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/city_buildings/interiors/row_house_west_variant_first.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-city-buildings-interiors-row-house-west-variant-ground.webp" aria-label="Open full size image: Row House West Variant Ground">
+    <img src="images/gallery/model-closeup-art-city-buildings-interiors-row-house-west-variant-ground.webp" alt="Row House West Variant Ground — Close-up studio render of the exported Row House West Variant Ground model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Town interiors</div><h3>Row House West Variant Ground</h3><p>Close-up studio render of the exported Row House West Variant Ground model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/city_buildings/interiors/row_house_west_variant_ground.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-city-buildings-interiors-smithy-first.webp" aria-label="Open full size image: Smithy First">
+    <img src="images/gallery/model-closeup-art-city-buildings-interiors-smithy-first.webp" alt="Smithy First — Close-up studio render of the exported Smithy First model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Town interiors</div><h3>Smithy First</h3><p>Close-up studio render of the exported Smithy First model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/city_buildings/interiors/smithy_first.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-city-buildings-interiors-smithy-ground.webp" aria-label="Open full size image: Smithy Ground">
+    <img src="images/gallery/model-closeup-art-city-buildings-interiors-smithy-ground.webp" alt="Smithy Ground — Close-up studio render of the exported Smithy Ground model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Town interiors</div><h3>Smithy Ground</h3><p>Close-up studio render of the exported Smithy Ground model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/city_buildings/interiors/smithy_ground.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-city-buildings-interiors-stable-first.webp" aria-label="Open full size image: Stable First">
+    <img src="images/gallery/model-closeup-art-city-buildings-interiors-stable-first.webp" alt="Stable First — Close-up studio render of the exported Stable First model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Town interiors</div><h3>Stable First</h3><p>Close-up studio render of the exported Stable First model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/city_buildings/interiors/stable_first.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-city-buildings-interiors-stable-ground.webp" aria-label="Open full size image: Stable Ground">
+    <img src="images/gallery/model-closeup-art-city-buildings-interiors-stable-ground.webp" alt="Stable Ground — Close-up studio render of the exported Stable Ground model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Town interiors</div><h3>Stable Ground</h3><p>Close-up studio render of the exported Stable Ground model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/city_buildings/interiors/stable_ground.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-city-buildings-interiors-town-hall-first.webp" aria-label="Open full size image: Town Hall First">
+    <img src="images/gallery/model-closeup-art-city-buildings-interiors-town-hall-first.webp" alt="Town Hall First — Close-up studio render of the exported Town Hall First model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Town interiors</div><h3>Town Hall First</h3><p>Close-up studio render of the exported Town Hall First model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/city_buildings/interiors/town_hall_first.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-city-buildings-interiors-town-hall-ground.webp" aria-label="Open full size image: Town Hall Ground">
+    <img src="images/gallery/model-closeup-art-city-buildings-interiors-town-hall-ground.webp" alt="Town Hall Ground — Close-up studio render of the exported Town Hall Ground model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Town interiors</div><h3>Town Hall Ground</h3><p>Close-up studio render of the exported Town Hall Ground model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/city_buildings/interiors/town_hall_ground.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-city-buildings-interiors-town-hall-second.webp" aria-label="Open full size image: Town Hall Second">
+    <img src="images/gallery/model-closeup-art-city-buildings-interiors-town-hall-second.webp" alt="Town Hall Second — Close-up studio render of the exported Town Hall Second model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Town interiors</div><h3>Town Hall Second</h3><p>Close-up studio render of the exported Town Hall Second model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/city_buildings/interiors/town_hall_second.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-city-buildings-interiors-warehouse-first.webp" aria-label="Open full size image: Warehouse First">
+    <img src="images/gallery/model-closeup-art-city-buildings-interiors-warehouse-first.webp" alt="Warehouse First — Close-up studio render of the exported Warehouse First model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Town interiors</div><h3>Warehouse First</h3><p>Close-up studio render of the exported Warehouse First model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/city_buildings/interiors/warehouse_first.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-city-buildings-interiors-warehouse-ground.webp" aria-label="Open full size image: Warehouse Ground">
+    <img src="images/gallery/model-closeup-art-city-buildings-interiors-warehouse-ground.webp" alt="Warehouse Ground — Close-up studio render of the exported Warehouse Ground model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Town interiors</div><h3>Warehouse Ground</h3><p>Close-up studio render of the exported Warehouse Ground model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/city_buildings/interiors/warehouse_ground.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-city-buildings-models-apothecary.webp" aria-label="Open full size image: Apothecary">
+    <img src="images/gallery/model-closeup-art-city-buildings-models-apothecary.webp" alt="Apothecary — Close-up studio render of the exported Apothecary model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Town exteriors</div><h3>Apothecary</h3><p>Close-up studio render of the exported Apothecary model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/city_buildings/models/apothecary.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-city-buildings-models-bakers-shop.webp" aria-label="Open full size image: Bakers Shop">
+    <img src="images/gallery/model-closeup-art-city-buildings-models-bakers-shop.webp" alt="Bakers Shop — Close-up studio render of the exported Bakers Shop model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Town exteriors</div><h3>Bakers Shop</h3><p>Close-up studio render of the exported Bakers Shop model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/city_buildings/models/bakers_shop.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-city-buildings-models-chapel.webp" aria-label="Open full size image: Chapel">
+    <img src="images/gallery/model-closeup-art-city-buildings-models-chapel.webp" alt="Chapel — Close-up studio render of the exported Chapel model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Town exteriors</div><h3>Chapel</h3><p>Close-up studio render of the exported Chapel model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/city_buildings/models/chapel.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-city-buildings-models-cloth-merchants-house.webp" aria-label="Open full size image: Cloth Merchants House">
+    <img src="images/gallery/model-closeup-art-city-buildings-models-cloth-merchants-house.webp" alt="Cloth Merchants House — Close-up studio render of the exported Cloth Merchants House model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Town exteriors</div><h3>Cloth Merchants House</h3><p>Close-up studio render of the exported Cloth Merchants House model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/city_buildings/models/cloth_merchants_house.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-city-buildings-models-cottage.webp" aria-label="Open full size image: Cottage">
+    <img src="images/gallery/model-closeup-art-city-buildings-models-cottage.webp" alt="Cottage — Close-up studio render of the exported Cottage model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Town exteriors</div><h3>Cottage</h3><p>Close-up studio render of the exported Cottage model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/city_buildings/models/cottage.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-city-buildings-models-granary.webp" aria-label="Open full size image: Granary">
+    <img src="images/gallery/model-closeup-art-city-buildings-models-granary.webp" alt="Granary — Close-up studio render of the exported Granary model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Town exteriors</div><h3>Granary</h3><p>Close-up studio render of the exported Granary model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/city_buildings/models/granary.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-city-buildings-models-hercules-fountain.webp" aria-label="Open full size image: Hercules Fountain">
+    <img src="images/gallery/model-closeup-art-city-buildings-models-hercules-fountain.webp" alt="Hercules Fountain — Close-up studio render of the exported Hercules Fountain model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Town exteriors</div><h3>Hercules Fountain</h3><p>Close-up studio render of the exported Hercules Fountain model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/city_buildings/models/hercules_fountain.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-city-buildings-models-inn.webp" aria-label="Open full size image: Inn">
+    <img src="images/gallery/model-closeup-art-city-buildings-models-inn.webp" alt="Inn — Close-up studio render of the exported Inn model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Town exteriors</div><h3>Inn</h3><p>Close-up studio render of the exported Inn model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/city_buildings/models/inn.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-city-buildings-models-merchant-house.webp" aria-label="Open full size image: Merchant House">
+    <img src="images/gallery/model-closeup-art-city-buildings-models-merchant-house.webp" alt="Merchant House — Close-up studio render of the exported Merchant House model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Town exteriors</div><h3>Merchant House</h3><p>Close-up studio render of the exported Merchant House model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/city_buildings/models/merchant_house.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-city-buildings-models-oil-street-lantern.webp" aria-label="Open full size image: Oil Street Lantern">
+    <img src="images/gallery/model-closeup-art-city-buildings-models-oil-street-lantern.webp" alt="Oil Street Lantern — Close-up studio render of the exported Oil Street Lantern model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Town exteriors</div><h3>Oil Street Lantern</h3><p>Close-up studio render of the exported Oil Street Lantern model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/city_buildings/models/oil_street_lantern.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-city-buildings-models-row-house.webp" aria-label="Open full size image: Row House">
+    <img src="images/gallery/model-closeup-art-city-buildings-models-row-house.webp" alt="Row House — Close-up studio render of the exported Row House model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Town exteriors</div><h3>Row House</h3><p>Close-up studio render of the exported Row House model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/city_buildings/models/row_house.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-city-buildings-models-row-house-west-variant.webp" aria-label="Open full size image: Row House West Variant">
+    <img src="images/gallery/model-closeup-art-city-buildings-models-row-house-west-variant.webp" alt="Row House West Variant — Close-up studio render of the exported Row House West Variant model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Town exteriors</div><h3>Row House West Variant</h3><p>Close-up studio render of the exported Row House West Variant model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/city_buildings/models/row_house_west_variant.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-city-buildings-models-smithy.webp" aria-label="Open full size image: Smithy">
+    <img src="images/gallery/model-closeup-art-city-buildings-models-smithy.webp" alt="Smithy — Close-up studio render of the exported Smithy model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Town exteriors</div><h3>Smithy</h3><p>Close-up studio render of the exported Smithy model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/city_buildings/models/smithy.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-city-buildings-models-stable.webp" aria-label="Open full size image: Stable">
+    <img src="images/gallery/model-closeup-art-city-buildings-models-stable.webp" alt="Stable — Close-up studio render of the exported Stable model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Town exteriors</div><h3>Stable</h3><p>Close-up studio render of the exported Stable model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/city_buildings/models/stable.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-city-buildings-models-town-hall.webp" aria-label="Open full size image: Town Hall">
+    <img src="images/gallery/model-closeup-art-city-buildings-models-town-hall.webp" alt="Town Hall — Close-up studio render of the exported Town Hall model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Town exteriors</div><h3>Town Hall</h3><p>Close-up studio render of the exported Town Hall model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/city_buildings/models/town_hall.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-city-buildings-models-warehouse.webp" aria-label="Open full size image: Warehouse">
+    <img src="images/gallery/model-closeup-art-city-buildings-models-warehouse.webp" alt="Warehouse — Close-up studio render of the exported Warehouse model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Town exteriors</div><h3>Warehouse</h3><p>Close-up studio render of the exported Warehouse model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/city_buildings/models/warehouse.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-ammunition-crate.webp" aria-label="Open full size image: Ammunition Crate">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-ammunition-crate.webp" alt="Ammunition Crate — Close-up studio render of the exported Ammunition Crate model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Ammunition Crate</h3><p>Close-up studio render of the exported Ammunition Crate model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/AmmunitionCrate.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-barrel.webp" aria-label="Open full size image: Barrel">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-barrel.webp" alt="Barrel — Close-up studio render of the exported Barrel model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Barrel</h3><p>Close-up studio render of the exported Barrel model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/Barrel.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-bedroll-bundle.webp" aria-label="Open full size image: Bedroll Bundle">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-bedroll-bundle.webp" alt="Bedroll Bundle — Close-up studio render of the exported Bedroll Bundle model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Bedroll Bundle</h3><p>Close-up studio render of the exported Bedroll Bundle model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/BedrollBundle.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-bench.webp" aria-label="Open full size image: Bench">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-bench.webp" alt="Bench — Close-up studio render of the exported Bench model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Bench</h3><p>Close-up studio render of the exported Bench model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/Bench.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-broken-wheel.webp" aria-label="Open full size image: Broken Wheel">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-broken-wheel.webp" alt="Broken Wheel — Close-up studio render of the exported Broken Wheel model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Broken Wheel</h3><p>Close-up studio render of the exported Broken Wheel model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/BrokenWheel.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-camp-footlocker.webp" aria-label="Open full size image: Camp Footlocker">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-camp-footlocker.webp" alt="Camp Footlocker — Close-up studio render of the exported Camp Footlocker model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Camp Footlocker</h3><p>Close-up studio render of the exported Camp Footlocker model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/CampFootlocker.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-camp-stretcher.webp" aria-label="Open full size image: Camp Stretcher">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-camp-stretcher.webp" alt="Camp Stretcher — Close-up studio render of the exported Camp Stretcher model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Camp Stretcher</h3><p>Close-up studio render of the exported Camp Stretcher model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/CampStretcher.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-camp-tent.webp" aria-label="Open full size image: Camp Tent">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-camp-tent.webp" alt="Camp Tent — Close-up studio render of the exported Camp Tent model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Camp Tent</h3><p>Close-up studio render of the exported Camp Tent model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/CampTent.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-camp-tent-wedge.webp" aria-label="Open full size image: Camp Tent Wedge">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-camp-tent-wedge.webp" alt="Camp Tent Wedge — Close-up studio render of the exported Camp Tent Wedge model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Camp Tent Wedge</h3><p>Close-up studio render of the exported Camp Tent Wedge model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/CampTentWedge.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-camp-tent-wedge-red.webp" aria-label="Open full size image: Camp Tent Wedge Red">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-camp-tent-wedge-red.webp" alt="Camp Tent Wedge Red — Close-up studio render of the exported Camp Tent Wedge Red model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Camp Tent Wedge Red</h3><p>Close-up studio render of the exported Camp Tent Wedge Red model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/CampTentWedgeRed.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-cannonball-stack.webp" aria-label="Open full size image: Cannonball Stack">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-cannonball-stack.webp" alt="Cannonball Stack — Close-up studio render of the exported Cannonball Stack model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Cannonball Stack</h3><p>Close-up studio render of the exported Cannonball Stack model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/CannonballStack.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-chair.webp" aria-label="Open full size image: Chair">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-chair.webp" alt="Chair — Close-up studio render of the exported Chair model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Chair</h3><p>Close-up studio render of the exported Chair model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/Chair.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-clothes-chest.webp" aria-label="Open full size image: Clothes Chest">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-clothes-chest.webp" alt="Clothes Chest — Close-up studio render of the exported Clothes Chest model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Clothes Chest</h3><p>Close-up studio render of the exported Clothes Chest model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/ClothesChest.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-cooking-tripod.webp" aria-label="Open full size image: Cooking Tripod">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-cooking-tripod.webp" alt="Cooking Tripod — Close-up studio render of the exported Cooking Tripod model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Cooking Tripod</h3><p>Close-up studio render of the exported Cooking Tripod model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/CookingTripod.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-cookpot.webp" aria-label="Open full size image: Cookpot">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-cookpot.webp" alt="Cookpot — Close-up studio render of the exported Cookpot model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Cookpot</h3><p>Close-up studio render of the exported Cookpot model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/Cookpot.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-covered-wagon.webp" aria-label="Open full size image: Covered Wagon">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-covered-wagon.webp" alt="Covered Wagon — Close-up studio render of the exported Covered Wagon model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Covered Wagon</h3><p>Close-up studio render of the exported Covered Wagon model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/CoveredWagon.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-fascine-bundle.webp" aria-label="Open full size image: Fascine Bundle">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-fascine-bundle.webp" alt="Fascine Bundle — Close-up studio render of the exported Fascine Bundle model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Fascine Bundle</h3><p>Close-up studio render of the exported Fascine Bundle model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/FascineBundle.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-field-desk.webp" aria-label="Open full size image: Field Desk">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-field-desk.webp" alt="Field Desk — Close-up studio render of the exported Field Desk model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Field Desk</h3><p>Close-up studio render of the exported Field Desk model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/FieldDesk.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-field-kitchen.webp" aria-label="Open full size image: Field Kitchen">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-field-kitchen.webp" alt="Field Kitchen — Close-up studio render of the exported Field Kitchen model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Field Kitchen</h3><p>Close-up studio render of the exported Field Kitchen model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/FieldKitchen.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-field-lantern.webp" aria-label="Open full size image: Field Lantern">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-field-lantern.webp" alt="Field Lantern — Close-up studio render of the exported Field Lantern model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Field Lantern</h3><p>Close-up studio render of the exported Field Lantern model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/FieldLantern.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-firewood-stack.webp" aria-label="Open full size image: Firewood Stack">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-firewood-stack.webp" alt="Firewood Stack — Close-up studio render of the exported Firewood Stack model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Firewood Stack</h3><p>Close-up studio render of the exported Firewood Stack model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/FirewoodStack.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-grain-basket.webp" aria-label="Open full size image: Grain Basket">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-grain-basket.webp" alt="Grain Basket — Close-up studio render of the exported Grain Basket model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Grain Basket</h3><p>Close-up studio render of the exported Grain Basket model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/GrainBasket.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-grain-sheaf-stack.webp" aria-label="Open full size image: Grain Sheaf Stack">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-grain-sheaf-stack.webp" alt="Grain Sheaf Stack — Close-up studio render of the exported Grain Sheaf Stack model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Grain Sheaf Stack</h3><p>Close-up studio render of the exported Grain Sheaf Stack model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/GrainSheafStack.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-grinding-stone.webp" aria-label="Open full size image: Grinding Stone">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-grinding-stone.webp" alt="Grinding Stone — Close-up studio render of the exported Grinding Stone model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Grinding Stone</h3><p>Close-up studio render of the exported Grinding Stone model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/GrindingStone.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-gun-limber.webp" aria-label="Open full size image: Gun Limber">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-gun-limber.webp" alt="Gun Limber — Close-up studio render of the exported Gun Limber model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Gun Limber</h3><p>Close-up studio render of the exported Gun Limber model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/GunLimber.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-handcart.webp" aria-label="Open full size image: Handcart">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-handcart.webp" alt="Handcart — Close-up studio render of the exported Handcart model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Handcart</h3><p>Close-up studio render of the exported Handcart model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/Handcart.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-hay-bale.webp" aria-label="Open full size image: Hay Bale">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-hay-bale.webp" alt="Hay Bale — Close-up studio render of the exported Hay Bale model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Hay Bale</h3><p>Close-up studio render of the exported Hay Bale model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/HayBale.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-haystack.webp" aria-label="Open full size image: Haystack">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-haystack.webp" alt="Haystack — Close-up studio render of the exported Haystack model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Haystack</h3><p>Close-up studio render of the exported Haystack model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/Haystack.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-laundry-basket.webp" aria-label="Open full size image: Laundry Basket">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-laundry-basket.webp" alt="Laundry Basket — Close-up studio render of the exported Laundry Basket model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Laundry Basket</h3><p>Close-up studio render of the exported Laundry Basket model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/LaundryBasket.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-laundry-rack.webp" aria-label="Open full size image: Laundry Rack">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-laundry-rack.webp" alt="Laundry Rack — Close-up studio render of the exported Laundry Rack model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Laundry Rack</h3><p>Close-up studio render of the exported Laundry Rack model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/LaundryRack.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-market-scale.webp" aria-label="Open full size image: Market Scale">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-market-scale.webp" alt="Market Scale — Close-up studio render of the exported Market Scale model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Market Scale</h3><p>Close-up studio render of the exported Market Scale model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/MarketScale.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-market-stall.webp" aria-label="Open full size image: Market Stall">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-market-stall.webp" alt="Market Stall — Close-up studio render of the exported Market Stall model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Market Stall</h3><p>Close-up studio render of the exported Market Stall model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/MarketStall.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-medical-chest.webp" aria-label="Open full size image: Medical Chest">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-medical-chest.webp" alt="Medical Chest — Close-up studio render of the exported Medical Chest model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Medical Chest</h3><p>Close-up studio render of the exported Medical Chest model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/MedicalChest.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-plank-stack.webp" aria-label="Open full size image: Plank Stack">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-plank-stack.webp" alt="Plank Stack — Close-up studio render of the exported Plank Stack model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Plank Stack</h3><p>Close-up studio render of the exported Plank Stack model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/PlankStack.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-pottery-jar.webp" aria-label="Open full size image: Pottery Jar">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-pottery-jar.webp" alt="Pottery Jar — Close-up studio render of the exported Pottery Jar model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Pottery Jar</h3><p>Close-up studio render of the exported Pottery Jar model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/PotteryJar.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-powder-keg.webp" aria-label="Open full size image: Powder Keg">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-powder-keg.webp" alt="Powder Keg — Close-up studio render of the exported Powder Keg model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Powder Keg</h3><p>Close-up studio render of the exported Powder Keg model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/PowderKeg.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-rope-coil.webp" aria-label="Open full size image: Rope Coil">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-rope-coil.webp" alt="Rope Coil — Close-up studio render of the exported Rope Coil model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Rope Coil</h3><p>Close-up studio render of the exported Rope Coil model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/RopeCoil.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-sack-stack.webp" aria-label="Open full size image: Sack Stack">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-sack-stack.webp" alt="Sack Stack — Close-up studio render of the exported Sack Stack model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Sack Stack</h3><p>Close-up studio render of the exported Sack Stack model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/SackStack.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-stone-block-stack.webp" aria-label="Open full size image: Stone Block Stack">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-stone-block-stack.webp" alt="Stone Block Stack — Close-up studio render of the exported Stone Block Stack model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Stone Block Stack</h3><p>Close-up studio render of the exported Stone Block Stack model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/StoneBlockStack.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-supply-crate.webp" aria-label="Open full size image: Supply Crate">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-supply-crate.webp" alt="Supply Crate — Close-up studio render of the exported Supply Crate model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Supply Crate</h3><p>Close-up studio render of the exported Supply Crate model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/SupplyCrate.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-supply-wagon.webp" aria-label="Open full size image: Supply Wagon">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-supply-wagon.webp" alt="Supply Wagon — Close-up studio render of the exported Supply Wagon model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Supply Wagon</h3><p>Close-up studio render of the exported Supply Wagon model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/SupplyWagon.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-table.webp" aria-label="Open full size image: Table">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-table.webp" alt="Table — Close-up studio render of the exported Table model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Table</h3><p>Close-up studio render of the exported Table model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/Table.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-timber-stack.webp" aria-label="Open full size image: Timber Stack">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-timber-stack.webp" alt="Timber Stack — Close-up studio render of the exported Timber Stack model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Timber Stack</h3><p>Close-up studio render of the exported Timber Stack model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/TimberStack.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-tool-chest.webp" aria-label="Open full size image: Tool Chest">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-tool-chest.webp" alt="Tool Chest — Close-up studio render of the exported Tool Chest model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Tool Chest</h3><p>Close-up studio render of the exported Tool Chest model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/ToolChest.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-tool-rack.webp" aria-label="Open full size image: Tool Rack">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-tool-rack.webp" alt="Tool Rack — Close-up studio render of the exported Tool Rack model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Tool Rack</h3><p>Close-up studio render of the exported Tool Rack model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/ToolRack.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-wash-tub.webp" aria-label="Open full size image: Wash Tub">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-wash-tub.webp" alt="Wash Tub — Close-up studio render of the exported Wash Tub model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Wash Tub</h3><p>Close-up studio render of the exported Wash Tub model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/WashTub.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-water-bucket.webp" aria-label="Open full size image: Water Bucket">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-water-bucket.webp" alt="Water Bucket — Close-up studio render of the exported Water Bucket model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Water Bucket</h3><p>Close-up studio render of the exported Water Bucket model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/WaterBucket.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-water-cask.webp" aria-label="Open full size image: Water Cask">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-water-cask.webp" alt="Water Cask — Close-up studio render of the exported Water Cask model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Water Cask</h3><p>Close-up studio render of the exported Water Cask model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/WaterCask.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-water-trough.webp" aria-label="Open full size image: Water Trough">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-water-trough.webp" alt="Water Trough — Close-up studio render of the exported Water Trough model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Water Trough</h3><p>Close-up studio render of the exported Water Trough model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/WaterTrough.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-wheelbarrow.webp" aria-label="Open full size image: Wheelbarrow">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-wheelbarrow.webp" alt="Wheelbarrow — Close-up studio render of the exported Wheelbarrow model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Wheelbarrow</h3><p>Close-up studio render of the exported Wheelbarrow model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/Wheelbarrow.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-wicker-basket.webp" aria-label="Open full size image: Wicker Basket">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-wicker-basket.webp" alt="Wicker Basket — Close-up studio render of the exported Wicker Basket model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Wicker Basket</h3><p>Close-up studio render of the exported Wicker Basket model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/WickerBasket.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-wooden-ladder.webp" aria-label="Open full size image: Wooden Ladder">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-wooden-ladder.webp" alt="Wooden Ladder — Close-up studio render of the exported Wooden Ladder model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Wooden Ladder</h3><p>Close-up studio render of the exported Wooden Ladder model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/WoodenLadder.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-wrecked-caisson.webp" aria-label="Open full size image: Wrecked Caisson">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-wrecked-caisson.webp" alt="Wrecked Caisson — Close-up studio render of the exported Wrecked Caisson model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Wrecked Caisson</h3><p>Close-up studio render of the exported Wrecked Caisson model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/WreckedCaisson.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-wrecked-cart.webp" aria-label="Open full size image: Wrecked Cart">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-wrecked-cart.webp" alt="Wrecked Cart — Close-up studio render of the exported Wrecked Cart model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Wrecked Cart</h3><p>Close-up studio render of the exported Wrecked Cart model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/WreckedCart.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-wrecked-gun.webp" aria-label="Open full size image: Wrecked Gun">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-wrecked-gun.webp" alt="Wrecked Gun — Close-up studio render of the exported Wrecked Gun model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Wrecked Gun</h3><p>Close-up studio render of the exported Wrecked Gun model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/WreckedGun.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-wrecked-limber.webp" aria-label="Open full size image: Wrecked Limber">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-wrecked-limber.webp" alt="Wrecked Limber — Close-up studio render of the exported Wrecked Limber model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Wrecked Limber</h3><p>Close-up studio render of the exported Wrecked Limber model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/WreckedLimber.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-placeable-props-models-wrecked-wagon.webp" aria-label="Open full size image: Wrecked Wagon">
+    <img src="images/gallery/model-closeup-art-placeable-props-models-wrecked-wagon.webp" alt="Wrecked Wagon — Close-up studio render of the exported Wrecked Wagon model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Placeable props</div><h3>Wrecked Wagon</h3><p>Close-up studio render of the exported Wrecked Wagon model.</p><span class="credit">Big Sim model · see CREDITS.md for source notes</span><code class="source">art/placeable_props/models/WreckedWagon.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-winged-hussar-winged-hussar-armor.webp" aria-label="Open full size image: Winged Hussar Armor">
+    <img src="images/gallery/model-closeup-art-winged-hussar-winged-hussar-armor.webp" alt="Winged Hussar Armor — Close-up studio render of the exported Winged Hussar Armor model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Cavalry models</div><h3>Winged Hussar Armor</h3><p>Close-up studio render of the exported Winged Hussar Armor model.</p><span class="credit">Big Sim armor and tack · see CREDITS.md for adapted sources</span><code class="source">art/winged_hussar/WingedHussarArmor.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-winged-hussar-winged-hussar-horse-armor.webp" aria-label="Open full size image: Winged Hussar Horse Armor">
+    <img src="images/gallery/model-closeup-art-winged-hussar-winged-hussar-horse-armor.webp" alt="Winged Hussar Horse Armor — Close-up studio render of the exported Winged Hussar Horse Armor model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Cavalry models</div><h3>Winged Hussar Horse Armor</h3><p>Close-up studio render of the exported Winged Hussar Horse Armor model.</p><span class="credit">Big Sim armor and tack · see CREDITS.md for adapted sources</span><code class="source">art/winged_hussar/WingedHussarHorseArmor.glb</code></div>
+</article><article class="card">
+  <a class="image" href="images/gallery/model-closeup-art-winged-hussar-winged-hussar-rider.webp" aria-label="Open full size image: Winged Hussar Rider">
+    <img src="images/gallery/model-closeup-art-winged-hussar-winged-hussar-rider.webp" alt="Winged Hussar Rider — Close-up studio render of the exported Winged Hussar Rider model." loading="lazy">
+  </a>
+  <div class="caption"><div class="eyebrow">Cavalry models</div><h3>Winged Hussar Rider</h3><p>Close-up studio render of the exported Winged Hussar Rider model.</p><span class="credit">Andy Woodhead rider details and abhayexe horse · adapted under CC BY 4.0</span><code class="source">art/winged_hussar/WingedHussarRider.glb</code></div>
+</article></div>
+</section></main>
+  <footer>Big Sim · Model showcase · <a href="CREDITS.md">Credits and source notes</a></footer>
+</div>
+<script src="cannon-shot-effect.js"></script>
+</body>
+</html>

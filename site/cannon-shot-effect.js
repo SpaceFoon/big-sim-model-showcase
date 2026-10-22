@@ -10,10 +10,9 @@
   if (!stage || !image || !canvas || !context) return;
 
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-  const muzzleProbeCanvas = document.createElement("canvas");
-  const muzzleProbeContext = muzzleProbeCanvas.getContext("2d", { willReadFrequently: true });
-  let sourceFlashWasVisible = false;
-  let burstStart = null;
+  const cycleMs = 4800;
+  const dischargeMs = 1000;
+  let epoch = null;
   let width = 0;
   let height = 0;
   let pixelRatio = 1;
@@ -42,34 +41,6 @@
       y: (height - frameHeight) / 2 + sourceY * scale,
       scale,
     };
-  }
-
-  // Use the flash in the capture as the shared timing cue for the web burst.
-  function sourceMuzzleFlashVisible() {
-    if (!image.naturalWidth || !image.naturalHeight || !muzzleProbeContext) return false;
-
-    const sourceX = Math.round(image.naturalWidth * 0.19);
-    const sourceY = Math.round(image.naturalHeight * 0.46);
-    const probeWidth = Math.max(1, Math.round(image.naturalWidth * 0.115));
-    const probeHeight = Math.max(1, Math.round(image.naturalHeight * 0.076));
-    if (muzzleProbeCanvas.width !== probeWidth || muzzleProbeCanvas.height !== probeHeight) {
-      muzzleProbeCanvas.width = probeWidth;
-      muzzleProbeCanvas.height = probeHeight;
-    }
-
-    muzzleProbeContext.drawImage(image, sourceX, sourceY, probeWidth, probeHeight, 0, 0, probeWidth, probeHeight);
-    const pixels = muzzleProbeContext.getImageData(0, 0, probeWidth, probeHeight).data;
-    let orangePixels = 0;
-    for (let index = 0; index < pixels.length; index += 4) {
-      const red = pixels[index];
-      const green = pixels[index + 1];
-      const blue = pixels[index + 2];
-      if (red > 180 && green > 65 && green < 195 && blue < 75 && red - green > 35 && green - blue > 30) {
-        orangePixels += 1;
-        if (orangePixels >= 24) return true;
-      }
-    }
-    return false;
   }
 
   function hash(index, channel) {
@@ -215,17 +186,12 @@
     if (!image.naturalWidth || !width || !height) return;
     context.clearRect(0, 0, width, height);
 
-    const sourceFlashIsVisible = sourceMuzzleFlashVisible();
-    if (sourceFlashIsVisible && !sourceFlashWasVisible) burstStart = now;
-    sourceFlashWasVisible = sourceFlashIsVisible;
-    if (burstStart !== null) {
-      const age = (now - burstStart) / 1000;
-      if (age >= 0 && age < 0.58) {
-        const muzzle = frameGeometry();
-        drawBurst(age, muzzle.x, muzzle.y, muzzle.scale);
-      } else if (age >= 0.58) {
-        burstStart = null;
-      }
+    if (epoch === null) epoch = now;
+    const phase = ((now - epoch) % cycleMs + cycleMs) % cycleMs;
+    const age = (phase - dischargeMs) / 1000;
+    if (age >= 0 && age < 0.58) {
+      const muzzle = frameGeometry();
+      drawBurst(age, muzzle.x, muzzle.y, muzzle.scale);
     }
 
     if (!reducedMotion.matches && inView && !document.hidden) {
@@ -251,8 +217,7 @@
   }
 
   function onImageLoad() {
-    sourceFlashWasVisible = false;
-    burstStart = null;
+    epoch = null;
     resize();
     if (reducedMotion.matches) {
       drawStaticBurst();
@@ -266,7 +231,7 @@
     if (image.complete && image.naturalWidth) onImageLoad();
   } else {
     // Load the capture only after the timing listener is attached, so its first frame anchors the overlay.
-    loadCaptureGif();
+    loadCaptureGif(true);
   }
 
   if ("ResizeObserver" in window) new ResizeObserver(resize).observe(stage);

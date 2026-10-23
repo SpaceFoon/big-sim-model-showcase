@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Watch cavalry deploy from column into a two-rank charge while infantry attempts to form square.">
+<title>Cavalry crisis · Big Sim model collection</title>
+<style>
+:root{color-scheme:dark;--bg:#0d1316;--panel:#172023;--ink:#f0e8d5;--muted:#aeb6ad;--gold:#d0ae6c;--red:#9b4744;--line:#3b4543}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(ellipse at 82% 3%,#202a2b 0,#0d1316 48rem);color:var(--ink);font:16px/1.5 Segoe UI,Arial,sans-serif}
+a{color:inherit}
+.shell{width:min(1480px,calc(100% - 44px));margin:auto}
+.topline{padding:20px 0 14px;color:var(--gold);font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;border-bottom:1px solid var(--line)}
+.category-nav{display:flex;gap:8px;flex-wrap:wrap;padding:13px 0 20px;border-bottom:1px solid var(--line)}
+.category-nav a{border:1px solid var(--line);border-radius:3px;padding:8px 12px;color:var(--muted);font-size:.83rem;text-decoration:none;white-space:nowrap}
+.category-nav a:hover,.category-nav a[aria-current=page]{border-color:var(--gold);color:var(--ink);background:#d0ae6c18}
+.kicker,.eyebrow{color:var(--gold);font-size:.72rem;letter-spacing:.15em;text-transform:uppercase}
+h1,h2,p{margin-top:0}
+.page-head{padding:25px 0 19px;max-width:1100px}
+h1{font:clamp(2.6rem,4.2vw,4rem)/.98 Georgia,serif;letter-spacing:-.035em;margin:6px 0 10px}
+.page-head p{max-width:900px;color:#c6cbc2;font:1.08rem/1.45 Georgia,serif;margin:0}
+.workbench{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:20px;align-items:stretch}
+.field-panel,.order-panel{background:linear-gradient(145deg,#172023,#131b1c);border:1px solid #35403d;box-shadow:0 24px 64px #0004;min-width:0}
+.field-head{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:15px 18px;border-bottom:1px solid #35403d}
+.field-head strong{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#e2d5b9;font-weight:600}
+.signal{display:flex;align-items:center;gap:8px;color:var(--gold);font-size:.7rem;letter-spacing:.09em;text-transform:uppercase;text-align:right}
+.signal:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 12px #d0ae6c99;flex:none}
+.stage{position:relative;background:#45533f;overflow:hidden;aspect-ratio:2.05;min-height:390px}
+.stage canvas{display:block;width:100%;height:100%}
+.field-stamp{position:absolute;top:16px;left:17px;padding:7px 10px;background:#111a18bf;border:1px solid #ddcfac44;color:#e7dcc1;font-size:.64rem;letter-spacing:.13em;text-transform:uppercase;pointer-events:none}
+.north{position:absolute;right:17px;top:15px;color:#f0e8d5b3;text-align:center;font:11px Georgia,serif;pointer-events:none}
+.north b{display:block;color:var(--gold);font-size:.72rem;font-weight:400;margin-bottom:2px}
+.field-foot{display:flex;justify-content:space-between;gap:14px;padding:12px 17px;color:var(--muted);font-size:.74rem;border-top:1px solid #35403d}
+.field-foot span:last-child{text-align:right;color:#d6c9a8}
+.order-panel{display:flex;flex-direction:column}
+.order-title{padding:20px 20px 16px;border-bottom:1px solid #35403d}
+.order-title h2{font:1.8rem/1.1 Georgia,serif;margin:5px 0 7px}
+.order-title p{color:var(--muted);font-size:.84rem;margin:0}
+.order-controls{padding:18px 20px 20px}
+.primary{display:block;width:100%;min-height:48px;padding:12px 14px;border:1px solid #d8bb7b;background:#3b3424;color:#f0e8d5;font:inherit;font-weight:600;letter-spacing:.02em;text-align:left;cursor:pointer;transition:background .18s,border-color .18s}
+.primary:hover{background:#4a402b;border-color:#f0d496}
+.primary:disabled{opacity:.55;cursor:default}
+.control-note{color:var(--muted);font-size:.76rem;margin:9px 0 22px}
+.section-label{display:flex;justify-content:space-between;align-items:center;color:#d9d0bd;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px}
+.section-label output{color:var(--gold);font-variant-numeric:tabular-nums;letter-spacing:0}
+input[type=range]{width:100%;accent-color:var(--gold);cursor:pointer}
+.range-labels{display:flex;justify-content:space-between;color:#88938a;font-size:.68rem;margin-top:3px}
+.rule{height:1px;background:#35403d;margin:20px 0}
+.sequence{display:grid;gap:13px;margin-top:16px}
+.sequence-item{display:grid;grid-template-columns:27px 1fr;gap:10px;align-items:start;color:#7f8982;font-size:.73rem;line-height:1.35}
+.sequence-item b{display:block;color:#b0b3a8;font-weight:500;margin-bottom:3px}
+.sequence-item .num{display:grid;place-items:center;width:22px;height:22px;border:1px solid #45504a;color:#92988e;font:12px Georgia,serif}
+.sequence-item.active b,.sequence-item.done b{color:var(--gold)}
+.sequence-item.active .num,.sequence-item.done .num{border-color:var(--gold);color:var(--gold)}
+.readout{padding:17px 20px;background:#11191a;border-top:1px solid #35403d;margin-top:auto}
+.readout-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:8px}
+.readout-head strong{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
+.readout-head output{font:1.25rem Georgia,serif;color:var(--gold);font-variant-numeric:tabular-nums}
+.meter{height:3px;background:#39413b;overflow:hidden;margin-bottom:12px}
+.meter span{display:block;width:0;height:100%;background:var(--gold);transition:width .18s linear}
+.readout p{margin:0;color:var(--muted);font-size:.78rem;min-height:3.4em}
+.note{display:flex;gap:11px;align-items:flex-start;margin:17px 0 40px;padding:13px 15px;border-left:2px solid var(--red);background:#151d1d;color:#aeb6ad;font-size:.77rem}
+.note b{color:#e6dcc6;font-weight:500}
+footer{padding:19px 0 32px;border-top:1px solid var(--line);color:#87918c;font-size:.77rem}
+footer a{color:var(--gold)}
+button:focus-visible,input:focus-visible,a:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+@media(max-width:1020px){.workbench{grid-template-columns:minmax(0,1fr) 310px;gap:14px}.order-title,.order-controls,.readout{padding-left:16px;padding-right:16px}}
+@media(max-width:760px){.shell{width:calc(100% - 28px)}.page-head{padding:34px 0 21px}.workbench{grid-template-columns:1fr}.stage{min-height:310px;aspect-ratio:1.45}.order-panel{display:grid;grid-template-columns:1fr 1fr}.order-title{grid-column:1/-1}.order-controls{grid-row:2}.readout{grid-column:2;grid-row:2;margin:0;border-top:0;border-left:1px solid #35403d;display:flex;flex-direction:column;justify-content:center}.note{margin-bottom:28px}}
+@media(max-width:500px){.shell{width:calc(100% - 22px)}.topline{font-size:.64rem}.category-nav{overflow-x:auto;flex-wrap:nowrap}.category-nav a{font-size:.75rem;padding:7px 9px}.page-head{padding-top:28px}.stage{min-height:280px;aspect-ratio:1.08}.field-head{padding:12px}.field-head strong{font-size:.61rem}.signal{font-size:.58rem}.field-foot{font-size:.66rem;padding:10px 12px}.order-panel{grid-template-columns:1fr}.order-title,.order-controls,.readout{grid-column:1;grid-row:auto}.order-controls{padding-bottom:16px}.readout{border-top:1px solid #35403d;border-left:0;padding:16px}.north{right:12px;top:12px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="shell">
+  <div class="topline">Big Sim / Model atlas</div>
+  <nav class="category-nav" aria-label="Formation studies"><a href="index.html">Model collection</a><a href="formation-drill.html">Infantry drill</a><a href="cavalry-crisis.html">Cavalry crisis</a></nav>
+  <header class="page-head">
+    <div class="kicker">Command and movement / field study 05</div>
+    <h1>The square has not formed yet.</h1>
+    <p>A cavalry squadron approaches in column, deploys into two ranks, and charges. The infantry receives the signal to form square and wheels into place man by man. Delay the order to see the gap stay open.</p>
+  </header>
+  <main>
+    <section class="workbench" aria-label="Interactive cavalry charge and infantry square drill">
+      <div class="field-panel">
+        <div class="field-head"><strong>West meadow · cavalry threat</strong><span class="signal" id="signalLabel">Awaiting the trumpet</span></div>
+        <div class="stage">
+          <canvas id="field" aria-label="Overhead study of cavalry deploying from column and charging an infantry battalion as it forms square"></canvas>
+          <div class="field-stamp" id="fieldStamp">Cavalry · squadron column</div>
+          <div class="north" aria-hidden="true"><b>N</b>↑</div>
+        </div>
+        <div class="field-foot"><span id="groundLabel">Cavalry approach · infantry in line</span><span>Separate movement · shared orders</span></div>
+      </div>
+      <aside class="order-panel" aria-label="Crisis drill controls">
+        <div class="order-title"><div class="eyebrow">A race to dress the ranks</div><h2 id="orderHeading">Form square</h2><p id="orderCopy">The battalion reacts to the cavalry it can see. The order starts each man's movement; it does not place him instantly.</p></div>
+        <div class="order-controls">
+          <button class="primary" id="runDrill" type="button">Run cavalry crisis <span aria-hidden="true">→</span></button>
+          <p class="control-note">The squadron moves while the signal travels down the line.</p>
+          <label class="section-label" for="orderDelay"><span>Square order delay</span><output id="delayValue" for="orderDelay">2.4 s</output></label>
+          <input id="orderDelay" type="range" min="0" max="3" step="0.1" value="2.4" aria-label="Delay before the infantry receives the square order">
+          <div class="range-labels"><span>Immediate</span><span>Late signal</span></div>
+          <div class="rule"></div>
+          <div class="eyebrow">Drill sequence</div>
+          <div class="sequence" aria-label="Crisis phases">
+            <div class="sequence-item" id="step1"><span class="num">1</span><span><b>Approach</b><span>Squadron column closes</span></span></div>
+            <div class="sequence-item" id="step2"><span class="num">2</span><span><b>Deploy</b><span>Two ranks dress on the guide</span></span></div>
+            <div class="sequence-item" id="step3"><span class="num">3</span><span><b>Charge</b><span>Infantry tries to close four faces</span></span></div>
+          </div>
+        </div>
+        <div class="readout">
+          <div class="readout-head"><strong id="statusText" aria-live="polite">The line is holding</strong><output id="arrivalCount">84 / 84</output></div>
+          <div class="meter" aria-hidden="true"><span id="progressMeter"></span></div>
+          <p id="phaseText">Run the drill to follow the order from the first approach through contact.</p>
+        </div>
+      </aside>
+    </section>
+    <p class="note"><span aria-hidden="true">◆</span><span><b>Mechanic illustration.</b> This local showcase demonstrates individual movement, order delay, formation cohesion, and cavalry contact. It is not connected to Unity gameplay or the running simulation.</span></p>
+  </main>
+  <footer>Big Sim · Cavalry crisis study · <a href="formation-drill.html">Return to formation drill</a> · <a href="CREDITS.md">Credits and source notes</a></footer>
+</div>
+<script>
+(() => {
+  const canvas = document.getElementById('field');
+  const ctx = canvas.getContext('2d', { alpha: false });
+  const runButton = document.getElementById('runDrill');
+  const delayInput = document.getElementById('orderDelay');
+  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const infantryCount = 84, cavalryCount = 18;
+  const contactAt = 6.25;
+  let width = 0, height = 0, ratio = 1, elapsed = 0, lastTime = 0;
+  let running = false, orderIssued = false, resolved = false, completed = 84, outcome = '';
+  let infantry = [], cavalry = [], squareSlots = [];
+  const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
+  const smooth = v => { const t = clamp(v, 0, 1); return t * t * (3 - 2 * t); };
+  const lerp = (a, b, t) => a + (b - a) * t;
+  const signalAt = () => .62 + Number(delayInput.value) * .9;
+
+  function lineSlots() {
+    return Array.from({ length: infantryCount }, (_, i) => ({
+      x: .58 + Math.floor(i / 3) * (.36 / 27),
+      y: .5 + (i % 3 - 1) * .035,
+      face: Math.PI
+    }));
+  }
+
+  function makeSquareSlots() {
+    const slots = [];
+    for (let row = 0; row < 10; row++) for (let col = 0; col < 10; col++) {
+      if (row >= 3 && row < 7 && col >= 3 && col < 7) continue;
+      const edgeX = Math.min(col, 9 - col), edgeY = Math.min(row, 9 - row);
+      const face = edgeX < edgeY ? (col < 5 ? Math.PI : 0) : (row < 5 ? -Math.PI / 2 : Math.PI / 2);
+      slots.push({ x: .70 + (col - 4.5) * .026, y: .5 + (row - 4.5) * .055, face });
+    }
+    return slots;
+  }
+
+  function makeCavalry() {
+    return Array.from({ length: cavalryCount }, (_, i) => {
+      const depth = Math.floor(i / 3), file = i % 3;
+      return {
+        id: i, x: .22 - depth * .024, y: .5 + (file - 1) * .032, face: 0,
+        baseX: .22 - depth * .024, baseY: .5 + (file - 1) * .032,
+        slot: null, move: null, breakthrough: false
+      };
+    });
+  }
+
+  function resetState() {
+    const slots = lineSlots();
+    infantry = slots.map((slot, i) => ({
+      id: i, x: slot.x, y: slot.y, face: slot.face, slot, move: null, broken: false,
+      pace: .78 + ((i * 37) % 101) / 100 * .48,
+      lag: ((i * 19) % 17) / 28
+    }));
+    cavalry = makeCavalry();
+    squareSlots = makeSquareSlots();
+    elapsed = 0; lastTime = 0; running = false; orderIssued = false; resolved = false;
+    completed = infantryCount; outcome = '';
+    document.getElementById('signalLabel').textContent = 'Awaiting the trumpet';
+    document.getElementById('fieldStamp').textContent = 'Cavalry · squadron column';
+    document.getElementById('groundLabel').textContent = 'Cavalry approach · infantry in line';
+    document.getElementById('statusText').textContent = 'The line is holding';
+    document.getElementById('phaseText').textContent = 'Run the drill to follow the order from the first approach through contact.';
+    document.getElementById('arrivalCount').textContent = '84 / 84';
+    document.getElementById('progressMeter').style.width = '100%';
+    runButton.disabled = false;
+    runButton.innerHTML = 'Run cavalry crisis <span aria-hidden="true">→</span>';
+    setSteps(0);
+    paint();
+  }
+
+  function assignNearest(slots) {
+    const pairs = [];
+    for (let i = 0; i < infantry.length; i++) for (let j = 0; j < slots.length; j++) {
+      const dx = (infantry[i].x - slots[j].x) * width;
+      const dy = (infantry[i].y - slots[j].y) * height;
+      pairs.push({ i, j, distance: dx * dx + dy * dy });
+    }
+    pairs.sort((a, b) => a.distance - b.distance || a.i - b.i || a.j - b.j);
+    const usedPeople = new Set(), usedSlots = new Set(), assignment = Array(infantry.length);
+    for (const pair of pairs) {
+      if (usedPeople.has(pair.i) || usedSlots.has(pair.j)) continue;
+      assignment[pair.i] = slots[pair.j];
+      usedPeople.add(pair.i); usedSlots.add(pair.j);
+      if (usedPeople.size === infantry.length) break;
+    }
+    return assignment;
+  }
+
+  function assignCavalryLine() {
+    const slots = Array.from({ length: cavalryCount }, (_, i) => ({
+      x: .405 + (i % 2) * .028,
+      y: .29 + Math.floor(i / 2) * (.42 / 8),
+      face: 0
+    }));
+    const pairs = [];
+    for (let i = 0; i < cavalry.length; i++) for (let j = 0; j < slots.length; j++) {
+      const dx = (cavalry[i].x - slots[j].x) * width;
+      const dy = (cavalry[i].y - slots[j].y) * height;
+      pairs.push({ i, j, distance: dx * dx + dy * dy });
+    }
+    pairs.sort((a, b) => a.distance - b.distance || a.i - b.i || a.j - b.j);
+    const usedPeople = new Set(), usedSlots = new Set();
+    for (const pair of pairs) {
+      if (usedPeople.has(pair.i) || usedSlots.has(pair.j)) continue;
+      cavalry[pair.i].slot = slots[pair.j];
+      usedPeople.add(pair.i); usedSlots.add(pair.j);
+      if (usedPeople.size === cavalry.length) break;
+    }
+  }
+
+  function issueSquare() {
+    orderIssued = true;
+    const assignment = assignNearest(squareSlots);
+    infantry.forEach((man, i) => {
+      const goal = assignment[i];
+      const distance = Math.hypot((goal.x - man.x) * width, (goal.y - man.y) * height);
+      man.slot = goal;
+      man.move = {
+        fromX: man.x, fromY: man.y, startAt: elapsed + man.lag,
+        duration: Math.max(.75, distance / (width * .06)) * man.pace,
+        goal, bend: (i % 2 ? 1 : -1) * .013
+      };
+    });
+    assignCavalryLine();
+    document.getElementById('orderHeading').textContent = 'Square order received';
+    document.getElementById('orderCopy').textContent = 'The signal reaches the battalion. Files wheel from their current places; late men cannot skip the movement.';
+    document.getElementById('signalLabel').textContent = 'Trumpet · form square';
+    document.getElementById('fieldStamp').textContent = 'Infantry · wheeling into square';
+    document.getElementById('groundLabel').textContent = 'Square ordered · cavalry deploying';
+  }
+
+  function moveActor(actor, now) {
+    const move = actor.move;
+    if (!move || now < move.startAt) return;
+    const t = clamp((now - move.startAt) / move.duration, 0, 1);
+    const eased = smooth(t);
+    const dx = move.goal.x - move.fromX, dy = move.goal.y - move.fromY;
+    const arc = Math.sin(Math.PI * eased) * (move.bend || 0);
+    actor.x = move.fromX + dx * eased - dy * arc;
+    actor.y = move.fromY + dy * eased + dx * arc;
+    const desired = t < .78 && Math.hypot(dx, dy) > .003 ? Math.atan2(dy * height, dx * width) : move.goal.face;
+    let turn = (desired - actor.face + Math.PI * 3) % (Math.PI * 2) - Math.PI;
+    actor.face += turn * (1 - Math.exp(-.12 * (now - move.startAt + .05)));
+    if (t >= 1) {
+      actor.x = move.goal.x; actor.y = move.goal.y; actor.face = move.goal.face; actor.move = null;
+    }
+  }
+
+  function updateInfantry() {
+    if (orderIssued) for (const man of infantry) moveActor(man, elapsed);
+    if (resolved && outcome === 'gap breached') for (const man of infantry) moveActor(man, elapsed);
+    const ready = infantry.reduce((sum, man) => {
+      if (man.move || !man.slot) return sum;
+      const d = Math.hypot((man.slot.x - man.x) * width, (man.slot.y - man.y) * height);
+      return sum + (d < 9 ? 1 : 0);
+    }, 0);
+    completed = ready;
+  }
+
+  function updateCavalry() {
+    if (!resolved) {
+      const approach = smooth(elapsed / 2.35);
+      const deploy = smooth((elapsed - 2.15) / 1.85);
+      const charge = clamp((elapsed - 4.1) / 2.15, 0, 1);
+      for (const rider of cavalry) {
+        if (elapsed < 2.15) {
+          rider.x = rider.baseX + .14 * approach;
+          rider.y = rider.baseY;
+          rider.face = Math.sin(elapsed * 3 + rider.id) * .035;
+        } else {
+          const slot = rider.slot || { x: .42, y: .5, face: 0 };
+          const lineX = slot.x + .112 * charge;
+          rider.x = lerp(rider.baseX + .14, lineX, deploy);
+          rider.y = lerp(rider.baseY, slot.y, deploy);
+          rider.face = Math.sin(elapsed * 2.4 + rider.id * .7) * .025;
+        }
+      }
+    } else {
+      for (const rider of cavalry) moveActor(rider, elapsed);
+    }
+  }
+
+  function resolveContact() {
+    if (resolved) return;
+    resolved = true;
+    const cohesion = completed / infantryCount;
+    outcome = cohesion >= .84 ? 'square holds' : 'gap breached';
+    cavalry.forEach((rider, i) => {
+      const inMiddle = Math.floor(i / 2) >= 3 && Math.floor(i / 2) <= 5;
+      const breach = outcome === 'gap breached' && inMiddle;
+      rider.breakthrough = breach;
+      rider.move = {
+        fromX: rider.x, fromY: rider.y, startAt: elapsed + (i % 4) * .055,
+        duration: breach ? 1.05 : .78,
+        goal: {
+          x: breach ? .705 + (i % 2) * .014 : .455 + (i % 2) * .024,
+          y: rider.y + (breach ? (i % 2 ? .012 : -.012) : 0),
+          face: breach ? 0 : Math.PI
+        }, bend: breach ? 0 : (i % 2 ? .025 : -.025)
+      };
+    });
+    if (outcome === 'gap breached') {
+      const westFace = infantry
+        .filter(man => man.slot && Math.abs(man.slot.x - .583) < .015)
+        .sort((a, b) => Math.abs(a.y - .5) - Math.abs(b.y - .5))
+        .slice(0, 9);
+      westFace.forEach((man, i) => {
+        man.broken = true;
+        man.move = {
+          fromX: man.x, fromY: man.y, startAt: elapsed + (i % 5) * .07,
+          duration: .65 + (i % 4) * .12,
+          goal: { x: man.x - .025 - (i % 3) * .006, y: man.y + (i % 2 ? .05 : -.05), face: Math.PI },
+          bend: (i % 2 ? 1 : -1) * .012
+        };
+      });
+      document.getElementById('statusText').textContent = 'Gap breached';
+      document.getElementById('phaseText').textContent = 'The front is still wheeling when the charge arrives. Riders break through the unfinished face; nearby files scatter.';
+      document.getElementById('signalLabel').textContent = 'Contact · square incomplete';
+      document.getElementById('fieldStamp').textContent = 'Gap · riders break through';
+    } else {
+      document.getElementById('statusText').textContent = 'Square holds';
+      document.getElementById('phaseText').textContent = 'The four faces are dressed before contact. The squadron checks its charge and wheels away to reform.';
+      document.getElementById('signalLabel').textContent = 'Contact · formed square';
+      document.getElementById('fieldStamp').textContent = 'Square · cavalry checked';
+    }
+    document.getElementById('orderHeading').textContent = outcome === 'square holds' ? 'The square holds' : 'The charge finds a gap';
+    document.getElementById('orderCopy').textContent = outcome === 'square holds'
+      ? 'The order arrives in time. The cavalry checks its charge against the dressed faces.'
+      : 'The order arrives late. Some files are still moving when the squadron reaches the open face.';
+    setSteps(3);
+  }
+
+  function setSteps(active) {
+    ['step1','step2','step3'].forEach((id, i) => {
+      const element = document.getElementById(id);
+      element.classList.toggle('active', i + 1 === active);
+      element.classList.toggle('done', i + 1 < active || (active === 3 && resolved));
+    });
+  }
+
+  function startDrill() {
+    resetState();
+    running = true;
+    runButton.disabled = true;
+    runButton.textContent = 'Crisis in progress…';
+    document.getElementById('statusText').textContent = 'Squadron approaching in column';
+    document.getElementById('phaseText').textContent = 'The cavalry closes in a marching column. The infantry has not received its square order yet.';
+    document.getElementById('signalLabel').textContent = 'Column · approach';
+    setSteps(1);
+  }
+
+  function update(dt) {
+    if (!running) return;
+    elapsed += dt;
+    if (resolved) {
+      updateInfantry(); updateCavalry();
+      document.getElementById('arrivalCount').textContent = completed + ' / ' + infantryCount;
+      document.getElementById('progressMeter').style.width = (completed / infantryCount * 100).toFixed(0) + '%';
+      if (elapsed > 8.0) {
+        running = false;
+        runButton.disabled = false;
+        runButton.textContent = 'Run drill again →';
+      }
+      return;
+    }
+    if (!orderIssued && elapsed >= signalAt()) issueSquare();
+    updateInfantry();
+    updateCavalry();
+    const phase = elapsed < 2.15 ? 1 : elapsed < 4.1 ? 2 : 3;
+    setSteps(phase);
+    if (phase === 1) {
+      document.getElementById('statusText').textContent = orderIssued ? 'Files wheeling for square' : 'Squadron approaching in column';
+      document.getElementById('phaseText').textContent = orderIssued
+        ? 'The trumpet carries form square down the line. Each man turns from his place and moves toward a face.'
+        : 'The cavalry closes in column while the battalion waits for a clear threat and an understood signal.';
+      document.getElementById('groundLabel').textContent = orderIssued ? 'Square order travelling · files wheel' : 'Cavalry column · closing on the line';
+      document.getElementById('fieldStamp').textContent = orderIssued ? 'Infantry · square order received' : 'Cavalry · squadron column';
+      document.getElementById('signalLabel').textContent = orderIssued ? 'Trumpet · form square' : 'Column · approach';
+    } else if (phase === 2) {
+      document.getElementById('statusText').textContent = 'Cavalry deploying';
+      document.getElementById('phaseText').textContent = orderIssued
+        ? 'The squadron opens into two ranks. The infantry continues to wheel and dress while the distance closes.'
+        : 'The squadron starts to deploy before the infantry has heard the order.';
+      document.getElementById('groundLabel').textContent = 'Cavalry deploys · two-rank line';
+      document.getElementById('fieldStamp').textContent = 'Cavalry · deploying into line';
+      document.getElementById('signalLabel').textContent = 'Deployment · two ranks';
+    } else if (phase === 3) {
+      document.getElementById('statusText').textContent = 'Charge · square dressing';
+      document.getElementById('phaseText').textContent = orderIssued
+        ? 'The squadron charges in line. Stragglers keep moving toward their assigned places until contact.'
+        : 'The squadron charges before the square order reaches the battalion.';
+      document.getElementById('groundLabel').textContent = 'Cavalry charge · infantry forms square';
+      document.getElementById('fieldStamp').textContent = 'Charge · infantry still dressing';
+      document.getElementById('signalLabel').textContent = 'Charge · contact near';
+    }
+    document.getElementById('arrivalCount').textContent = completed + ' / ' + infantryCount;
+    document.getElementById('progressMeter').style.width = (completed / infantryCount * 100).toFixed(0) + '%';
+    if (!resolved && elapsed >= contactAt) resolveContact();
+    if (resolved && elapsed > 8.0) {
+      running = false;
+      runButton.disabled = false;
+      runButton.textContent = 'Run drill again →';
+      document.getElementById('arrivalCount').textContent = completed + ' / ' + infantryCount;
+    }
+  }
+
+  function fitCanvas() {
+    const bounds = canvas.getBoundingClientRect();
+    width = bounds.width; height = bounds.height;
+    ratio = Math.min(window.devicePixelRatio || 1, 2);
+    canvas.width = Math.max(1, Math.round(width * ratio));
+    canvas.height = Math.max(1, Math.round(height * ratio));
+    ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+    paint();
+  }
+
+  function drawGround() {
+    ctx.fillStyle = '#4a5841'; ctx.fillRect(0, 0, width, height);
+    const light = ctx.createRadialGradient(width * .55, height * .45, 5, width * .55, height * .45, width * .8);
+    light.addColorStop(0, '#64704d'); light.addColorStop(.7, '#536144'); light.addColorStop(1, '#3e4c3a');
+    ctx.fillStyle = light; ctx.fillRect(0, 0, width, height);
+    ctx.save(); ctx.globalAlpha = .1; ctx.strokeStyle = '#c3b88b'; ctx.lineWidth = 1;
+    for (let i = 0; i < 4; i++) {
+      ctx.beginPath(); ctx.ellipse(width * (.12 + i * .25), height * (.27 + (i % 2) * .43), width * .2, height * .13, -.12, .08, Math.PI * 1.12); ctx.stroke();
+    }
+    ctx.globalAlpha = .15; ctx.beginPath(); ctx.moveTo(width * .03, height * .84); ctx.bezierCurveTo(width * .28, height * .68, width * .64, height * .9, width * .97, height * .64); ctx.stroke();
+    ctx.restore();
+    for (let i = 0; i < 220; i++) {
+      const x = ((i * 127.1 + 19) % 997) / 997 * width, y = ((i * 311.7 + 53) % 991) / 991 * height;
+      ctx.strokeStyle = i % 3 ? '#b3b38320' : '#202e252b'; ctx.lineWidth = .7;
+      ctx.beginPath(); ctx.moveTo(x, y); ctx.lineTo(x + 2 + i % 4, y - 1 - i % 3); ctx.stroke();
+    }
+    ctx.fillStyle = '#d7c79a'; ctx.font = '10px Segoe UI, Arial, sans-serif'; ctx.letterSpacing = '1.5px';
+    ctx.fillText('WEST MEADOW', 17, height - 18);
+    ctx.fillStyle = '#e3d9bd99'; ctx.font = '9px Segoe UI, Arial, sans-serif'; ctx.letterSpacing = '1px';
+    ctx.fillText('INFANTRY SQUARE', width * .64, height * .88);
+  }
+
+  function drawIntent() {
+    ctx.save(); ctx.setLineDash([5, 7]); ctx.lineWidth = 1;
+    ctx.strokeStyle = '#ead39a66'; ctx.strokeRect(width * .565, height * .225, width * .27, height * .55);
+    ctx.strokeStyle = '#dcb98166'; ctx.beginPath(); ctx.moveTo(width * .04, height * .5); ctx.lineTo(width * .45, height * .5); ctx.stroke();
+    ctx.setLineDash([]); ctx.fillStyle = '#eee0bd'; ctx.font = '10px Segoe UI, Arial, sans-serif'; ctx.letterSpacing = '1px';
+    ctx.fillText('SQUARE PLACE', width * .57, height * .205);
+    if (running && elapsed < 2.15) {
+      ctx.strokeStyle = '#e4c98f77'; ctx.beginPath(); ctx.moveTo(width * .12, height * .5); ctx.lineTo(width * .31, height * .5); ctx.stroke();
+    }
+    ctx.restore();
+  }
+
+  function drawFoot(man) {
+    const x = man.x * width, y = man.y * height;
+    ctx.save(); ctx.translate(x, y); ctx.rotate(man.face);
+    ctx.fillStyle = '#17201c88'; ctx.beginPath(); ctx.ellipse(-.4, 2.8, 7.2, 4.1, 0, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = man.broken ? '#733a32' : (man.id % 7 === 0 ? '#344f59' : '#294552');
+    ctx.strokeStyle = '#172e39'; ctx.lineWidth = .8; ctx.beginPath(); ctx.roundRect(-5, -3.5, 10, 7, 2.2); ctx.fill(); ctx.stroke();
+    ctx.strokeStyle = '#d7ccb0'; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(-1.8, -3); ctx.lineTo(2.6, 3); ctx.stroke();
+    ctx.fillStyle = '#9e3936'; ctx.fillRect(-.7, -3.1, 1.5, 6.2);
+    ctx.strokeStyle = '#745d42'; ctx.lineWidth = 1.1; ctx.beginPath(); ctx.moveTo(-4, 3.1); ctx.lineTo(5.2, -4.7); ctx.stroke();
+    ctx.fillStyle = '#d3c2a0'; ctx.beginPath(); ctx.arc(5.4, 0, 2.1, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = '#293a3c'; ctx.fillRect(4.1, -2.5, 2.8, 1.1);
+    ctx.restore();
+  }
+
+  function drawHorse(rider) {
+    const x = rider.x * width, y = rider.y * height;
+    ctx.save(); ctx.translate(x, y); ctx.rotate(rider.face);
+    ctx.fillStyle = '#18201a8c'; ctx.beginPath(); ctx.ellipse(-1, 5, 12, 5.2, 0, 0, Math.PI * 2); ctx.fill();
+    ctx.strokeStyle = '#30251c'; ctx.lineWidth = 1.6;
+    for (const legX of [-6, 4]) for (const legY of [-3.2, 3.2]) {
+      ctx.beginPath(); ctx.moveTo(legX, legY); ctx.lineTo(legX + .4, legY + (legY < 0 ? -3.2 : 3.2)); ctx.stroke();
+    }
+    ctx.fillStyle = rider.id % 4 === 0 ? '#574031' : '#40372a';
+    ctx.beginPath(); ctx.ellipse(-1, 0, 11, 4.8, 0, 0, Math.PI * 2); ctx.fill();
+    ctx.beginPath(); ctx.moveTo(6, -2.6); ctx.lineTo(10.5, -4.3); ctx.lineTo(14.8, -2.7); ctx.lineTo(12.5, 2.2); ctx.lineTo(7.2, 2.7); ctx.closePath(); ctx.fill();
+    ctx.strokeStyle = '#251f19'; ctx.lineWidth = 1.2; ctx.beginPath(); ctx.moveTo(-11, 0); ctx.quadraticCurveTo(-15, -2, -15.8, -5); ctx.stroke();
+    ctx.fillStyle = '#b13e36'; ctx.fillRect(-4.5, -3.2, 7, 6.4);
+    ctx.fillStyle = '#263b42'; ctx.beginPath(); ctx.ellipse(-.8, -.2, 4.1, 2.7, 0, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = '#d4c3a0'; ctx.beginPath(); ctx.ellipse(1, -1.1, 2.2, 3.1, 0, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = '#d0ae6c'; ctx.beginPath(); ctx.arc(1.7, -1.7, 1.5, 0, Math.PI * 2); ctx.fill();
+    ctx.strokeStyle = '#d4c39a'; ctx.lineWidth = 1.05; ctx.beginPath(); ctx.moveTo(2, -3.7); ctx.lineTo(17, -4.8); ctx.stroke();
+    ctx.strokeStyle = '#2c2720'; ctx.lineWidth = .8; ctx.beginPath(); ctx.moveTo(17, -4.8); ctx.lineTo(20, -5.2); ctx.stroke();
+    ctx.restore();
+  }
+
+  function paint() {
+    if (!width || !height) return;
+    drawGround(); drawIntent();
+    [...infantry].sort((a, b) => a.y - b.y).forEach(drawFoot);
+    [...cavalry].sort((a, b) => a.y - b.y).forEach(drawHorse);
+    if (resolved) {
+      ctx.fillStyle = outcome === 'square holds' ? '#ead39a' : '#e0a08a';
+      ctx.font = '10px Segoe UI, Arial, sans-serif'; ctx.letterSpacing = '1px';
+      ctx.fillText(outcome === 'square holds' ? 'CHARGE CHECKED' : 'GAP BREACHED', width * .47, height * .91);
+    }
+  }
+
+  function frame(now) {
+    const dt = lastTime ? Math.min((now - lastTime) / 1000, .05) : 0;
+    lastTime = now;
+    update(dt); paint();
+    requestAnimationFrame(frame);
+  }
+
+  runButton.addEventListener('click', startDrill);
+  delayInput.addEventListener('input', () => { document.getElementById('delayValue').textContent = Number(delayInput.value).toFixed(1) + ' s'; });
+  new ResizeObserver(fitCanvas).observe(canvas);
+  resetState(); fitCanvas(); requestAnimationFrame(frame);
+  if (!reducedMotion) window.setTimeout(startDrill, 650);
+})();
+</script>
+</body>
+</html>

@@ -67,7 +67,7 @@
     },
     {
       "kind": "gallery-card",
-      "title": "Bl\u00fccher sabre",
+      "title": "Blücher sabre",
       "source_path": "art/model_showcase/images/blucher-sabre.png",
       "published_path": "images/gallery/blucher-sabre.webp",
       "source_sha256": "9ff409482b59b04456c9d05ad650188c4486e88ab65a39bb0feaa48f50d27aff",
@@ -355,7 +355,7 @@
     },
     {
       "kind": "model-closeup",
-      "title": "Bl\u00fccher Sabre Source",
+      "title": "Blücher Sabre Source",
       "source_path": "art/battlefield/imports/blucher-sabre/scene.glb",
       "published_path": "images/gallery/model-closeup-art-battlefield-imports-blucher-sabre-scene.webp",
       "source_sha256": "5693b9dc390530f1a467805b73f0f12c52fc65ff3440822ef09e6ed9113657ec",
@@ -1062,8 +1062,8 @@
       "title": "Field Lantern",
       "source_path": "art/placeable_props/models/FieldLantern.glb",
       "published_path": "images/gallery/model-closeup-art-placeable-props-models-field-lantern.webp",
-      "source_sha256": "ba6ea3227e6c9edf28728b88685c684da97e8280213990b68be75e3d72c7405b",
-      "published_sha256": "5873f336d4e4d1164183d375d9b99a53992bfcd770c630f26730bcec5fd9cd70"
+      "source_sha256": "607fb77257ae1688fe2b7a53e2e58244ff5e5d76c9f65a244ddb292d9b086f36",
+      "published_sha256": "3b6a68ff814b9859ce2aaaaf759956e434a9021bf966d4d7f74aab78a66ea226"
     },
     {
       "kind": "model-closeup",
@@ -1470,8 +1470,8 @@
       "title": "Field lantern",
       "source_path": "art/placeable_props/previews/metal-texture-lantern-closeup.png",
       "published_path": "images/gallery/placeable-field-lantern.webp",
-      "source_sha256": "1da462a024e9bb03915ea24cc01271ecc5b0e1085946f449fa6d45344fd54aca",
-      "published_sha256": "d267d4e611ec5ac6a0e674a82ea5b893ff7106d957a14f1463e583f65b9a619b"
+      "source_sha256": "4a256c931558938d22e4fd71690af0cf4586d0852d2d87b1247251b938d53335",
+      "published_sha256": "15bb4fd1526b907f85d4cbe866264a5b687ec2aec12a560e9aca1ac1deed3381"
     },
     {
       "kind": "gallery-card",

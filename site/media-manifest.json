@@ -1696,6 +1696,14 @@
       "published_path": "motion/walk.gif",
       "source_sha256": "58eb12b537b47e68a74f8ba1d21d6b664565e3bf4f8a1aa2cff33fa93e8c87c7",
       "published_sha256": "58eb12b537b47e68a74f8ba1d21d6b664565e3bf4f8a1aa2cff33fa93e8c87c7"
+    },
+    {
+      "kind": "animation",
+      "title": "Field lantern turntable",
+      "source_path": "art/placeable_props/models/FieldLantern.glb",
+      "published_path": "videos/field-lantern-turntable.mp4",
+      "source_sha256": "95a9bf3f2a828223d89674216bb26ad72723b5b553252c5718feb2a76ca948e0",
+      "published_sha256": "63f05e5bc6f9e4a6a61c471c529659988133e29336f31e86389f6ac836529970"
     }
   ]
 }

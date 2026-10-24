@@ -1,0 +1,1701 @@
+{
+  "schema_version": 1,
+  "media": [
+    {
+      "kind": "gallery-card",
+      "title": "Apothecary shopfront",
+      "source_path": "art/city_buildings/previews/apothecary-shopfront-detail.png",
+      "published_path": "images/gallery/apothecary-shopfront-detail.webp",
+      "source_sha256": "e1fb134eb4aef41f65f5db4a49c70d718bc67e19cd10300b35914ae5bd159eac",
+      "published_sha256": "0c9e2b1aa6241679ef1f4da557618f3c3eb04f1701369fd6f6b8c9625c0a48d8"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Artillery crewman",
+      "source_path": "art/model_showcase/images/artillery-crew.png",
+      "published_path": "images/gallery/artillery-crew.webp",
+      "source_sha256": "c9f215fa36f04744994a1a5a1a824e84e72f02198e237125dd21d1e5250b0833",
+      "published_sha256": "c818ebadc818cf09e60a1b228443c64d720e1683ba317dffee2741a1bebf2b7c"
+    },
+    {
+      "kind": "battlefield-view",
+      "title": "Eastern battlefield panorama",
+      "source_path": "art/battlefield/previews/showcase/battle-east-panorama.png",
+      "published_path": "images/gallery/battle-east-panorama-grass-texture.webp",
+      "source_sha256": "b6b055a6a9113f5d6aa0da8cacd385d77cec09cd1f3b1763dfe1d4b5dfc836d3",
+      "published_sha256": "634c8e9403a350f75820022e13ef5167020f13c00a86cbc940c406ab23ed97ec"
+    },
+    {
+      "kind": "battlefield-view",
+      "title": "Just above the field",
+      "source_path": "art/battlefield/previews/showcase/battle-above-field.png",
+      "published_path": "images/gallery/battle-grass-level.webp",
+      "source_sha256": "edc1990cc88efb0e8b24a3f887d70e66c9c4963aa9e02f640c2512fa21183670",
+      "published_sha256": "1fdad586720c02693f069bc090d754a4c99296a67407ebad0c8f59fadcfe3e87"
+    },
+    {
+      "kind": "battlefield-view",
+      "title": "Along the infantry line",
+      "source_path": "art/battlefield/previews/showcase/battle-ground-line.png",
+      "published_path": "images/gallery/battle-ground-line.webp",
+      "source_sha256": "eccdf1e1b960f41ba45824b5b866371a553ef00ad2fe663c987f1ff0c986d962",
+      "published_sha256": "9992438e519e057a030cb7cfdb4e0e2f3b1cc38d0a2f17c260bc1a82f59d9a5e"
+    },
+    {
+      "kind": "battlefield-view",
+      "title": "Through the front ranks",
+      "source_path": "art/battlefield/previews/showcase/battle-line-action.png",
+      "published_path": "images/gallery/battle-line-action.webp",
+      "source_sha256": "3a19961f32a89efbd63eb2e8b1d9ed07e34db7c9bb00c314cfd1afa01afa31d2",
+      "published_sha256": "c9c61cc2203604fb91766ae75e7dbf0948cbcd5d1da7229d9353cc11bd8f087e"
+    },
+    {
+      "kind": "battlefield-view",
+      "title": "Western battlefield panorama",
+      "source_path": "art/battlefield/previews/showcase/battle-panorama.png",
+      "published_path": "images/gallery/battle-west-panorama-grass-texture.webp",
+      "source_sha256": "5498bbed0465cfe619955a6df3490c44a38bf7f2b51a8c9f9d9ec62443b3522a",
+      "published_sha256": "291e507c3d5cff8b2e5b1a6759a46a03e62b0a29b90d0e814bf73ffda3391bf0"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Battlefield material library",
+      "source_path": "art/battlefield/previews/surface-texture-closeups.png",
+      "published_path": "images/gallery/battlefield-texture-samples.webp",
+      "source_sha256": "40b9246edb384120531ed27458cec92d22196e6e4df04b4e1009347ec93d4c4b",
+      "published_sha256": "43aaf762456e57d706c77f5decaf52b2f779b6943c359147f7828cf173afb66c"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Bl\u00fccher sabre",
+      "source_path": "art/model_showcase/images/blucher-sabre.png",
+      "published_path": "images/gallery/blucher-sabre.webp",
+      "source_sha256": "9ff409482b59b04456c9d05ad650188c4486e88ab65a39bb0feaa48f50d27aff",
+      "published_sha256": "92b3015c3edd6a98de108ea91a8558926ba2f1b0d5c930b576468b9872e51b2b"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Ammunition caisson",
+      "source_path": "art/battlefield/previews/ammunition-caisson-pbr.png",
+      "published_path": "images/gallery/caisson.webp",
+      "source_sha256": "8eb8bf8dc253d29583db7b31debf962c652be83d1a798c74959d380ad4d2dc56",
+      "published_sha256": "3bc1a8eb093a7dca79c3b4cea7fa0b93703c998b7f0e569f3984c5127df7b701"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Chapel bellcote",
+      "source_path": "art/city_buildings/previews/chapel-bellcote-detail.png",
+      "published_path": "images/gallery/chapel-bellcote.webp",
+      "source_sha256": "8a04075a6e06d2a728cfe43f3a1111fca646ccc435a6ca9db423713f78e097d8",
+      "published_sha256": "e5c642a6b160f69282d732dd482905f7f0c500647b84d577170e4ab9fbec330f"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "City edge and market square",
+      "source_path": "art/city_buildings/previews/city-edge-overview.png",
+      "published_path": "images/gallery/city-edge-layout.webp",
+      "source_sha256": "13d6836a16a63dbdce0f46e608915b9949de713d4e4b034610d77d488df90e03",
+      "published_sha256": "20673968893d18e1595881a637dfdfdb9d41b94b52316b24b6833f8685eca7e0"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "City wall gate and breach",
+      "source_path": "art/city_buildings/previews/city-wall-crossings-detail.png",
+      "published_path": "images/gallery/city-wall-crossings.webp",
+      "source_sha256": "e0733ce714c8bfe15d6ab2b542d54fccac5b40fa735c9f78175bb7cfce144a29",
+      "published_sha256": "5cc5256af4437c5829062d94f28436d85eede99405d937f957271e9e843111a1"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Cloth merchant windows",
+      "source_path": "art/city_buildings/previews/cloth_merchants_house-windows-detail.png",
+      "published_path": "images/gallery/cloth_merchants_house-windows-detail.webp",
+      "source_sha256": "8b0c9ce08330cd0178d69e6d3abdc817435b9d20edf3c36645a8cf9e972f85c4",
+      "published_sha256": "5b4f38c42d086ae43955acab0a0a37288784d1a745fe9797690e61793284b97d"
+    },
+    {
+      "kind": "battlefield-view",
+      "title": "Battlefield overview, concept rendering",
+      "source_path": "art/model_showcase/images/generated/concept-battlefield-overview.png",
+      "published_path": "images/gallery/concept-battlefield-overview.webp",
+      "source_sha256": "f73ae0c4fcf0b5110ed576fe3add7671e9823e6cf39754408b9ee3ca478dfc93",
+      "published_sha256": "9aeb529551f5e629c32e69f882f725d0c8b9d545f324c1831a9bd71100c50ac0"
+    },
+    {
+      "kind": "battlefield-view",
+      "title": "Farm entrance, concept rendering",
+      "source_path": "art/model_showcase/images/generated/concept-farm-entrance.png",
+      "published_path": "images/gallery/concept-farm-entrance.webp",
+      "source_sha256": "8a78c7faee433672c0a45a9be7c6bd6bea35edfdd2290135b6f8e4d2612b67a4",
+      "published_sha256": "7467cd1ee7a8a81acb5fbd40a953ffc003020011160822e6833bf84f712c8607"
+    },
+    {
+      "kind": "battlefield-view",
+      "title": "Farmhouse lane, concept rendering",
+      "source_path": "art/model_showcase/images/generated/concept-farmhouse-lane.png",
+      "published_path": "images/gallery/concept-farmhouse-lane.webp",
+      "source_sha256": "4d27305a4ba3013ee2a65631ad9a2c79cb571a63eb1ae453122226ea248381eb",
+      "published_sha256": "e4c2775ffb240875302ad6773c3308c7d853629b824b67c7a8ed060b593dd219"
+    },
+    {
+      "kind": "battlefield-view",
+      "title": "Town street, concept rendering",
+      "source_path": "art/model_showcase/images/generated/concept-town-street.png",
+      "published_path": "images/gallery/concept-town-street.webp",
+      "source_sha256": "1b038f4ab6077a2ff92a8329ee5461d73156042df63d9acbad04f022fe89dd87",
+      "published_sha256": "0b2da249af40329adc30c527ea3016eb55b3dd3b6eda02b5903f2c23ddbf7842"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Cottage roof and joinery",
+      "source_path": "art/city_buildings/previews/cottage-roof-detail.png",
+      "published_path": "images/gallery/cottage-roof-detail.webp",
+      "source_sha256": "688341705c2d57ce8f7d5d0e68d3caf1590434abea992278ccac1faf328179cc",
+      "published_sha256": "acd480e008adb2e6777d21356db4907b489c1feb90c3d9a848b791de7e375fb3"
+    },
+    {
+      "kind": "battlefield-view",
+      "title": "Fields across the battlefield",
+      "source_path": "art/battlefield/previews/unity/ground-polish/fields.png",
+      "published_path": "images/gallery/farm-country.webp",
+      "source_sha256": "590cc5c41be8ded4a520d1b7d5e1cd7ba66e6f7adf0572fb430af9134fda8528",
+      "published_sha256": "470770383823b64f72607e65a70d292b8a13705c304ab117ee5cf03b9dad27f4"
+    },
+    {
+      "kind": "battlefield-view",
+      "title": "Farm entrance, ground level",
+      "source_path": "art/battlefield/previews/unity/ground-polish/farm-entrance.png",
+      "published_path": "images/gallery/farm-lane-detail.webp",
+      "source_sha256": "71d256f81d0f8fd58df0af25bd3f0419366dc80221a4380dc09fd73bd90d655b",
+      "published_sha256": "a99f006af979f6ba57fb3b01a4eab7899226eaccbfb94be8e471b1ed27e78ee2"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Fieldworks and farm props",
+      "source_path": "art/battlefield/previews/prop-kit.png",
+      "published_path": "images/gallery/fieldworks.webp",
+      "source_sha256": "c24baae6e7bb1eee5d167670ba7fec59432d77111125067b48297a638a31d7d9",
+      "published_sha256": "30a6bac483b3457cd1e76af595b390367be4e1f276d4e4328f28f821de0be1b1"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Gribeauval cannon",
+      "source_path": "art/model_showcase/images/gribeauval-cannon.png",
+      "published_path": "images/gallery/gribeauval-cannon.webp",
+      "source_sha256": "23c618277e415edfa7be0aa7ac2ae6b9c9c6a8f7a1053372de0b3874b640f6c5",
+      "published_sha256": "20e40c7a4973e6b75afcbe1afd5d119368901e382090a5c9348ef4dc7bdc8c65"
+    },
+    {
+      "kind": "battlefield-view",
+      "title": "Crop edge and field fence",
+      "source_path": "art/battlefield/previews/unity/ground-polish/crop-edge.png",
+      "published_path": "images/gallery/ground-polish-crop-edge.webp",
+      "source_sha256": "e2768776ab8e7ff504b2b5d9d1d6936c4e05867f6035b6a587d79b644e479132",
+      "published_sha256": "077383ebc6b0f840d2457cad24dada52ac5120f2a711ac011fb133d062cc34ea"
+    },
+    {
+      "kind": "battlefield-view",
+      "title": "Lane beside the farmhouse",
+      "source_path": "art/battlefield/previews/unity/ground-polish/lane-ditch.png",
+      "published_path": "images/gallery/ground-polish-lane-ditch.webp",
+      "source_sha256": "c7cde63137d604e905b83cc598822e227901cb3dc794aeea14dc068fac5ca2e6",
+      "published_sha256": "92931085d32379094ff4417d1ea57a85e7876013a2bfcd044f2d2ef61c17ac00"
+    },
+    {
+      "kind": "battlefield-view",
+      "title": "Tree-lined rural lane",
+      "source_path": "art/battlefield/previews/unity/ground-polish/wagon-lane.png",
+      "published_path": "images/gallery/ground-polish-wagon-lane.webp",
+      "source_sha256": "617a82ea2bf7268f1af33a4e364ca71e858601d19891d3cbf52e98d881cbe169",
+      "published_sha256": "bc1aa7f1e7044618c1c35039c09dd005f7b4b2c8bda0b909d49a71c2683a18ff"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Troops at ground level",
+      "source_path": "art/battlefield/previews/ground.png",
+      "published_path": "images/gallery/ground-view.webp",
+      "source_sha256": "2c7e69bf57df98aa3762c251a51d52f7783f84c4b98eaa7e8679963815d9436a",
+      "published_sha256": "7578fc83fe8444329c0f94c4687add7bc78d5492604dc3dae784ffacf2a05a2b"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Hercules fountain",
+      "source_path": "art/city_buildings/previews/hercules-fountain-closeup.png",
+      "published_path": "images/gallery/hercules-fountain.webp",
+      "source_sha256": "004367331d374cb5f41f62a350a12562fd86bb890473dcecb4504c940c268462",
+      "published_sha256": "2b16bcf667931bfa16062718809d7635d75d8f2ec292c545fdd139b5858e6671"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Hercules bronze-faced shield",
+      "source_path": "art/city_buildings/previews/hercules-shield-face-detail.png",
+      "published_path": "images/gallery/hercules-shield-face-detail.webp",
+      "source_sha256": "44b0d3f0b4373a04fa5454d787ebcaea9b19219fc521fac78fd9710a0663e0bb",
+      "published_sha256": "f81a30a383465f40d336efa3a1821e4f466ee39cc10ed63e00c94decdd98beba"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Hercules carved anatomy",
+      "source_path": "art/city_buildings/previews/hercules-statue-detail.png",
+      "published_path": "images/gallery/hercules-statue-detail.webp",
+      "source_sha256": "0168ac4f50e37540d9f5e5e33d2770f2e2ff47046043b7b0cbfada1e86e8daa5",
+      "published_sha256": "bfcf9a07b46c8d370efaa0950a32450353789dc03767292768398c81cc9ddbd0"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Horse armor and tack",
+      "source_path": "art/winged_hussar/discord-showcase/hussar-horse-closeup-hires.png",
+      "published_path": "images/gallery/horse-armor.webp",
+      "source_sha256": "a73de7dbf6dfc465a4bc16997e12dd3528cc04f65a80f69e23bad0a344b4fcb9",
+      "published_sha256": "992a33a0121b040eec985c357eac5e28b1397ca7f0d5423de7580ab2ed9a5e66"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "War horse",
+      "source_path": "art/model_showcase/images/horse.png",
+      "published_path": "images/gallery/horse.webp",
+      "source_sha256": "10dfe6b89c1547e0af5d6aeb6eebea2d0b683e34bed03ccb2c638faa49d9dd43",
+      "published_sha256": "909096954af75adc8c8713e95266ce3fd2a31e350bef065ca79f331f6bfd3ca8"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Winged Hussar armor close-up",
+      "source_path": "art/winged_hussar/discord-showcase/hussar-armor-closeup-hires.png",
+      "published_path": "images/gallery/hussar-armor-closeup.webp",
+      "source_sha256": "983d4cfb42632bb9e091d1e6a27bc15c93d40ab6a5fe99bd20e6cf273ceb8811",
+      "published_sha256": "6cb6831b6ff7d74d836b4015958ef71574851936b0fd6690ae6322f50b689e3b"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Inn entrance and sign",
+      "source_path": "art/city_buildings/previews/inn-entry-detail.png",
+      "published_path": "images/gallery/inn-entry-detail.webp",
+      "source_sha256": "f5ef983d21b2e6c26d31a5dfb29bf011d02cd92581c238df30a2f57af4482e98",
+      "published_sha256": "ecb1930b8ac602d07297a7f865ca19295ca35f1300d6303fca2faf9c2d0b07bf"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Apothecary shop floor",
+      "source_path": "art/city_buildings/previews/rooms/apothecary-shop.png",
+      "published_path": "images/gallery/interior-apothecary-shop.webp",
+      "source_sha256": "90d7936f54c3b18b8426e7b634aecbbed6161bbd7d9a9512b61c48f2821fa7ba",
+      "published_sha256": "693558d5df322cbd5f442218980c0d261b27eeba28f21d327930ae8f36fe1eb1"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Chapel nave",
+      "source_path": "art/city_buildings/previews/rooms/chapel-nave.png",
+      "published_path": "images/gallery/interior-chapel-nave.webp",
+      "source_sha256": "d6aa1818dd73f9e8b84465f8cbacba4b32688525a7b7eda6346f1820feace723",
+      "published_sha256": "a7f3efe7b3d144c9aebeb6a698cadff83184af9207709095a3aba535dd2c6e4a"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Inn taproom",
+      "source_path": "art/city_buildings/previews/rooms/inn-taproom.png",
+      "published_path": "images/gallery/interior-inn-taproom.webp",
+      "source_sha256": "c12a5c480f21cff078f7e5697af0ca6d4c3cb89b35fe60366df96a3a885e81ae",
+      "published_sha256": "dd261f6e77c178f10db01bc70716c839badf6c056ff5c6ebf8e895e731ef3a3a"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Row house Stube",
+      "source_path": "art/city_buildings/previews/rooms/row-house-stube.png",
+      "published_path": "images/gallery/interior-row-house-stube.webp",
+      "source_sha256": "3b56f3fb0605512230a9fb078f8ee49f780be892843123793e2f50550381df44",
+      "published_sha256": "969a1332021657c7ff81b74218eb907006f8fb1eabbfaad548c85cb70382ea63"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Smithy forge bay",
+      "source_path": "art/city_buildings/previews/rooms/smithy-forge.png",
+      "published_path": "images/gallery/interior-smithy-forge.webp",
+      "source_sha256": "53004e39315fe5f453f1b88f7adf13172821471ec32b4202f64bd19fa50ec2ef",
+      "published_sha256": "1aec1df2ed0de95b220df9fd063e29f44fe254c7e151e95ca6e0106dd77c3c2e"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Town hall council room",
+      "source_path": "art/city_buildings/previews/rooms/town-hall-council.png",
+      "published_path": "images/gallery/interior-town-hall-council.webp",
+      "source_sha256": "46ee6dc2f30603c62b7937bf910c902b86e6e47db56e4139763e81ae89dc34f0",
+      "published_sha256": "8584f4017a62ef3bec16a7079c7f13519b8faadcce04b366b513e1702c0ac10e"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Kopia and saddle weapons",
+      "source_path": "art/winged_hussar/discord-showcase/hussar-weapon-closeup-hires.png",
+      "published_path": "images/gallery/kopia.webp",
+      "source_sha256": "d3577f96fc91a8b61581e5123a1b8d5e5636e512f1a078716a6bead25bca8687",
+      "published_sha256": "a1d37991224883b73d774d7a5ab290ad82a1000f66e6008d8a55eec45ab878df"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Market square close-up",
+      "source_path": "art/city_buildings/previews/market-square-detail.png",
+      "published_path": "images/gallery/market-square-detail.webp",
+      "source_sha256": "cf852be8d512dc791613407475385eb9591dc2b54ee953ea0ea94df8a547bfe4",
+      "published_sha256": "7de398d804134c24ec37ba0b1a347bce733a876223c27719d1c5b8f0d252d402"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Fountain from street level",
+      "source_path": "art/city_buildings/previews/fountain-eye-level-scale.png",
+      "published_path": "images/gallery/market-square-eye-level.webp",
+      "source_sha256": "e99a7a716ffd493e331e930281ab14ca09a94473d34360ebf02f4474506fd729",
+      "published_sha256": "05daee8d3328529dc6d4ffba73d3a48b66936871090de5f735a72ea0c81655f2"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "British Redcoat Close",
+      "source_path": "art/battlefield/close_infantry/BritishRedcoatClose.glb",
+      "published_path": "images/gallery/model-closeup-art-battlefield-close-infantry-british-redcoat-close.webp",
+      "source_sha256": "790d202441af312058765792e3c46742d927bec55158cb6eed4aed99651d2512",
+      "published_sha256": "1961574ce38c38c75543d8929699ea92055a9037c9ef25828ddbcc8f58e3ac1f"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Bl\u00fccher Sabre Source",
+      "source_path": "art/battlefield/imports/blucher-sabre/scene.glb",
+      "published_path": "images/gallery/model-closeup-art-battlefield-imports-blucher-sabre-scene.webp",
+      "source_sha256": "5693b9dc390530f1a467805b73f0f12c52fc65ff3440822ef09e6ed9113657ec",
+      "published_sha256": "c3854d688756744eece14bb58a1b44ecd4e023e5f4731a503d2e8db62fafd25a"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Gribeauval Cannon Source",
+      "source_path": "art/battlefield/imports/cannon-gribeauval/scene.gltf",
+      "published_path": "images/gallery/model-closeup-art-battlefield-imports-cannon-gribeauval-scene.webp",
+      "source_sha256": "018f82b04c852fe45d9a89c402d71d892b5a5c12e6e3e8cd0aa1ee29e6972c37",
+      "published_sha256": "8379c84d04c65dfee78e6849231776415b7c03f040ca0384c8c7ff84e6fca095"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "War Horse Source",
+      "source_path": "art/battlefield/imports/horse/scene.gltf",
+      "published_path": "images/gallery/model-closeup-art-battlefield-imports-horse-scene.webp",
+      "source_sha256": "1b5ef7e5dc3897a9230d690524fef74ed41e8c20c22aeca6237f215619ce6f3b",
+      "published_sha256": "cc0cdcd108b47f03de80a775348f0032b03f78fc0b2300fff57058359fd75d61"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Battlefield Tents Source",
+      "source_path": "art/battlefield/imports/tents/scene.glb",
+      "published_path": "images/gallery/model-closeup-art-battlefield-imports-tents-scene.webp",
+      "source_sha256": "f8fee13581c2257d36f1e1b281b80975a461c8d9972752c30a0e87f529b60367",
+      "published_sha256": "b8d2defc24a9e9336b28cb903fcdd8b905ecb986b30ff54c749193f38923e556"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Village Furniture Source",
+      "source_path": "art/battlefield/imports/village-furniture/scene.gltf",
+      "published_path": "images/gallery/model-closeup-art-battlefield-imports-village-furniture-scene.webp",
+      "source_sha256": "03b34e8c8340354dbe1df4f208bcce4a3b04bc516873df32775ae4d900023079",
+      "published_sha256": "47117d747d57f46d5818fa77aaa04a92cb4db39890406214a08705cf7b51e3d0"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Battlefield Wagon Source",
+      "source_path": "art/battlefield/imports/wagon/scene.gltf",
+      "published_path": "images/gallery/model-closeup-art-battlefield-imports-wagon-scene.webp",
+      "source_sha256": "5da58a93aa9ec9722124473987499c24d51b4fd644a122d246aabda2ef4e85f2",
+      "published_sha256": "d6e5553cd8576a376635c7b24c3097c307b32bc4858efe97522cb0aff991d21c"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Artillery Crew Source",
+      "source_path": "art/battlefield/imports/woodhead-artillery-crew/scene.gltf",
+      "published_path": "images/gallery/model-closeup-art-battlefield-imports-woodhead-artillery-crew-scene.webp",
+      "source_sha256": "4a2a4b01e94dc71c08b14f7c7f68a857c0911d00dcaa38857c55b610979be6f2",
+      "published_sha256": "77231d9c70bc63ce6f214cf7eae30b3da51a65fdb1c224d71ddd8dde80cdc7f6"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Napoleonic Hussar Source",
+      "source_path": "art/battlefield/imports/woodhead-hussar/scene.gltf",
+      "published_path": "images/gallery/model-closeup-art-battlefield-imports-woodhead-hussar-scene.webp",
+      "source_sha256": "8b66903f344a04429f8b9253cd03d315caff1a05471e1982bd29ffc29f9c06d1",
+      "published_sha256": "ab7b698c32df6f9a3239b42cf7b7f784d9a1cffcccb5985607676bfd8c859431"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Napoleonic Infantry Source",
+      "source_path": "art/battlefield/imports/woodhead-infantry/scene.gltf",
+      "published_path": "images/gallery/model-closeup-art-battlefield-imports-woodhead-infantry-scene.webp",
+      "source_sha256": "4e15da82ae456002d1ee54b2e4c465054808f5045633079b139f42f5bd090349",
+      "published_sha256": "5421eb5285d9709f2976d95af75e576c22c995d3df18f9fed0f415238a78cb78"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Chevaux De Frise",
+      "source_path": "art/battlefield/models/field_props/ChevauxDeFrise.glb",
+      "published_path": "images/gallery/model-closeup-art-battlefield-models-field-props-chevaux-de-frise.webp",
+      "source_sha256": "8a805b191e9a0730b80f519a7621c986512eb9a2ad193db8f14dfa72ca58e9b0",
+      "published_sha256": "2f34253c9c0d59ca0947ca325ed6a7e0a51403ff8f7882ba061cee2e22e0b6d6"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Damaged Fence Collapsed",
+      "source_path": "art/battlefield/models/field_props/DamagedFenceCollapsed.glb",
+      "published_path": "images/gallery/model-closeup-art-battlefield-models-field-props-damaged-fence-collapsed.webp",
+      "source_sha256": "cdc7af4f6ec5e2eefc17a191937f05fd0aff02cc62b9a900c18163b80250e548",
+      "published_sha256": "8ce3ff677f5f43550f71e55c624960eb5549f5919e8a960a04adbd6ba99c9478"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Damaged Fence",
+      "source_path": "art/battlefield/models/field_props/DamagedFence.glb",
+      "published_path": "images/gallery/model-closeup-art-battlefield-models-field-props-damaged-fence.webp",
+      "source_sha256": "5f33193d36d41b216b56b1a39b80a12e7337d726c8c8bbd88820f3105a862017",
+      "published_sha256": "15282248fc6b5f97d9edb5a13f0f12366f080f41774aab95b61b6d9f88356775"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Fascine",
+      "source_path": "art/battlefield/models/field_props/Fascine.glb",
+      "published_path": "images/gallery/model-closeup-art-battlefield-models-field-props-fascine.webp",
+      "source_sha256": "7568efeb0ed6d8b2de53c6dae7e1ab2eb0b422e9f92158a560d25adadc3e446b",
+      "published_sha256": "fba21508a336cc828bbfa0a7c06a7bd79cbdd18e998d074cde1bf388d62a061a"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Gabion",
+      "source_path": "art/battlefield/models/field_props/Gabion.glb",
+      "published_path": "images/gallery/model-closeup-art-battlefield-models-field-props-gabion.webp",
+      "source_sha256": "33758da734551f80ba79316132a863fd09fc53300d19a129103edd96ae693939",
+      "published_sha256": "7eceded2aa3aa9a8c3527c2bdf1ed7538562de3f2ec7b51413f365c5949530b4"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Gate Open",
+      "source_path": "art/battlefield/models/field_props/GateOpen.glb",
+      "published_path": "images/gallery/model-closeup-art-battlefield-models-field-props-gate-open.webp",
+      "source_sha256": "37879d103394a227094e7acb08680a44fa1978849d6590b53d8b6cc69c6165f7",
+      "published_sha256": "6287016637f074d70f796a36e1fa1abcba685d44912377878099de04591c7569"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Gate",
+      "source_path": "art/battlefield/models/field_props/Gate.glb",
+      "published_path": "images/gallery/model-closeup-art-battlefield-models-field-props-gate.webp",
+      "source_sha256": "71a6f97c0e06c4efdb024e2de03c546139a58356ddd673a624ab1457e5691145",
+      "published_sha256": "ec3ebd3c8582a9932ce858bf31c4d33ca92084fb31571709eeaf433c46dcf346"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Haystack",
+      "source_path": "art/battlefield/models/field_props/Haystack.glb",
+      "published_path": "images/gallery/model-closeup-art-battlefield-models-field-props-haystack.webp",
+      "source_sha256": "4b010a35967ae316650309427bbbaa7d18d90e464e86eb5afc719b4f0baed7c2",
+      "published_sha256": "c7133ef55118007d66af4148607d5636f4b509e95e7342df52cb5ac1e074af83"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Stakes",
+      "source_path": "art/battlefield/models/field_props/Stakes.glb",
+      "published_path": "images/gallery/model-closeup-art-battlefield-models-field-props-stakes.webp",
+      "source_sha256": "f935f721c390e844edeab74c63e4e3c34ae14fe99c64a6c86358883dd856d792",
+      "published_sha256": "44711ce833754ed8eb033c2d2f03032200486379521ad6235ce5d1c4965c7cee"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Stone Wall Broken",
+      "source_path": "art/battlefield/models/field_props/StoneWallBroken.glb",
+      "published_path": "images/gallery/model-closeup-art-battlefield-models-field-props-stone-wall-broken.webp",
+      "source_sha256": "640fba95b8a1f7cd4c839e5f0e74f765908334ed4f32d728fb43c706bfdb7a50",
+      "published_sha256": "ce74fcc2a7c39112d04c644d48d322ce8a44606a9fe888ec8a68687de4483b53"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Stone Wall",
+      "source_path": "art/battlefield/models/field_props/StoneWall.glb",
+      "published_path": "images/gallery/model-closeup-art-battlefield-models-field-props-stone-wall.webp",
+      "source_sha256": "bf576484a9cb59178628cca89ecec45c06abed45c56f202979a06486ddeec7c0",
+      "published_sha256": "2a7a1f5f34696ad548f93d9e6665e01aa558015a3bcace54ed5f9ed49df87d4b"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Water Trough",
+      "source_path": "art/battlefield/models/field_props/WaterTrough.glb",
+      "published_path": "images/gallery/model-closeup-art-battlefield-models-field-props-water-trough.webp",
+      "source_sha256": "9cef888089909e5c2e427a256ebc6e635861d2a43691907ce910d208d3d69e57",
+      "published_sha256": "d42f6642a8e9f4c23e02ed1ed80fd270afec0fd1331ee78059232f5a0f3b0869"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Well",
+      "source_path": "art/battlefield/models/field_props/Well.glb",
+      "published_path": "images/gallery/model-closeup-art-battlefield-models-field-props-well.webp",
+      "source_sha256": "bf1c24be6e95da4bf275fb1f26abba33f21d25cc7560982bebc965760a58445c",
+      "published_sha256": "db72dcc8286b9bfdd4ddaab5f458e57cf5963d8786c1c87b1250faf151591b34"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Woodpile",
+      "source_path": "art/battlefield/models/field_props/Woodpile.glb",
+      "published_path": "images/gallery/model-closeup-art-battlefield-models-field-props-woodpile.webp",
+      "source_sha256": "6a380e1aa91d2c2b0e7ef702ad206cf6d46b233c5de6d71350ccc68ae5c1c677",
+      "published_sha256": "cab38c9be1455e1ca98ce9084ec995df8ea008f83d3d0b47d27cabadece90990"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Apothecary First",
+      "source_path": "art/city_buildings/interiors/apothecary_first.glb",
+      "published_path": "images/gallery/model-closeup-art-city-buildings-interiors-apothecary-first.webp",
+      "source_sha256": "08ab3317214bae2c6b043c9b75554ca017f0e0821fe321695c2224a0be6b1911",
+      "published_sha256": "6a2ab29bff7231f608ccb6fa8e11f0355f5626e01891422d07f33d2befcc729e"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Apothecary Ground",
+      "source_path": "art/city_buildings/interiors/apothecary_ground.glb",
+      "published_path": "images/gallery/model-closeup-art-city-buildings-interiors-apothecary-ground.webp",
+      "source_sha256": "3ed78f97405e68e7d02cb42b1591b0dd0ed7fa5680c940ac5541347a26f5d438",
+      "published_sha256": "e77679747cba1793069c69cc9cdb489fd4e21da19dd43e8beb6b058f7ebcec52"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Bakers Shop First",
+      "source_path": "art/city_buildings/interiors/bakers_shop_first.glb",
+      "published_path": "images/gallery/model-closeup-art-city-buildings-interiors-bakers-shop-first.webp",
+      "source_sha256": "344c98b03071e2ae09e5e7f6082cfc59cb500621d113f83eb7e15df5ff24b1cc",
+      "published_sha256": "6a2ab29bff7231f608ccb6fa8e11f0355f5626e01891422d07f33d2befcc729e"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Bakers Shop Ground",
+      "source_path": "art/city_buildings/interiors/bakers_shop_ground.glb",
+      "published_path": "images/gallery/model-closeup-art-city-buildings-interiors-bakers-shop-ground.webp",
+      "source_sha256": "235b28e214bfc717d91164a5dfb69fe2ec510a7ee6c369b5ac4a1d1750bc3f54",
+      "published_sha256": "e77679747cba1793069c69cc9cdb489fd4e21da19dd43e8beb6b058f7ebcec52"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Chapel First",
+      "source_path": "art/city_buildings/interiors/chapel_first.glb",
+      "published_path": "images/gallery/model-closeup-art-city-buildings-interiors-chapel-first.webp",
+      "source_sha256": "17ae677c56f3eff1fce17683443463fc17c44e7814469b58f9a99d1d55e1024f",
+      "published_sha256": "7ca05b95b2cf7218509d4afc65578739fba409dd0013a7d426275800fee3ad99"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Chapel Ground",
+      "source_path": "art/city_buildings/interiors/chapel_ground.glb",
+      "published_path": "images/gallery/model-closeup-art-city-buildings-interiors-chapel-ground.webp",
+      "source_sha256": "6a9c8bfb11a8a549248b0533a1c1306e119107fb34065332ccf02fd75378a028",
+      "published_sha256": "cdf17c56b7ece7e374c6cb7fefd239bf22846f30e448af72ed66d8a592c4c438"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Cloth Merchants House First",
+      "source_path": "art/city_buildings/interiors/cloth_merchants_house_first.glb",
+      "published_path": "images/gallery/model-closeup-art-city-buildings-interiors-cloth-merchants-house-first.webp",
+      "source_sha256": "94057bdf6839a233baffd2e6b2721a41729313eb941281e353239292bbb71b2f",
+      "published_sha256": "d78c904a5e8c0cb09388f18e15397a9a1485e0c85edb032c4bee9098378cfbbf"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Cloth Merchants House Ground",
+      "source_path": "art/city_buildings/interiors/cloth_merchants_house_ground.glb",
+      "published_path": "images/gallery/model-closeup-art-city-buildings-interiors-cloth-merchants-house-ground.webp",
+      "source_sha256": "f28f1e9defba869aa8b6c2e8f5f4c8f4e1f9514f268b3dbe36cb017869ef198e",
+      "published_sha256": "e77679747cba1793069c69cc9cdb489fd4e21da19dd43e8beb6b058f7ebcec52"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Cloth Merchants House Second",
+      "source_path": "art/city_buildings/interiors/cloth_merchants_house_second.glb",
+      "published_path": "images/gallery/model-closeup-art-city-buildings-interiors-cloth-merchants-house-second.webp",
+      "source_sha256": "e7467d4a08cafd351c5ffd1bb022f2c38845b8a6695a1a1e4b4bc57d8cca0b12",
+      "published_sha256": "fa82fcf20087356e6c6f585663ff548af0e26cf74525522c3fee67ca3e0792bb"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Cottage First",
+      "source_path": "art/city_buildings/interiors/cottage_first.glb",
+      "published_path": "images/gallery/model-closeup-art-city-buildings-interiors-cottage-first.webp",
+      "source_sha256": "797f4387380aaf81006461c60bc2e0bd35d476ea2efbf29502fad1a08923f730",
+      "published_sha256": "0df1ccce5ad3dde1b539c25e94dabba3d5c790d48327377a125c453ea1146c7b"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Cottage Ground",
+      "source_path": "art/city_buildings/interiors/cottage_ground.glb",
+      "published_path": "images/gallery/model-closeup-art-city-buildings-interiors-cottage-ground.webp",
+      "source_sha256": "e836c617c05f6f3cbb9982e2960f638c54d41f56514c4f3cc2a070705d8e15ba",
+      "published_sha256": "46fe49b44b63b02e26bb48c495a6b0e2eadf4baa29062d1d183c7007a4ba0cf5"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Granary First",
+      "source_path": "art/city_buildings/interiors/granary_first.glb",
+      "published_path": "images/gallery/model-closeup-art-city-buildings-interiors-granary-first.webp",
+      "source_sha256": "804cc47774660656f2b50f28f9ce255258d53f08165aa90314b71e2eb1db5f71",
+      "published_sha256": "27bd06f7855be8f7a754d7f5839533070f7981bf5b0eca91b90c01deb232e812"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Granary Ground",
+      "source_path": "art/city_buildings/interiors/granary_ground.glb",
+      "published_path": "images/gallery/model-closeup-art-city-buildings-interiors-granary-ground.webp",
+      "source_sha256": "0833f9e80d3b3ef1d8c731036bc3b7f9f87ecd84de0a52c194fda5a6e0d5111c",
+      "published_sha256": "ef64cf8e2c8e08bb3ec42ae3243e53c971e461c6a063c9afa3385ab143cc7351"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Inn First",
+      "source_path": "art/city_buildings/interiors/inn_first.glb",
+      "published_path": "images/gallery/model-closeup-art-city-buildings-interiors-inn-first.webp",
+      "source_sha256": "da7e34fa41144520eefd40d1227497ff52a8115baf3356bd30e82300045054c0",
+      "published_sha256": "bee8fa4151b6fa221a6bf34e909d13ab182f58acc06c91e4552d5248a0d09a1b"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Inn Ground",
+      "source_path": "art/city_buildings/interiors/inn_ground.glb",
+      "published_path": "images/gallery/model-closeup-art-city-buildings-interiors-inn-ground.webp",
+      "source_sha256": "e625dace3ac4bd63164fdea27dcd8de6a7189c8180af3848dc048bf80297c6ae",
+      "published_sha256": "0f41846fd9a5163827d690d2075866149715aca140d4e7160db0633238e56bd8"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Merchant House First",
+      "source_path": "art/city_buildings/interiors/merchant_house_first.glb",
+      "published_path": "images/gallery/model-closeup-art-city-buildings-interiors-merchant-house-first.webp",
+      "source_sha256": "cae87eb5e4169bba88cbdf0311685e2a2c55846b9a3384f99904399f29333c48",
+      "published_sha256": "6a2ab29bff7231f608ccb6fa8e11f0355f5626e01891422d07f33d2befcc729e"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Merchant House Ground",
+      "source_path": "art/city_buildings/interiors/merchant_house_ground.glb",
+      "published_path": "images/gallery/model-closeup-art-city-buildings-interiors-merchant-house-ground.webp",
+      "source_sha256": "21dbfa216b5402ef2eefea99e642907328d4bc2b879aa8d13cec6a45dd299bd6",
+      "published_sha256": "3f052cbea24a70800327926accfbd54bd625dfcff1267daf9b30a74268a8c856"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Row House First",
+      "source_path": "art/city_buildings/interiors/row_house_first.glb",
+      "published_path": "images/gallery/model-closeup-art-city-buildings-interiors-row-house-first.webp",
+      "source_sha256": "d1ff13aaa5728e6280f91d17c792459ed5112e7dd0227eaa235c84eb28c05e05",
+      "published_sha256": "412012181ad506f535aae03b435a6aba97869a5f7db2cc183afa5104a78f94ca"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Row House Ground",
+      "source_path": "art/city_buildings/interiors/row_house_ground.glb",
+      "published_path": "images/gallery/model-closeup-art-city-buildings-interiors-row-house-ground.webp",
+      "source_sha256": "9e62a2b05315aed0d564dce7369127771f03539892e1672c71c97337a351927d",
+      "published_sha256": "341de6734bcc8719e6a91dc3f90f4e649371caae0663e8e90f83064d215ddc9d"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Row House West Variant First",
+      "source_path": "art/city_buildings/interiors/row_house_west_variant_first.glb",
+      "published_path": "images/gallery/model-closeup-art-city-buildings-interiors-row-house-west-variant-first.webp",
+      "source_sha256": "f765a103e688799deb9e965966f7a59ccde0ec8287b382c92e4696d2483360ea",
+      "published_sha256": "6a2ab29bff7231f608ccb6fa8e11f0355f5626e01891422d07f33d2befcc729e"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Row House West Variant Ground",
+      "source_path": "art/city_buildings/interiors/row_house_west_variant_ground.glb",
+      "published_path": "images/gallery/model-closeup-art-city-buildings-interiors-row-house-west-variant-ground.webp",
+      "source_sha256": "294c02e519e0bbc412d041b7ce0829df4f180eeffa653a43a727296950f564bf",
+      "published_sha256": "3f052cbea24a70800327926accfbd54bd625dfcff1267daf9b30a74268a8c856"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Smithy First",
+      "source_path": "art/city_buildings/interiors/smithy_first.glb",
+      "published_path": "images/gallery/model-closeup-art-city-buildings-interiors-smithy-first.webp",
+      "source_sha256": "b0ce172bd4838a600820d02aa71e7ee254034bbaa005c856b8ade30db026f21f",
+      "published_sha256": "1f8084f0b7984ed4b1a7d6906a2ea854e71e3134fb441103a008fac186a5458d"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Smithy Ground",
+      "source_path": "art/city_buildings/interiors/smithy_ground.glb",
+      "published_path": "images/gallery/model-closeup-art-city-buildings-interiors-smithy-ground.webp",
+      "source_sha256": "66a03520ad51ef6cf1121164befb2e24bb1b806ddfe17321d25ba514dfd0a380",
+      "published_sha256": "f3c382fc9d6a4882d8cec48760c362937db753e286423e66a6f657235e6d1ecd"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Stable First",
+      "source_path": "art/city_buildings/interiors/stable_first.glb",
+      "published_path": "images/gallery/model-closeup-art-city-buildings-interiors-stable-first.webp",
+      "source_sha256": "531548dc7ef2213019e27876135c3b32028f866f3cec17c47f933a89babb3ef0",
+      "published_sha256": "9cfe90da41c171533587f4155166367b2f0f6541f05413be7598f2aeb97efda5"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Stable Ground",
+      "source_path": "art/city_buildings/interiors/stable_ground.glb",
+      "published_path": "images/gallery/model-closeup-art-city-buildings-interiors-stable-ground.webp",
+      "source_sha256": "acf36c2fe0329d5fec6d60c534d7b8d6915680d86e872b68038ac28f631946d2",
+      "published_sha256": "dcae8ef515712d3feeca135b213f4f1b2ec1d825bcf177ba9504f8483cc141c1"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Town Hall First",
+      "source_path": "art/city_buildings/interiors/town_hall_first.glb",
+      "published_path": "images/gallery/model-closeup-art-city-buildings-interiors-town-hall-first.webp",
+      "source_sha256": "8b27dc04a2d7a6ad985df4b8f891e598a60fd64fbd7350d8a7b866a8037aa46e",
+      "published_sha256": "e0428848913a82cb314f81490d9a2f59e5f31eabcc80b499e13e88c2d811e2b6"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Town Hall Ground",
+      "source_path": "art/city_buildings/interiors/town_hall_ground.glb",
+      "published_path": "images/gallery/model-closeup-art-city-buildings-interiors-town-hall-ground.webp",
+      "source_sha256": "6daeb98803a0e5f094d9d20deff06eac0b511252fa7ee83f46681602ae28b2bd",
+      "published_sha256": "86cea7a288c352c4c0edd8fd95261683b01dca77dbecbb5dc9e617ba7742c247"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Town Hall Second",
+      "source_path": "art/city_buildings/interiors/town_hall_second.glb",
+      "published_path": "images/gallery/model-closeup-art-city-buildings-interiors-town-hall-second.webp",
+      "source_sha256": "a3d51f40da71f81a8ac80b209882ebfceee0962c4224028574a267d55404ac50",
+      "published_sha256": "c84d8541c90fd8a2bc145771f3963ed9b5c7dca3a73c06b4b9bf9a947b037ffa"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Warehouse First",
+      "source_path": "art/city_buildings/interiors/warehouse_first.glb",
+      "published_path": "images/gallery/model-closeup-art-city-buildings-interiors-warehouse-first.webp",
+      "source_sha256": "4e72f0805ab0da0ed7847bac491fc4c5f02a8555dd61cc83376c66b2b27b0318",
+      "published_sha256": "6e85afff9decb6275981ac28a0788401f2d22c8056b1e6978894c823b9713a61"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Warehouse Ground",
+      "source_path": "art/city_buildings/interiors/warehouse_ground.glb",
+      "published_path": "images/gallery/model-closeup-art-city-buildings-interiors-warehouse-ground.webp",
+      "source_sha256": "9798aaf5be29d38b3aeb9181865d37b1e3a9db591b157d8e3e60da38dc1db504",
+      "published_sha256": "ec3c5ef1e2df76ba84db04656edbef61e005ac8125f62bec7292895256bae868"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Apothecary",
+      "source_path": "art/city_buildings/models/apothecary.glb",
+      "published_path": "images/gallery/model-closeup-art-city-buildings-models-apothecary.webp",
+      "source_sha256": "ece72c7108f5abcf81330c22461e32b352fd1e8eab7ae4aee821a0b71a77304e",
+      "published_sha256": "2a962ace752a6b26b7cb1edc26707ea951ea1a06cacc0ffef250bcf9bec6ffa0"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Bakers Shop",
+      "source_path": "art/city_buildings/models/bakers_shop.glb",
+      "published_path": "images/gallery/model-closeup-art-city-buildings-models-bakers-shop.webp",
+      "source_sha256": "aa4c0bfb659b7d08d961f4713bd25d32b047ac00006e8ceb03c1c3b6386ef870",
+      "published_sha256": "67e3447dab5802fa121db5144693fe57099c9a739a246059f4af375174cb63cc"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Chapel",
+      "source_path": "art/city_buildings/models/chapel.glb",
+      "published_path": "images/gallery/model-closeup-art-city-buildings-models-chapel.webp",
+      "source_sha256": "c49613574ef9beed87d6b1a49cf384c1b8a5ffc12442a5dcb5771a88e852a6cb",
+      "published_sha256": "41aa9957dbba871933b36e6c666a489da2d94174d2598d934eb352356eaf9915"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Cloth Merchants House",
+      "source_path": "art/city_buildings/models/cloth_merchants_house.glb",
+      "published_path": "images/gallery/model-closeup-art-city-buildings-models-cloth-merchants-house.webp",
+      "source_sha256": "e025fd025b95b7de6baee68e0d1256e128e7de7699c502942a5bcc284a63842e",
+      "published_sha256": "8fdf125a5bfcebf3f32a4315c38573b54cea4e452fb2661e0e2ba93653bd000f"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Cottage",
+      "source_path": "art/city_buildings/models/cottage.glb",
+      "published_path": "images/gallery/model-closeup-art-city-buildings-models-cottage.webp",
+      "source_sha256": "1af690f8e4bf725a0f066a57d2435cebcddc7c278a91258b05437dd670445d1e",
+      "published_sha256": "3eee2ff9706c6b866d6e0583ea5bfdd2b8118672c746a930789cbe347b28a9fc"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Granary",
+      "source_path": "art/city_buildings/models/granary.glb",
+      "published_path": "images/gallery/model-closeup-art-city-buildings-models-granary.webp",
+      "source_sha256": "4497edc887e0ef04c3880c993285f7ea7b61ed0bb5198b7c61111589c090c0ab",
+      "published_sha256": "7a8fdfce777c907e65506c3247fe4da80417302d22e90b2ff6a831aed92d3312"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Hercules Fountain",
+      "source_path": "art/city_buildings/models/hercules_fountain.glb",
+      "published_path": "images/gallery/model-closeup-art-city-buildings-models-hercules-fountain.webp",
+      "source_sha256": "c68c70905968c8da6145ee62f2daa9678427bb6621c2f6fa0b0516c0e7c32c55",
+      "published_sha256": "dc72a85377794c23e83bc7ad7d18ba6cc540daa851b17e24e6997d905816c562"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Inn",
+      "source_path": "art/city_buildings/models/inn.glb",
+      "published_path": "images/gallery/model-closeup-art-city-buildings-models-inn.webp",
+      "source_sha256": "ff3434e0326f30b3395657c7bb557411f3d1914dbcabc891418a0e4cb54f98cc",
+      "published_sha256": "46eb139100e36fc15882ed7e9cc1b112904e60e780f25002c909dd771277b1b0"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Merchant House",
+      "source_path": "art/city_buildings/models/merchant_house.glb",
+      "published_path": "images/gallery/model-closeup-art-city-buildings-models-merchant-house.webp",
+      "source_sha256": "f420550de899222440bd735a60189b16c891b896a1967b09ad27353eafe07317",
+      "published_sha256": "3064ec13b7e1ad2f8e73ce691f412d2baf7c98e28fa8242acfb6e3716f7b6397"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Oil Street Lantern",
+      "source_path": "art/city_buildings/models/oil_street_lantern.glb",
+      "published_path": "images/gallery/model-closeup-art-city-buildings-models-oil-street-lantern.webp",
+      "source_sha256": "f677232e97cafa920a8668ae45a6e8e6983087617054d9962ccd669388791277",
+      "published_sha256": "9fba3ea7de2526048d1c20790068b01324406f04a1875cd37844c07a55b29233"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Row House West Variant",
+      "source_path": "art/city_buildings/models/row_house_west_variant.glb",
+      "published_path": "images/gallery/model-closeup-art-city-buildings-models-row-house-west-variant.webp",
+      "source_sha256": "58db8d0e4042c3edd822c3f769f259563f6d4c22e851cac7b9468130e6b2ccc0",
+      "published_sha256": "3064ec13b7e1ad2f8e73ce691f412d2baf7c98e28fa8242acfb6e3716f7b6397"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Row House",
+      "source_path": "art/city_buildings/models/row_house.glb",
+      "published_path": "images/gallery/model-closeup-art-city-buildings-models-row-house.webp",
+      "source_sha256": "aad846183d56065605dd86bd8b1436b3fca4d8facf044a1ec7a3fd57a18be59a",
+      "published_sha256": "d14ee6e1ac897b518b9599cdae9fa26dd65a5122e1c2798663e7e4532e29ec02"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Smithy",
+      "source_path": "art/city_buildings/models/smithy.glb",
+      "published_path": "images/gallery/model-closeup-art-city-buildings-models-smithy.webp",
+      "source_sha256": "0f7b42cbca9fb39e3f2f8be8d9ba56c46d2142890605c5a8a998e67199300e0c",
+      "published_sha256": "6732ed39b1264e846695c53d16828918baf12a5811df2ed4dee70d3fad748b2b"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Stable",
+      "source_path": "art/city_buildings/models/stable.glb",
+      "published_path": "images/gallery/model-closeup-art-city-buildings-models-stable.webp",
+      "source_sha256": "9511e39f90c5c3875d655f0767da03b3fb12310f45e699973817e1cb161bd803",
+      "published_sha256": "52d53e0c598891c56d724ab51de5c1226683b735726bc784c8a589a237e8dac1"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Town Hall",
+      "source_path": "art/city_buildings/models/town_hall.glb",
+      "published_path": "images/gallery/model-closeup-art-city-buildings-models-town-hall.webp",
+      "source_sha256": "ee83118f57d44d2d8c60769c16ba0d91b7a89b606e293526e576d8bf4726e734",
+      "published_sha256": "62ff2556154718a6448a54c24dc4258e2b3e94951efcbdfc0b9561de80886708"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Warehouse",
+      "source_path": "art/city_buildings/models/warehouse.glb",
+      "published_path": "images/gallery/model-closeup-art-city-buildings-models-warehouse.webp",
+      "source_sha256": "f77d5bba6e0b12be31896f6f023a9b4e29a6b8704f7fae7ed28278d297bc4c34",
+      "published_sha256": "9d4199e1117828c5f8a03b52066a17518035a9aecc958e49a9451bf843af796a"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Ammunition Crate",
+      "source_path": "art/placeable_props/models/AmmunitionCrate.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-ammunition-crate.webp",
+      "source_sha256": "e27b150eca72f9ea77dd7a8ed3407bafbd1b688864a4f9d6ffbdfb873eaf159a",
+      "published_sha256": "8f3dcadc18c360e0cad7c7e4b59ee9b66457a6d91b2ffe279f7144ce7cd3d8ae"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Barrel",
+      "source_path": "art/placeable_props/models/Barrel.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-barrel.webp",
+      "source_sha256": "8ed06ffe5657d7870470aa4a1f72264e3e3c0374950707b86fab7842b7acd5fc",
+      "published_sha256": "b4c586f30797320b51aeaa5b46719619569b82557b304db6215329e87faf8831"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Bedroll Bundle",
+      "source_path": "art/placeable_props/models/BedrollBundle.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-bedroll-bundle.webp",
+      "source_sha256": "0591c6e8d7cdb71471d34744850a92d835758bfe6151bb3e4109ecbf06d2c6f6",
+      "published_sha256": "08637e667e9f1346aab1e1a66d9a2d91e16f951691ff0902d22e149db3522cdb"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Bench",
+      "source_path": "art/placeable_props/models/Bench.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-bench.webp",
+      "source_sha256": "382a7921418d6a38fbb8684ce48b7ab6de6608dae0249bdf67b3aafe4c3dc124",
+      "published_sha256": "e0305a998dba6e1224fa0521846165aff2e7944aea9aaf2768c51eac52eccc69"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Broken Wheel",
+      "source_path": "art/placeable_props/models/BrokenWheel.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-broken-wheel.webp",
+      "source_sha256": "cd4ec9327204ab5b96eeb89f2d0a930b393edff93982766aa9dc1f6f67d15814",
+      "published_sha256": "46b307fb9e36b61d17789b393f62850ff40d12401691a167b8739125d4e2331e"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Camp Footlocker",
+      "source_path": "art/placeable_props/models/CampFootlocker.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-camp-footlocker.webp",
+      "source_sha256": "7413f1887f492d6d36cd5c0588f92d96c54df3776f0ca3872da04354c5bfeb28",
+      "published_sha256": "e4efc6ff8b81ed72b9dc18782df76b77c03b1eed49c3e27627a4bc84fe7939d5"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Camp Stretcher",
+      "source_path": "art/placeable_props/models/CampStretcher.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-camp-stretcher.webp",
+      "source_sha256": "de603b411460ef68902d5f4ade7ea4e69e3028ca93543e22f182a17ea45aec5e",
+      "published_sha256": "ff8bc7246ff9fcd38019a01121484cc4628b08d57f428966e9f4280dad41fd4f"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Camp Tent Wedge Red",
+      "source_path": "art/placeable_props/models/CampTentWedgeRed.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-camp-tent-wedge-red.webp",
+      "source_sha256": "d048ce185efb559cb1e99eaf56890ada217d9c007337d4e0b2fe8b04987207bc",
+      "published_sha256": "535ede0974a4fee7393e92abf65befb2d282abf4d50ad598d2a144d8c1ab3967"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Camp Tent Wedge",
+      "source_path": "art/placeable_props/models/CampTentWedge.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-camp-tent-wedge.webp",
+      "source_sha256": "f92a75a6ddbebf46f2cb5e6c30e563a2a41d0dd728bd047a92f3fd197213c5af",
+      "published_sha256": "d8e3bd4409fc702d5e2841594677d594435386dd0a2d950994b8a7d476d1f35f"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Camp Tent",
+      "source_path": "art/placeable_props/models/CampTent.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-camp-tent.webp",
+      "source_sha256": "f6f1b93731dbef6787d9ace550fac829f74073ec7efc08037af492529a7edd42",
+      "published_sha256": "952a48669be169e591279431c096fa13dde3f278afa2f5a00065cb565d71eb44"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Cannonball Stack",
+      "source_path": "art/placeable_props/models/CannonballStack.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-cannonball-stack.webp",
+      "source_sha256": "6c6ea8f7780be2f190e0429ce2f31897c2a6cf2b6894371a56d7d0b011f7079b",
+      "published_sha256": "8f37256cc5987ab5881108cf9e2fa2f0b2bcc86ddb19d7ee0a564216d243c10b"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Chair",
+      "source_path": "art/placeable_props/models/Chair.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-chair.webp",
+      "source_sha256": "2af1b6f299e3c7be16c67587136b4d4b39682bbc0009be0620d1a5f19a8852c5",
+      "published_sha256": "aa01cc40a5fbc049a7fcfeac73b92c49c2191c54e32e35ad03f0ba4fb7b82503"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Clothes Chest",
+      "source_path": "art/placeable_props/models/ClothesChest.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-clothes-chest.webp",
+      "source_sha256": "747f09a7a782164bd137fadb816e8610e677bf8114345483fbea20a02ca8d10e",
+      "published_sha256": "28d276bc660cdcd14c47287fb078556cd59d9759e33d753a61ebbf55d2de3ad8"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Cooking Tripod",
+      "source_path": "art/placeable_props/models/CookingTripod.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-cooking-tripod.webp",
+      "source_sha256": "a4e644fa6c01d2bc3f83ff6b7ca047c7ad8b6f7bde017b1aab4056e4afa33273",
+      "published_sha256": "c75e45d12804944486dae72ca97a15d45a866560a831dfa28b6be9acd82e5813"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Cookpot",
+      "source_path": "art/placeable_props/models/Cookpot.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-cookpot.webp",
+      "source_sha256": "7afc1585f1583af97058715f6a522331799f5c35d225d0f9b627733ac2f718e0",
+      "published_sha256": "e4d4a01ab67b64687132a9eca8543ec441ae55955c4ed0b92a46c3b277964cf0"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Covered Wagon",
+      "source_path": "art/placeable_props/models/CoveredWagon.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-covered-wagon.webp",
+      "source_sha256": "b693d6b09ed0d1766557645c70dd4b18f7c70a0c9ce8485a1cecc2c1ebce638e",
+      "published_sha256": "bfbe605c5c93c3f3e19a7a00ed1baed2104708966d5b6b10f8436a96e78416d9"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Fascine Bundle",
+      "source_path": "art/placeable_props/models/FascineBundle.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-fascine-bundle.webp",
+      "source_sha256": "9f820e6dfe5f61da195892443e2c17b56c18fce64af0ae4272c3853bb8f09b39",
+      "published_sha256": "8b286f8131d0779626dd0e3f0c7bab51e7bd5f74d1bb7a791e44494e659119f3"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Field Desk",
+      "source_path": "art/placeable_props/models/FieldDesk.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-field-desk.webp",
+      "source_sha256": "0b7bc00eef1c59d143a1596f23d6a7e9e4552fc98fcd441eae196705a418789a",
+      "published_sha256": "9b4f6797970b93c69908ac15708c191bd70ae4e751c4d7e0829d7768c4a5efbf"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Field Kitchen",
+      "source_path": "art/placeable_props/models/FieldKitchen.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-field-kitchen.webp",
+      "source_sha256": "3843cb0d2081d4cb68d5bef37bf2ff25db408dfc273a5ecc4aaf657565b6e7c1",
+      "published_sha256": "d539ea8bad0df3a721b95ca34d65d8eeddf3a4832614644ee21a1c66fff24df3"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Field Lantern",
+      "source_path": "art/placeable_props/models/FieldLantern.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-field-lantern.webp",
+      "source_sha256": "ba6ea3227e6c9edf28728b88685c684da97e8280213990b68be75e3d72c7405b",
+      "published_sha256": "5873f336d4e4d1164183d375d9b99a53992bfcd770c630f26730bcec5fd9cd70"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Firewood Stack",
+      "source_path": "art/placeable_props/models/FirewoodStack.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-firewood-stack.webp",
+      "source_sha256": "11c1ed0e4bb47f7ef1be7cb2e58259f34121deee803e3fa666c0a9aa3f229b44",
+      "published_sha256": "2475dd0b5d2225e6510ccc1d1429cafed7dd81e9204b6ff8b644e6049979770c"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Grain Basket",
+      "source_path": "art/placeable_props/models/GrainBasket.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-grain-basket.webp",
+      "source_sha256": "3c4bf8b0ef9d775ff1bd2d7a7534511ac4dd7063d2e6bfba79e1b24591d2155b",
+      "published_sha256": "cbf9e2a4942b705a0783733439037c3651d619148594e80e78d8c76fb90c049b"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Grain Sheaf Stack",
+      "source_path": "art/placeable_props/models/GrainSheafStack.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-grain-sheaf-stack.webp",
+      "source_sha256": "7a2daf78f300fc85905363df39f13ade6e1292e65fce45dde477cb5f4d77d26e",
+      "published_sha256": "45cd51327a420bc9e6df9a6376a05bc0457a558637248cc7b2f69fa414609b82"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Grinding Stone",
+      "source_path": "art/placeable_props/models/GrindingStone.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-grinding-stone.webp",
+      "source_sha256": "ecb1acf28a92b39b43587eb6814e6054beece3b530099d5fefafd1521893d185",
+      "published_sha256": "3bf459b8bc778d3c25ce5b7f874b3c4cf97a55bc01ffa2b53038f5fea6837b41"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Gun Limber",
+      "source_path": "art/placeable_props/models/GunLimber.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-gun-limber.webp",
+      "source_sha256": "d720cfb8b3ceb0ba64776259b611f95e8f5fd20bbae44c760997923543d77f1d",
+      "published_sha256": "b908173a7c7a7b1472a24e064b1e4a2b61c0b811ff50ae22bf6ba6a830aae21f"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Handcart",
+      "source_path": "art/placeable_props/models/Handcart.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-handcart.webp",
+      "source_sha256": "39b633689a5ba5dc299cbfb212c712ed1111d925f431ddbe6c6e7533a5ae0568",
+      "published_sha256": "1661fca0b0463250759fc24e2ded55dbfb46cc4e7b1b5c0aae948caf82c8719b"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Hay Bale",
+      "source_path": "art/placeable_props/models/HayBale.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-hay-bale.webp",
+      "source_sha256": "2199f55adadc176c970722cbf732d2c89f7815eea6e1d445f447ce5fb912672a",
+      "published_sha256": "f524ec4df6ba7a37bd78af4e31f675f8d51ade1b9539c4d30bab42102c53b91e"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Haystack",
+      "source_path": "art/placeable_props/models/Haystack.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-haystack.webp",
+      "source_sha256": "ad4dca96284063e0153435d50031c8f16b2eb42d5f1528b84dca9727add6bc3f",
+      "published_sha256": "21e32b543c560b9b63c64b1ca770f08399da7f78ce24678d90a25129146ed5d6"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Laundry Basket",
+      "source_path": "art/placeable_props/models/LaundryBasket.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-laundry-basket.webp",
+      "source_sha256": "036c095fcf0c416f4c4cf5b3056113f7bff5db81ced12271a6fe500d1f009ecc",
+      "published_sha256": "3dce09f0b2e47c4d4af12d66f9a133828d86f79d63f2dfced6078fb3001ed12b"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Laundry Rack",
+      "source_path": "art/placeable_props/models/LaundryRack.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-laundry-rack.webp",
+      "source_sha256": "171dea3dae0c69c2a13930513778e0e244b8a7a439b91fc484b3e8240cf53ee2",
+      "published_sha256": "29b1d6eb6a7fe031b0b5b18f8d5e80da22dfc67be19f0bcd611795b17cc53395"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Market Scale",
+      "source_path": "art/placeable_props/models/MarketScale.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-market-scale.webp",
+      "source_sha256": "04837aaaaafeed8be1d3cc5926315a1e2ce82f1fb0c2afd25652af486e3c64b7",
+      "published_sha256": "48fa3809ee86bb9d5e1ad3a7dd00f573d01a082d0fde2af36cbadf9898a768c9"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Market Stall",
+      "source_path": "art/placeable_props/models/MarketStall.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-market-stall.webp",
+      "source_sha256": "e94a867688556bb9feb481aa8f709af5b7d1ce486ccc745fa117db84f9b195f9",
+      "published_sha256": "688bfbc055d9219052817941560ffe276180ddbe0db9a9f421742540095f3b67"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Medical Chest",
+      "source_path": "art/placeable_props/models/MedicalChest.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-medical-chest.webp",
+      "source_sha256": "96d51e7ba67e23ee5b1eb6e5159aa16ef8fd9ba5680c0ccfbd383a7d39919b93",
+      "published_sha256": "9dff009c907351409c54c2a170e9c8abb7ac488ad081897cf39902b00ccab607"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Plank Stack",
+      "source_path": "art/placeable_props/models/PlankStack.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-plank-stack.webp",
+      "source_sha256": "4c28297ce0cecba8251131b6efc1049f0ebd018fa63e37375a2c260b8bca07cb",
+      "published_sha256": "e456b34f01a86e45b3c19fa34b5a2025d7b76d5aa5f8f7726f124383818ad7ed"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Pottery Jar",
+      "source_path": "art/placeable_props/models/PotteryJar.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-pottery-jar.webp",
+      "source_sha256": "aa45f0ff1ac1323a23823ac5223b908ade11862189828f2835fffb00e3e35d82",
+      "published_sha256": "fad3c4e4666a97454a95765dfb29d0ee00f92c4da06091f052e1ddeedce9e60b"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Powder Keg",
+      "source_path": "art/placeable_props/models/PowderKeg.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-powder-keg.webp",
+      "source_sha256": "2f9c948661a695ea7c9d5240dcecbee60f8ed7f6d4450ef61d5cd655be639b9c",
+      "published_sha256": "e637b1d17c8085e1eae644d031a1f9f64b4ad0629a2c0fc0a61cfca93754e4af"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Rope Coil",
+      "source_path": "art/placeable_props/models/RopeCoil.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-rope-coil.webp",
+      "source_sha256": "a76a04169ec2c691163296064e98ba1a20d5bb2796922a2d618467df01c06e9b",
+      "published_sha256": "7261065b445d444379a5b9ff468e03bce2aab8363d8d9581d083f9c50d722660"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Sack Stack",
+      "source_path": "art/placeable_props/models/SackStack.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-sack-stack.webp",
+      "source_sha256": "c430da24d45b2a2ef3af2c9c066b39449b7797679850cf81d0311e700a5e7d08",
+      "published_sha256": "dff4d82ea8143ed93adcb646226448975a23fc99de77307860797e850bf018ba"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Stone Block Stack",
+      "source_path": "art/placeable_props/models/StoneBlockStack.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-stone-block-stack.webp",
+      "source_sha256": "80025b2e6459aadffe35b27c72abf53cb83a53a7e6b3ee4c1766b63f69fee5d8",
+      "published_sha256": "98102db9238e09f9af2181dffdc61455e6cc458e158b184abfc0dc9e404dca78"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Supply Crate",
+      "source_path": "art/placeable_props/models/SupplyCrate.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-supply-crate.webp",
+      "source_sha256": "98c32433c23469f804bdf969653e1f9baba6818c7d99058c8ac61f6abdd75aa5",
+      "published_sha256": "6be2fbdfb4aac1eb46ccef11c78df81f00b83885d4576582510f41001f2b612e"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Supply Wagon",
+      "source_path": "art/placeable_props/models/SupplyWagon.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-supply-wagon.webp",
+      "source_sha256": "7d50a6364b624962cb5f9a91c40b2016b22f2d59c0507b46d3e351b2ef174c6e",
+      "published_sha256": "0cb722e9b6d0badda10291b26920c31f6613ac2de62e64145d434f8f71d223ff"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Table",
+      "source_path": "art/placeable_props/models/Table.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-table.webp",
+      "source_sha256": "905110b0ac85ad04ffb78c041f207c9287caaa8f878c567a86bcc7ba1a7a8ffd",
+      "published_sha256": "1e7450cae9929f73458528d52e8c336f7cc6de52f9ac57b544f5c34099e7731c"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Timber Stack",
+      "source_path": "art/placeable_props/models/TimberStack.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-timber-stack.webp",
+      "source_sha256": "7e673f05fa3bce12565da75ec9c8498c492f12f0330433da8f5367240b748433",
+      "published_sha256": "279425b752b576830306ab99eba04c56e9f2a242f16abd7831120e01b0fc5419"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Tool Chest",
+      "source_path": "art/placeable_props/models/ToolChest.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-tool-chest.webp",
+      "source_sha256": "4d2cc6b44d7d64c9e4db4aacec1a796203c7fbb226f5cd6dad66623a0b57740a",
+      "published_sha256": "3ac4b5c537b7f32292d1ccc009dbc3c71da6d6199138404fda407e2324594c81"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Tool Rack",
+      "source_path": "art/placeable_props/models/ToolRack.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-tool-rack.webp",
+      "source_sha256": "ead001b79da0e994d60b1663d0807feae675e357a918470ef3945310b0cac0dc",
+      "published_sha256": "ddeef4ba1bd69a337d33eca046feb512565aa15482824ac792a25628ea361720"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Wash Tub",
+      "source_path": "art/placeable_props/models/WashTub.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-wash-tub.webp",
+      "source_sha256": "3552abd116b5c408e5ef02a723d85d40f9c974bc70c9b2994f94a60a68336854",
+      "published_sha256": "be1d6c583e90936cfb769486fa0b6b186eafaf6d538d59b049ea7fc85fcb76e1"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Water Bucket",
+      "source_path": "art/placeable_props/models/WaterBucket.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-water-bucket.webp",
+      "source_sha256": "53df49c1ff0fbb18803654af58863cfd87402d05b47e0c26bbb658b396c055b1",
+      "published_sha256": "f89be45dba7795ec59145f32f76f4e200ac12d7826c4ea08082c5ef627e46222"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Water Cask",
+      "source_path": "art/placeable_props/models/WaterCask.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-water-cask.webp",
+      "source_sha256": "b5fcf1a24fff60f1afb46fb86d38e295fe79bf8f53e6a3977b05c11e2bd042b2",
+      "published_sha256": "c15cc8b632a9a147ffebfc5adb799c066941f6cb460755b36db96bc396ab3e93"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Water Trough",
+      "source_path": "art/placeable_props/models/WaterTrough.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-water-trough.webp",
+      "source_sha256": "50120075a5dafe037d47c21de203b7bc98294a17cb30ced2125f300ac05a583c",
+      "published_sha256": "f4795fb0269099d6b0e3d1f0ad11eac32c7d14274385cb692dcdcdd3bbd69614"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Wheelbarrow",
+      "source_path": "art/placeable_props/models/Wheelbarrow.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-wheelbarrow.webp",
+      "source_sha256": "0897fb50ab76301b52bce997b41b7b2e0b71bec295cb93f560077bdd34fac93d",
+      "published_sha256": "1ae27d69a2743c7b024368281a21c774136c65a266f931fe6712c169f429797f"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Wicker Basket",
+      "source_path": "art/placeable_props/models/WickerBasket.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-wicker-basket.webp",
+      "source_sha256": "79c7d114fe0f41ca84a23c2bb39bad4663e85fe506f90f3bc3c531d34c817123",
+      "published_sha256": "1593023d1c41e244ed917252f150b67fa755c67c24057f19ff0a145153015aae"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Wooden Ladder",
+      "source_path": "art/placeable_props/models/WoodenLadder.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-wooden-ladder.webp",
+      "source_sha256": "3de0c837b358f5da6465d0f3de4b1f9d4c13c7f126a254ac15fe3380218ba884",
+      "published_sha256": "521c2d09c13d1ac78d2c9cd181a80af04ecff68da34077acb51a8dba85860e92"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Wrecked Caisson",
+      "source_path": "art/placeable_props/models/WreckedCaisson.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-wrecked-caisson.webp",
+      "source_sha256": "7107efa3b9102b2e07d4dd10a0cfc149f31a2cb949f6f20829f2b378ad11583d",
+      "published_sha256": "e4d35f7bc1368690c3d3dd8b33554fdc4dad66b470345ef3b3565e0772a2eb7d"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Wrecked Cart",
+      "source_path": "art/placeable_props/models/WreckedCart.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-wrecked-cart.webp",
+      "source_sha256": "80e985c4ab25ec62e4c099e517984127af87e60a6eeca279d5ccf1f206a48f5f",
+      "published_sha256": "6aea3b9813b6bd2ccb2c324ee4084cece167f9f3f30c96ec1100815534709df2"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Wrecked Gun",
+      "source_path": "art/placeable_props/models/WreckedGun.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-wrecked-gun.webp",
+      "source_sha256": "ac719048a465f31aac5bed67a99eb9efae8658a75fc83d16a5f2017e1e48d90a",
+      "published_sha256": "0a2a062d9e6055d00560e32905b2e4a60cfbf05d651800975c6223c6da41ea73"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Wrecked Limber",
+      "source_path": "art/placeable_props/models/WreckedLimber.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-wrecked-limber.webp",
+      "source_sha256": "16f77f92249bffae795cc0c4dde24295c1deaff807299947eaec44f591780ff7",
+      "published_sha256": "87c7b32ae378361ce7115fa0259df36c722287fd547efdbbfa725cfd5df37ebb"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Wrecked Wagon",
+      "source_path": "art/placeable_props/models/WreckedWagon.glb",
+      "published_path": "images/gallery/model-closeup-art-placeable-props-models-wrecked-wagon.webp",
+      "source_sha256": "552b612d3ae037d6c2ac8915c275c2260e9c84df9a15b1132704b95d0f75e1a1",
+      "published_sha256": "b8fdce10965cd5a748580740582b8a48300a54fd388421a601f725b37988362a"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Winged Hussar Armor",
+      "source_path": "art/winged_hussar/WingedHussarArmor.glb",
+      "published_path": "images/gallery/model-closeup-art-winged-hussar-winged-hussar-armor.webp",
+      "source_sha256": "9831ec70db49dd9b023423ead0fb33b29d24eaeec49370901c369c551d451559",
+      "published_sha256": "c62568bcd9a1258b5e33a9a0561291bed9baf5e3e5b78db3b8f14c794b6f8819"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Winged Hussar Horse Armor",
+      "source_path": "art/winged_hussar/WingedHussarHorseArmor.glb",
+      "published_path": "images/gallery/model-closeup-art-winged-hussar-winged-hussar-horse-armor.webp",
+      "source_sha256": "f964ea7670534594e8ad91193bec4d891606802d6908c22d77ebf4bf321e083b",
+      "published_sha256": "fc00aed727f13171d433df1ba3920648efb40180854776afc54ee0792fbe0063"
+    },
+    {
+      "kind": "model-closeup",
+      "title": "Winged Hussar Rider",
+      "source_path": "art/winged_hussar/WingedHussarRider.glb",
+      "published_path": "images/gallery/model-closeup-art-winged-hussar-winged-hussar-rider.webp",
+      "source_sha256": "1384e80e5383101fc1b67febf7a75ff9ac42eaecc6861814080cafd85c5cf33e",
+      "published_sha256": "70f97a6aa6a57eabfda6d75163b4d6df0b47df0a01f21136f00290164e9799f6"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Napoleonic light hussar",
+      "source_path": "art/model_showcase/images/napoleonic-hussar.png",
+      "published_path": "images/gallery/napoleonic-hussar.webp",
+      "source_sha256": "736e7a774157da0a171daa943fdbdf4822917374757ef8e63f9adfd772f25803",
+      "published_sha256": "24a26fcf094d5115df1f0638f84779de343b6b3867f48aab46eeb0bc4c9a1500"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Napoleonic infantry",
+      "source_path": "art/model_showcase/images/infantry.png",
+      "published_path": "images/gallery/napoleonic-infantry.webp",
+      "source_sha256": "e968786cd0bd828980e82e9c50cb0ddc8d1023975432cce8b000b30508f8b663",
+      "published_sha256": "ccbdb6a3e152d7f14a77d3aff9d865529b22262e2802d0aa2275b90ffb266856"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Oil lantern materials",
+      "source_path": "art/city_buildings/previews/oil-street-lantern-head-detail.png",
+      "published_path": "images/gallery/oil-lantern-materials.webp",
+      "source_sha256": "dc451dd3c8c757a8bb8824b304079e5d41f15aa30d1d0ede43894c387aa1817d",
+      "published_sha256": "c07fb9317c1397507a3cc1438ca5152c90453dd3a8b9cd28d7d1fdd00ffa1f0d"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Oil street lantern",
+      "source_path": "art/city_buildings/previews/oil-street-lantern-closeup.png",
+      "published_path": "images/gallery/oil-street-lantern.webp",
+      "source_sha256": "742d9c5c6c103f658be3ea7f1a9ecacd7dd19c2c560e6b4159bc5c051cd2ec28",
+      "published_sha256": "00c7d4faacec04ac9b403959405c6e0cf51cf3ac73441d3536e0ce3271867a17"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Olive artillery battery",
+      "source_path": "art/battlefield/previews/olive-artillery.png",
+      "published_path": "images/gallery/olive-artillery.webp",
+      "source_sha256": "2650f8317776ad68680d82b4aceda02be57582626f261349fd859a2dae1889f2",
+      "published_sha256": "e36d8df96a74f5828e8638838f1f4bb4cb147c92b3134262ea6dcff3f2d0585f"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Olive field cannon",
+      "source_path": "art/battlefield/previews/olive-cannon-close.png",
+      "published_path": "images/gallery/olive-cannon.webp",
+      "source_sha256": "4dc1419111d0d00845a7ede4a239e9c9f8a0bcc5210de3cb5b0a41d01f68be45",
+      "published_sha256": "0b163cff8039f00f263f62800f86dd189d3d9c9b0115bd5f88173c4db0379c88"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Battlefield overview",
+      "source_path": "art/battlefield/previews/panorama.png",
+      "published_path": "images/gallery/panorama.webp",
+      "source_sha256": "3d8649fcffb6f8228a743082069465729016761aa3f3ac0b8cc82af252183f6b",
+      "published_sha256": "4e8859f1710c327042a16bac0612a183f6be183c95a2ff0f0abab444bc96105c"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Early-19th-century town buildings",
+      "source_path": "art/city_buildings/previews/period-town-buildings.png",
+      "published_path": "images/gallery/period-town-buildings.webp",
+      "source_sha256": "06ddf39bd448f8a5ca30d8faf3515782e484ab24a2182705a14152395468707e",
+      "published_sha256": "a79b98855a8e1142e56aaa9f3520024319081caed756eb8ce2869213dbf7aac9"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Town building floor plans",
+      "source_path": "art/city_buildings/previews/period-town-interiors.png",
+      "published_path": "images/gallery/period-town-floor-plans.webp",
+      "source_sha256": "330828f3e2da78f26d0c495a619c093e52c256cedaffc3867c6d419ff9817625",
+      "published_sha256": "dd872ea3f8557c11bfa692e809ef155f5a6f75632d7163c56395a2b203f02d2d"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Planked field chest",
+      "source_path": "art/placeable_props/previews/wood-texture-crate-closeup.png",
+      "published_path": "images/gallery/placeable-field-chest.webp",
+      "source_sha256": "67dc4006284d944a8cecc3be23cb9c3c0ab77a82adc83f3051fc047758fb0b63",
+      "published_sha256": "b29f41f1aca3a41868a4f6725485a93da0b2b74fe8c38555dbeb369d76ea734f"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Field lantern",
+      "source_path": "art/placeable_props/previews/metal-texture-lantern-closeup.png",
+      "published_path": "images/gallery/placeable-field-lantern.webp",
+      "source_sha256": "1da462a024e9bb03915ea24cc01271ecc5b0e1085946f449fa6d45344fd54aca",
+      "published_sha256": "d267d4e611ec5ac6a0e674a82ea5b893ff7106d957a14f1463e583f65b9a619b"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Town market stall",
+      "source_path": "art/placeable_props/previews/market-stall-closeup.png",
+      "published_path": "images/gallery/placeable-market-stall.webp",
+      "source_sha256": "ee183aa5f056f2e46cb6e3b0de3246dbf701d6c33f01212ca8e9beb4318a4fdd",
+      "published_sha256": "a1f5dfd2b84296e0e0dcf5f8765bd62af078e392bfc6366811b973953d000b3f"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Placeable prop catalog",
+      "source_path": "art/placeable_props/previews/placeable-props.png",
+      "published_path": "images/gallery/placeable-props-catalog.webp",
+      "source_sha256": "515f68464bdffeb9ef7a033ed4c05b794dc20727e6265cce1e0a366966ad1c1f",
+      "published_sha256": "394d1cc1b7a7076b140b517d9820a2587ebeb19faae9218382f403a1e7c70650"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Square campaign tent",
+      "source_path": "art/placeable_props/previews/camp-tent-closeup-angle.png",
+      "published_path": "images/gallery/placeable-square-campaign-tent.webp",
+      "source_sha256": "8dc5082365d797c75dd5e181fbef1d4ea627221ce861a6fcfff520e52724482d",
+      "published_sha256": "a760e06688a75e2512f6f781f102f0142679dbc9d9ef117273b3cf9390eb15e9"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Wicker market basket",
+      "source_path": "art/placeable_props/previews/wicker-texture-basket-closeup.png",
+      "published_path": "images/gallery/placeable-wicker-basket.webp",
+      "source_sha256": "bed849d04d0fd97624b69f70b5d0e8afb7d3ece8537bef30d9ad5b057dabf1c5",
+      "published_sha256": "81d60e5fbddb72c2bfe11906e81006c67d4972f501726e6fc0a13b7512a52c4b"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Player field kit",
+      "source_path": "art/battlefield/previews/player-items.png",
+      "published_path": "images/gallery/player-kit.webp",
+      "source_sha256": "33be599ed78f5e6c900eceb48021abf23200f3c13eef35aa1db13a40a82ab428",
+      "published_sha256": "27ce7f2623bc05544045c6db96dafa06e97f83e42f9f68fcda89eb87cb9e07a5"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Hussar rider armor",
+      "source_path": "art/winged_hussar/previews/armor-only.png",
+      "published_path": "images/gallery/rider-armor.webp",
+      "source_sha256": "9657293709fe2b51525ba0ebcb6a6f2f2e4d9c27cff3bac933ac1dc4f3031c51",
+      "published_sha256": "0f44a694fcbed3f7c73874c72a6ecd283574387f6f8761f2275c0697039043e8"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Town-house window construction",
+      "source_path": "art/city_buildings/previews/row_house-windows-detail.png",
+      "published_path": "images/gallery/row_house-windows-detail.webp",
+      "source_sha256": "c9b9b34ed9ce2134499873f352a5a3f187e1c2f77db9f1d425054a794f5db918",
+      "published_sha256": "55c4010f305ca0595c3e03f1da7369a6acae1b442b4c4379464567ce18ff4387"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Coopered field barrel",
+      "source_path": "art/placeable_props/previews/coopered-barrel-closeup.png",
+      "published_path": "images/gallery/scenery-barrel-closeup.webp",
+      "source_sha256": "004961cc61683ded9fcfb5ccebd994428d3dbf12af1de272ef6d7a414acff9da",
+      "published_sha256": "6f11b22a3d4f03cc6228cfd79a9934bc34a5af9372f18844e289675f73762c21"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Camp and village kit",
+      "source_path": "art/battlefield/previews/scenery-kit.png",
+      "published_path": "images/gallery/scenery-kit.webp",
+      "source_sha256": "aa3885dc4b7cd66640ff4b4be080962417751254efea70f29027d0b5c3633e4c",
+      "published_sha256": "fff256e81f24f8577bf22d7f8749164ed20ce0a7b6fa2a126156d1ad7def2991"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Red canvas wedge tent",
+      "source_path": "art/placeable_props/previews/camp-tent-wedge-red-closeup-angle.png",
+      "published_path": "images/gallery/scenery-red-tent-closeup.webp",
+      "source_sha256": "5a31f387114e261520f77c57b26150ad160645f6df1a6a5047bf100e4e46f904",
+      "published_sha256": "6dbad8bedec18618219216b36ecf27fff19ad024337cb754165bc1f7a536f2e2"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Covered supply wagon",
+      "source_path": "art/placeable_props/previews/covered-wagon-closeup.png",
+      "published_path": "images/gallery/scenery-wagon-closeup.webp",
+      "source_sha256": "933788582dfb2582aeb89643e84ecf0ea34d158543f154322978fde88748faa2",
+      "published_sha256": "2203c8da29e278bbd4682d07e2f7dbb8ddbb6dc729c68916af64b7135a45c3d2"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Natural canvas wedge tent",
+      "source_path": "art/placeable_props/previews/camp-tent-wedge-closeup-front.png",
+      "published_path": "images/gallery/scenery-white-tent-closeup.webp",
+      "source_sha256": "190f7a47e644c6c52ca1333b8d331445ca8ae1626db895bbef777bad783137cf",
+      "published_sha256": "2cd88ce399d89a42bce79712fec4445e429978e0e415bb8a0e71f5e6fb65e26c"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Smithy work bay",
+      "source_path": "art/city_buildings/previews/smithy-work-bay-detail.png",
+      "published_path": "images/gallery/smithy-work-bay-detail.webp",
+      "source_sha256": "723239e31a0d5ec7c0af63f5955bcbb734428f21671c45eff69b1dcd6754ba54",
+      "published_sha256": "f22f1ef08cb67035cb7b443a0859e9bbe455ca60357c7dc2e661b3b49a13a83a"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Town joins the city at its short side",
+      "source_path": "art/battlefield/previews/town-edge-integration.png",
+      "published_path": "images/gallery/town-edge-integration.webp",
+      "source_sha256": "6e8a3989a4d9692f8e3abe3a31946ebfa0008f3f98fb256230766ffe7580854b",
+      "published_sha256": "7c0dfe011af1fcc5d6eb7c58ff17b74672efe64cfb136826c9b29788172bf70b"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Town hall roof lantern",
+      "source_path": "art/city_buildings/previews/town-hall-lantern-detail.png",
+      "published_path": "images/gallery/town-hall-lantern.webp",
+      "source_sha256": "2f996bbef3d8b5c8036dc91119bc8f43bd1ce71bdf1da7a6393cd9d7236f8dae",
+      "published_sha256": "ffeeb262c858d02bc2d356c98ea26eca1da46052bc4a5bf2e24bdda5f3c6c75f"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Town material library",
+      "source_path": "art/city_buildings/previews/town-texture-samples.png",
+      "published_path": "images/gallery/town-texture-samples.webp",
+      "source_sha256": "6049c1261e05d5c509ce35f921c3687386630ae8701f2dc321608ca92398cf6b",
+      "published_sha256": "c60b013fd9039d811bcfb2c9d318d5fa15416e1f5c9d3bbf819376308633b41c"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Existing town and city edge",
+      "source_path": "art/battlefield/previews/village.png",
+      "published_path": "images/gallery/village.webp",
+      "source_sha256": "2c4276b88a70aa87a247912c42371a301952d6d428d850e11fb58e81c4e3aaaa",
+      "published_sha256": "10399a6ff59f1367c501faa06169915bfd512a87190337125ebea2ecdde4c5e8"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Winged Hussar formation",
+      "source_path": "art/winged_hussar/hussar-formation-hero.png",
+      "published_path": "images/gallery/winged-formation.webp",
+      "source_sha256": "7c8f176cacfc1833be7ae146f1300e6babc4fd63096cc793ed8324103d18b42d",
+      "published_sha256": "666b998f3b749382cf729653abd2c954994473dfd581e6ba3270f14c57f06ec1"
+    },
+    {
+      "kind": "gallery-card",
+      "title": "Winged Hussar",
+      "source_path": "art/winged_hussar/discord-showcase/hussar-hero-hires.png",
+      "published_path": "images/gallery/winged-hussar.webp",
+      "source_sha256": "a15c24e9ef7c3b0061570f9e3193c8ac745e2be8be2b912fc0c8d2b7cbec6c09",
+      "published_sha256": "6cbeec86b7af4c4a307fe6ba32cc981de62350f7839622b48013ce903231e344"
+    },
+    {
+      "kind": "overview-board",
+      "title": "Showcase overview board",
+      "source_path": null,
+      "published_path": "model-showcase-board.jpg",
+      "source_sha256": null,
+      "published_sha256": "c5942f2a7e3999d9f8b6211238f6a95ae0aee60849de15a0e9e5818913a159b8"
+    },
+    {
+      "kind": "poster",
+      "title": "Cannon firing reduced-motion poster",
+      "source_path": null,
+      "published_path": "motion/cannon-firing-poster.webp",
+      "source_sha256": null,
+      "published_sha256": "10f891946f41907ddbcd3898c5b9467d36159418e5f58e38b146289e1826bde9"
+    },
+    {
+      "kind": "animation",
+      "title": "Cannon firing",
+      "source_path": "art/battlefield/previews/unity/cannon-firing.gif",
+      "published_path": "motion/cannon-firing.gif",
+      "source_sha256": "4f0ca79ea5e1b1c884efef37122765e5595935059fa43001831040749a63bf7e",
+      "published_sha256": "4f0ca79ea5e1b1c884efef37122765e5595935059fa43001831040749a63bf7e"
+    },
+    {
+      "kind": "animation",
+      "title": "Gallop",
+      "source_path": "art/winged_hussar/mounted-gallop-preview.gif",
+      "published_path": "motion/gallop.gif",
+      "source_sha256": "605f58fdbc94a5e83c8e81f055b523597034631bd44b00095563a20a5bec2074",
+      "published_sha256": "605f58fdbc94a5e83c8e81f055b523597034631bd44b00095563a20a5bec2074"
+    },
+    {
+      "kind": "animation",
+      "title": "Mounted idle",
+      "source_path": "art/winged_hussar/mounted-idle-preview.gif",
+      "published_path": "motion/idle.gif",
+      "source_sha256": "f84c47449e66d3fd4dc5770c123d55a793a4ae8053295c466f0166b35dfa5462",
+      "published_sha256": "f84c47449e66d3fd4dc5770c123d55a793a4ae8053295c466f0166b35dfa5462"
+    },
+    {
+      "kind": "animation",
+      "title": "Infantry musket volley",
+      "source_path": "art/model_showcase/source_media/infantry-volley.gif",
+      "published_path": "motion/infantry-volley.gif",
+      "source_sha256": "5210a85d6086a600ce8aed561c237dbb8595b82153b79c982d1bcd4155841384",
+      "published_sha256": "5210a85d6086a600ce8aed561c237dbb8595b82153b79c982d1bcd4155841384"
+    },
+    {
+      "kind": "animation",
+      "title": "Lance attack and recovery",
+      "source_path": "art/winged_hussar/mounted-lance-attack-preview.gif",
+      "published_path": "motion/lance-attack.gif",
+      "source_sha256": "a17b1c9a29a75abc5f2fcfc7b1989e01421482d1273e66ec912c2192fe8854d2",
+      "published_sha256": "a17b1c9a29a75abc5f2fcfc7b1989e01421482d1273e66ec912c2192fe8854d2"
+    },
+    {
+      "kind": "animation",
+      "title": "Trot",
+      "source_path": "art/winged_hussar/mounted-trot-preview.gif",
+      "published_path": "motion/trot.gif",
+      "source_sha256": "241b287f1ccef0a16425704bc712093691cbf25bd38bd32967f91c2f86f78077",
+      "published_sha256": "241b287f1ccef0a16425704bc712093691cbf25bd38bd32967f91c2f86f78077"
+    },
+    {
+      "kind": "animation",
+      "title": "Walk",
+      "source_path": "art/winged_hussar/mounted-walk-preview.gif",
+      "published_path": "motion/walk.gif",
+      "source_sha256": "58eb12b537b47e68a74f8ba1d21d6b664565e3bf4f8a1aa2cff33fa93e8c87c7",
+      "published_sha256": "58eb12b537b47e68a74f8ba1d21d6b664565e3bf4f8a1aa2cff33fa93e8c87c7"
+    }
+  ]
+}

@@ -6,9 +6,9 @@ This archive contains renders and a gallery page. It does not contain the raw so
 
 Armor, wings, horse tack, kopia, saddle weapons, the olive artillery and caisson, village and period-town buildings, the Hercules fountain, oil street lantern, presentation-only interiors, terrain, and the procedural scenery, fieldwork, and player-item kits were authored for Big Sim. The 55 cataloged placeable-prop models and their embedded PBR maps are also original Big Sim work. The battlefield scene uses CC0 surface textures from Poly Haven; source maps and licenses are recorded in `art/battlefield/textures/cc0/manifest.json` in the project repository.
 
-The fountain, figure pose, stone treatment, shield, club, and waterworks were authored for Big Sim. Its anatomy uses the MakeHuman base mesh bundled with MPFB; that mesh file explicitly carries a CC0 dedication dated September 2020. The header credits Data Collection AB, Joel Palmius, and Jonas Hauquier as the holders at dedication. The fountain is a generic period-inspired interpretation of Heidelberg's public-history reference, not a scan or replica.
-
 The fourteen rebuilt fieldwork, boundary and farm masters use original Big Sim geometry and generated 512 px albedo, roughness and tangent-normal maps in `art/battlefield/textures/field_props/`. Their textured GLBs and matching vertex-coloured Unity FBXs retain separate inspection and runtime material paths.
+
+The fountain, figure pose, stone treatment, shield, club, and waterworks were authored for Big Sim. Its anatomy uses the MakeHuman base mesh bundled with MPFB; that mesh file explicitly carries a CC0 dedication dated September 2020. The header credits Data Collection AB, Joel Palmius, and Jonas Hauquier as the holders at dedication. The fountain is a generic period-inspired interpretation of Heidelberg's public-history reference, not a scan or replica.
 
 ## CC0 town textures
 

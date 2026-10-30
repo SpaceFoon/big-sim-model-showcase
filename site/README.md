@@ -65,4 +65,3 @@ To rebuild the infantry volley GIF from locally available Unity inspection frame
 ```
 
 The ready-to-share GIFs are already included in `source_media/` or the battlefield preview folder, so this capture step is needed only when those local frames are being refreshed.
-

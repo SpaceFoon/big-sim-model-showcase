@@ -43,4 +43,3 @@ The cannon card layers a browser-rendered orange flash, fire, and sparks over th
 The collection groups alternate LODs and repeated exports under their model family. It includes Blender source renders, not a claim that every source model has passed Unity runtime or performance review. The five latest farm and battlefield ground-polish views are Unity captures from October 24, 2026. Four separately labeled AI concept renders are illustrative visual treatments based on source captures, not raw game screenshots. The five mounted loops are Blender source previews. The infantry volley and cannon discharge are Unity inspection captures; they show presentation clips, not authoritative battlefield outcomes.
 
 `model-closeups.html` and the root `MODEL-CLOSEUPS.md` show one close-up render for every exported GLB and glTF model under `art/`. Each close-up card names the source file; the GitHub Markdown catalog groups all images by asset family.
-

@@ -67,7 +67,7 @@
     },
     {
       "kind": "gallery-card",
-      "title": "Bl\u00fccher sabre",
+      "title": "Blücher sabre",
       "source_path": "art/model_showcase/images/blucher-sabre.png",
       "published_path": "images/gallery/blucher-sabre.webp",
       "source_sha256": "9ff409482b59b04456c9d05ad650188c4486e88ab65a39bb0feaa48f50d27aff",
@@ -355,7 +355,7 @@
     },
     {
       "kind": "model-closeup",
-      "title": "Bl\u00fccher Sabre Source",
+      "title": "Blücher Sabre Source",
       "source_path": "art/battlefield/imports/blucher-sabre/scene.glb",
       "published_path": "images/gallery/model-closeup-art-battlefield-imports-blucher-sabre-scene.webp",
       "source_sha256": "5693b9dc390530f1a467805b73f0f12c52fc65ff3440822ef09e6ed9113657ec",
@@ -1626,6 +1626,46 @@
       "published_sha256": "6cbeec86b7af4c4a307fe6ba32cc981de62350f7839622b48013ce903231e344"
     },
     {
+      "kind": "uniform-study",
+      "title": "Rear view",
+      "source_path": "art/battlefield/close_infantry/redcoat-back.png",
+      "published_path": "images/redcoat/back.png",
+      "source_sha256": "51fececaa82c3eb6640846f1f18b21b167a9fb2f88bee94af74502619417fb4a",
+      "published_sha256": "51fececaa82c3eb6640846f1f18b21b167a9fb2f88bee94af74502619417fb4a"
+    },
+    {
+      "kind": "uniform-study",
+      "title": "Front view",
+      "source_path": "art/battlefield/close_infantry/redcoat-front.png",
+      "published_path": "images/redcoat/front.png",
+      "source_sha256": "71e2c669d5f907f2a524d4aaac7ddda92d42641ec45677df54e51f82229cd065",
+      "published_sha256": "71e2c669d5f907f2a524d4aaac7ddda92d42641ec45677df54e51f82229cd065"
+    },
+    {
+      "kind": "uniform-study",
+      "title": "Portrait",
+      "source_path": "art/battlefield/close_infantry/redcoat-portrait.png",
+      "published_path": "images/redcoat/portrait.png",
+      "source_sha256": "e81ce9c7bea473e38c4c3efed3f1a8a789dad586114159d9b52761a89fddb07a",
+      "published_sha256": "e81ce9c7bea473e38c4c3efed3f1a8a789dad586114159d9b52761a89fddb07a"
+    },
+    {
+      "kind": "uniform-study",
+      "title": "Three-quarter view",
+      "source_path": "art/battlefield/close_infantry/redcoat-three-quarter.png",
+      "published_path": "images/redcoat/three-quarter.png",
+      "source_sha256": "3b7cfcaa96d99fb96954ff452c1659ce0d9b85ec16691feb97d1d765d5843f60",
+      "published_sha256": "3b7cfcaa96d99fb96954ff452c1659ce0d9b85ec16691feb97d1d765d5843f60"
+    },
+    {
+      "kind": "uniform-study",
+      "title": "Uniform detail",
+      "source_path": "art/battlefield/close_infantry/redcoat-uniform-detail.png",
+      "published_path": "images/redcoat/uniform-detail.png",
+      "source_sha256": "e0224038ed7797e3d586d70584763e7035aa29a181c726cf0c326d7226a1356a",
+      "published_sha256": "e0224038ed7797e3d586d70584763e7035aa29a181c726cf0c326d7226a1356a"
+    },
+    {
       "kind": "overview-board",
       "title": "Showcase overview board",
       "source_path": null,
@@ -1707,3 +1747,4 @@
     }
   ]
 }
+

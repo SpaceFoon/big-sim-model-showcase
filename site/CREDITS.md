@@ -34,6 +34,8 @@ Battlefield prop and material previews use nine 1K CC0 material sets from Poly H
 
 All listed Sketchfab source models are licensed under [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/). Their source files and license records are retained in `art/battlefield/imports/`; project changes are described in `art/battlefield/THIRD_PARTY.md` and `art/winged_hussar/RIDER_ATTRIBUTION.md`.
 
+The five-view British Redcoat art study adapts the body, head, hands, uniform meshes, and rig from **Andy Woodhead**, [Infantry - rigged for UE4/5 - free download](https://sketchfab.com/3d-models/infantry-rigged-for-ue45-free-download-771050587ce248498178aee2c2f88f36), under CC BY 4.0. It depicts a weapon-free 52nd (Oxfordshire) Light Infantry private. The model is an art study and is not integrated into gameplay.
+
 ## Showcase scope
 
 The cannon card layers a browser-rendered orange flash, fire, and sparks over the Unity capture. The captured smoke remains a separate layer.
@@ -41,3 +43,4 @@ The cannon card layers a browser-rendered orange flash, fire, and sparks over th
 The collection groups alternate LODs and repeated exports under their model family. It includes Blender source renders, not a claim that every source model has passed Unity runtime or performance review. The five latest farm and battlefield ground-polish views are Unity captures from October 24, 2026. Four separately labeled AI concept renders are illustrative visual treatments based on source captures, not raw game screenshots. The five mounted loops are Blender source previews. The infantry volley and cannon discharge are Unity inspection captures; they show presentation clips, not authoritative battlefield outcomes.
 
 `model-closeups.html` and the root `MODEL-CLOSEUPS.md` show one close-up render for every exported GLB and glTF model under `art/`. Each close-up card names the source file; the GitHub Markdown catalog groups all images by asset family.
+

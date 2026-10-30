@@ -1418,6 +1418,14 @@
       "published_sha256": "ccbdb6a3e152d7f14a77d3aff9d865529b22262e2802d0aa2275b90ffb266856"
     },
     {
+      "kind": "battlefield-view",
+      "title": "Camp lantern after dark",
+      "source_path": "art/battlefield/previews/unity/night-lantern-camp.png",
+      "published_path": "images/gallery/night-lantern-camp.webp",
+      "source_sha256": "6d9c51872ba01f42a9308344878b581a8dde57d834f0655655405fbe659c0b52",
+      "published_sha256": "eb15bd47f1767f0a2fccf2d80b6f3a350ab8b88bae927623eb285b503c204bea"
+    },
+    {
       "kind": "gallery-card",
       "title": "Oil lantern materials",
       "source_path": "art/city_buildings/previews/oil-street-lantern-head-detail.png",

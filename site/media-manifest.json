@@ -1386,6 +1386,22 @@
       "published_sha256": "70f97a6aa6a57eabfda6d75163b4d6df0b47df0a01f21136f00290164e9799f6"
     },
     {
+      "kind": "battlefield-view",
+      "title": "Live musket discharge",
+      "source_path": "art/battlefield/previews/unity/codex-musket-line-wide-20261030-actual-firing-line.png",
+      "published_path": "images/gallery/musket-discharge-live.webp",
+      "source_sha256": "2553580134057f62fd39cfbd457fac4ea67b6cc0989cfb8376e74939772a0a36",
+      "published_sha256": "1d95c564566c1f9c67bbed4c2c147b5b55fff297700a93460460441a8eec99ee"
+    },
+    {
+      "kind": "battlefield-view",
+      "title": "Musket pan ignition",
+      "source_path": "art/battlefield/previews/unity/codex-pan-flash-review2-20261030-actual-pan-ignition.png",
+      "published_path": "images/gallery/musket-pan-ignition.webp",
+      "source_sha256": "f6bc89f0e359eb081c68826d9744e7455f42e3d2230361af5337c28b9c6bd148",
+      "published_sha256": "553337819faec87c073f00afa54429b35fa974fe12c6e045202265e8d887bbef"
+    },
+    {
       "kind": "gallery-card",
       "title": "Napoleonic light hussar",
       "source_path": "art/model_showcase/images/napoleonic-hussar.png",

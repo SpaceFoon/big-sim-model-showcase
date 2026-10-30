@@ -68,6 +68,7 @@ footer{padding:18px 0 30px;border-top:1px solid var(--line);color:#87918c;font-s
 @media(max-width:760px){.hero{grid-template-columns:1fr;gap:26px;padding-top:36px}.hero-art{order:-1}.hero-art img{height:60vh}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.battle-grid,.motion-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.note-box{grid-template-columns:1fr}.section-head{display:block}.stats{margin-bottom:42px}}
 @media(max-width:480px){.shell{width:min(100% - 24px,1480px)}.grid,.battle-grid,.motion-grid{grid-template-columns:1fr}.topline{font-size:.63rem}.category-nav{overflow-x:auto;flex-wrap:nowrap}.stat{padding:14px 10px}.stat strong{font-size:1.5rem}.motion-section{padding:18px}footer{display:block}}
 </style>
+  <link rel="stylesheet" href="lightbox.css">
 </head>
 <body>
 <div class="shell">
@@ -85,7 +86,7 @@ footer{padding:18px 0 30px;border-top:1px solid var(--line);color:#87918c;font-s
   </header>
   <div class="stats" aria-label="Showcase totals"><div class="stat"><strong>59</strong><span>model groups and scene kits</span></div><div class="stat"><strong>7</strong><span>animation clips</span></div><div class="stat"><strong>16</strong><span>battlefield views</span></div></div>
   <main id="models">
-    <div class="section-head"><div><div class="kicker">Browse the collection</div><h2>Models and model families</h2></div><p>LOD versions, exports, and pieces that belong to the same kit are grouped together. Select a card to open its full size image.</p></div>
+    <div class="section-head"><div><div class="kicker">Browse the collection</div><h2>Models and model families</h2></div><p>LOD versions, exports, and pieces that belong to the same kit are grouped together. Select any image to view it larger without leaving the gallery.</p></div>
     <div class="filters" role="group" aria-label="Filter model gallery"><button class="active" type="button" data-filter="all" aria-pressed="true">All 59</button>
         <button type="button" data-filter="People" aria-pressed="false">People</button>
         <button type="button" data-filter="Hussar" aria-pressed="false">Hussar</button>
@@ -554,5 +555,6 @@ filters.forEach(button => button.addEventListener('click', () => {
 }));
 </script>
 <script src="cannon-shot-effect.js"></script>
+  <script src="lightbox.js" defer></script>
 </body>
 </html>

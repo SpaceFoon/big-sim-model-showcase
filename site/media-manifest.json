@@ -36,10 +36,10 @@
     {
       "kind": "battlefield-view",
       "title": "Along the infantry line",
-      "source_path": "art/battlefield/previews/unity/rural-ground/ground.png",
+      "source_path": "art/battlefield/close_infantry/redcoat-line-study.png",
       "published_path": "images/gallery/battle-ground-line.webp",
-      "source_sha256": "4faf70fb2c2f5e0a1df4171f371f21cacd9666c3927cbdc96bce81a021c4909b",
-      "published_sha256": "4a3dd085e280717ba410aa6127c97f1e2a138aa60aa25f24461c41e2aec9d520"
+      "source_sha256": "6850f34b82a2e321b002cf91580794bda74cc9126a6d613d8894fd6e156bd078",
+      "published_sha256": "b454f7808e7cfcc0f9315561ca6c6d4311c141a32965e8234de450f6616ff4e9"
     },
     {
       "kind": "battlefield-view",
@@ -212,10 +212,10 @@
     {
       "kind": "gallery-card",
       "title": "Troops at ground level",
-      "source_path": "art/battlefield/previews/ground.png",
+      "source_path": "art/battlefield/previews/unity/codex-musket-line-wide-verified-20261030-actual-firing-line.png",
       "published_path": "images/gallery/ground-view.webp",
-      "source_sha256": "2c7e69bf57df98aa3762c251a51d52f7783f84c4b98eaa7e8679963815d9436a",
-      "published_sha256": "7578fc83fe8444329c0f94c4687add7bc78d5492604dc3dae784ffacf2a05a2b"
+      "source_sha256": "63b7d539495ec1c3d9562a7836c9e5b3943abf4a67ef221aa959241600a16351",
+      "published_sha256": "34356bbe521083ca0be5d6a0829e61735c0bbb236b8c813c859ac4ac927d3528"
     },
     {
       "kind": "gallery-card",
@@ -350,8 +350,8 @@
       "title": "British Redcoat Close",
       "source_path": "art/battlefield/close_infantry/BritishRedcoatClose.glb",
       "published_path": "images/gallery/model-closeup-art-battlefield-close-infantry-british-redcoat-close.webp",
-      "source_sha256": "790d202441af312058765792e3c46742d927bec55158cb6eed4aed99651d2512",
-      "published_sha256": "1961574ce38c38c75543d8929699ea92055a9037c9ef25828ddbcc8f58e3ac1f"
+      "source_sha256": "01a15812931e06b28e75e45fa2859a5b1a488f9cb56f15c5a80a61652cb7523d",
+      "published_sha256": "ebaaa82f13b3bef6e6b61aa752ddf72786a892e923960850207f818865eb55b7"
     },
     {
       "kind": "model-closeup",
@@ -1460,10 +1460,10 @@
     {
       "kind": "gallery-card",
       "title": "Battlefield overview",
-      "source_path": "art/battlefield/previews/panorama.png",
+      "source_path": "art/battlefield/previews/unity/rural-ground/panorama.png",
       "published_path": "images/gallery/panorama.webp",
-      "source_sha256": "3d8649fcffb6f8228a743082069465729016761aa3f3ac0b8cc82af252183f6b",
-      "published_sha256": "4e8859f1710c327042a16bac0612a183f6be183c95a2ff0f0abab444bc96105c"
+      "source_sha256": "dd5cd275f226e08015c469ff145f2d3159984005efee407ef68c43bb046acc60",
+      "published_sha256": "3b34ff108f7ed36eac4600169e64c6296bf9b8d0c3e16e74c492a6b559547694"
     },
     {
       "kind": "gallery-card",
@@ -1654,40 +1654,40 @@
       "title": "Rear view",
       "source_path": "art/battlefield/close_infantry/redcoat-back.png",
       "published_path": "images/redcoat/back.png",
-      "source_sha256": "51fececaa82c3eb6640846f1f18b21b167a9fb2f88bee94af74502619417fb4a",
-      "published_sha256": "51fececaa82c3eb6640846f1f18b21b167a9fb2f88bee94af74502619417fb4a"
+      "source_sha256": "d0b03d1b4a83bb3cbb8b8d190798c92752bc98c529dfa28cf3b9393a89e83e2f",
+      "published_sha256": "d0b03d1b4a83bb3cbb8b8d190798c92752bc98c529dfa28cf3b9393a89e83e2f"
     },
     {
       "kind": "uniform-study",
       "title": "Front view",
       "source_path": "art/battlefield/close_infantry/redcoat-front.png",
       "published_path": "images/redcoat/front.png",
-      "source_sha256": "71e2c669d5f907f2a524d4aaac7ddda92d42641ec45677df54e51f82229cd065",
-      "published_sha256": "71e2c669d5f907f2a524d4aaac7ddda92d42641ec45677df54e51f82229cd065"
+      "source_sha256": "e5f8dfddbe7fbd39d32ad7d82e88728b5a6f3cfedca5f2e2b308a7eaa541b70f",
+      "published_sha256": "e5f8dfddbe7fbd39d32ad7d82e88728b5a6f3cfedca5f2e2b308a7eaa541b70f"
     },
     {
       "kind": "uniform-study",
       "title": "Portrait",
       "source_path": "art/battlefield/close_infantry/redcoat-portrait.png",
       "published_path": "images/redcoat/portrait.png",
-      "source_sha256": "e81ce9c7bea473e38c4c3efed3f1a8a789dad586114159d9b52761a89fddb07a",
-      "published_sha256": "e81ce9c7bea473e38c4c3efed3f1a8a789dad586114159d9b52761a89fddb07a"
+      "source_sha256": "dbfb50c71c838a1276dbfd455e0470239056ea168e25e9ed1a90982376e3f027",
+      "published_sha256": "dbfb50c71c838a1276dbfd455e0470239056ea168e25e9ed1a90982376e3f027"
     },
     {
       "kind": "uniform-study",
       "title": "Three-quarter view",
       "source_path": "art/battlefield/close_infantry/redcoat-three-quarter.png",
       "published_path": "images/redcoat/three-quarter.png",
-      "source_sha256": "3b7cfcaa96d99fb96954ff452c1659ce0d9b85ec16691feb97d1d765d5843f60",
-      "published_sha256": "3b7cfcaa96d99fb96954ff452c1659ce0d9b85ec16691feb97d1d765d5843f60"
+      "source_sha256": "e420f064a079ceedcd300c1701bc5f61bedefe84509ca8ba6bc14cee4803a9b3",
+      "published_sha256": "e420f064a079ceedcd300c1701bc5f61bedefe84509ca8ba6bc14cee4803a9b3"
     },
     {
       "kind": "uniform-study",
       "title": "Uniform detail",
       "source_path": "art/battlefield/close_infantry/redcoat-uniform-detail.png",
       "published_path": "images/redcoat/uniform-detail.png",
-      "source_sha256": "e0224038ed7797e3d586d70584763e7035aa29a181c726cf0c326d7226a1356a",
-      "published_sha256": "e0224038ed7797e3d586d70584763e7035aa29a181c726cf0c326d7226a1356a"
+      "source_sha256": "7fd25fd881e5087836bebd2578bb0e6755eec15897fb653a2a1ae51f90c931e3",
+      "published_sha256": "7fd25fd881e5087836bebd2578bb0e6755eec15897fb653a2a1ae51f90c931e3"
     },
     {
       "kind": "overview-board",
@@ -1695,7 +1695,7 @@
       "source_path": null,
       "published_path": "model-showcase-board.jpg",
       "source_sha256": null,
-      "published_sha256": "c5942f2a7e3999d9f8b6211238f6a95ae0aee60849de15a0e9e5818913a159b8"
+      "published_sha256": "46d8177c6cd4165af890a15eb6e90d3aecdb56b19b79b975263aa3bee631ebdf"
     },
     {
       "kind": "poster",

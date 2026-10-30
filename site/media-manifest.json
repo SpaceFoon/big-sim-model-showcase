@@ -20,42 +20,42 @@
     {
       "kind": "battlefield-view",
       "title": "Eastern battlefield panorama",
-      "source_path": "art/battlefield/previews/showcase/battle-east-panorama.png",
+      "source_path": "art/battlefield/previews/unity/codex-lighting-playtest-20261026-mid-side.png",
       "published_path": "images/gallery/battle-east-panorama-grass-texture.webp",
-      "source_sha256": "b6b055a6a9113f5d6aa0da8cacd385d77cec09cd1f3b1763dfe1d4b5dfc836d3",
-      "published_sha256": "634c8e9403a350f75820022e13ef5167020f13c00a86cbc940c406ab23ed97ec"
+      "source_sha256": "3a692de3d35a8a8752d88f456326a3aa848da3c7a2e19f3a2bfdfeabbb75eddc",
+      "published_sha256": "5423b2af74593916261ef83ec0fbc1ac2a7298374ac88940fc6b10c070682c3c"
     },
     {
       "kind": "battlefield-view",
       "title": "Just above the field",
-      "source_path": "art/battlefield/previews/showcase/battle-above-field.png",
+      "source_path": "art/battlefield/previews/unity/codex-lighting-playtest-20261026-close-oblique.png",
       "published_path": "images/gallery/battle-grass-level.webp",
-      "source_sha256": "edc1990cc88efb0e8b24a3f887d70e66c9c4963aa9e02f640c2512fa21183670",
-      "published_sha256": "1fdad586720c02693f069bc090d754a4c99296a67407ebad0c8f59fadcfe3e87"
+      "source_sha256": "f98b00c604997bd6e7d331d505b2543f9e5a5cc2aa0fb08bda72655bccc2a8b2",
+      "published_sha256": "ddbe03e501af705f22504a0c0dc78a975b42f082e599c1347ba85a37f51be2a4"
     },
     {
       "kind": "battlefield-view",
       "title": "Along the infantry line",
-      "source_path": "art/battlefield/previews/showcase/battle-ground-line.png",
+      "source_path": "art/battlefield/previews/unity/rural-ground/ground.png",
       "published_path": "images/gallery/battle-ground-line.webp",
-      "source_sha256": "eccdf1e1b960f41ba45824b5b866371a553ef00ad2fe663c987f1ff0c986d962",
-      "published_sha256": "9992438e519e057a030cb7cfdb4e0e2f3b1cc38d0a2f17c260bc1a82f59d9a5e"
+      "source_sha256": "4faf70fb2c2f5e0a1df4171f371f21cacd9666c3927cbdc96bce81a021c4909b",
+      "published_sha256": "4a3dd085e280717ba410aa6127c97f1e2a138aa60aa25f24461c41e2aec9d520"
     },
     {
       "kind": "battlefield-view",
       "title": "Through the front ranks",
-      "source_path": "art/battlefield/previews/showcase/battle-line-action.png",
+      "source_path": "art/battlefield/previews/unity/codex-muzzle-review-20261030-actual-musket-discharge.png",
       "published_path": "images/gallery/battle-line-action.webp",
-      "source_sha256": "3a19961f32a89efbd63eb2e8b1d9ed07e34db7c9bb00c314cfd1afa01afa31d2",
-      "published_sha256": "c9c61cc2203604fb91766ae75e7dbf0948cbcd5d1da7229d9353cc11bd8f087e"
+      "source_sha256": "8b0859020f712f0b48b196dd278f826607c10ead6bc9a28591b38601eb4a3297",
+      "published_sha256": "da7df39d1e693bed21f295d3a2c37353a2886fdd75ebc3fad47252cf0860e67c"
     },
     {
       "kind": "battlefield-view",
       "title": "Western battlefield panorama",
-      "source_path": "art/battlefield/previews/showcase/battle-panorama.png",
+      "source_path": "art/battlefield/previews/unity/codex-lighting-playtest-20261026-wide-high.png",
       "published_path": "images/gallery/battle-west-panorama-grass-texture.webp",
-      "source_sha256": "5498bbed0465cfe619955a6df3490c44a38bf7f2b51a8c9f9d9ec62443b3522a",
-      "published_sha256": "291e507c3d5cff8b2e5b1a6759a46a03e62b0a29b90d0e814bf73ffda3391bf0"
+      "source_sha256": "11ff6a2e3bb067b33fc563a1e8b780ecb4bce26d2ce21abc6588db8f7f7f86cb",
+      "published_sha256": "f5d6ac06228045a82f060218ac49021568a12f57e0e12a56e53b6ca79620f7d9"
     },
     {
       "kind": "gallery-card",

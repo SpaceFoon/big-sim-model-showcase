@@ -14,8 +14,8 @@ a{color:inherit}
 .shell{width:min(1480px,calc(100% - 44px));margin:auto}
 .topline{display:flex;justify-content:space-between;align-items:center;padding:22px 0;border-bottom:1px solid var(--line);font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
 .topline a{text-decoration:none;color:var(--muted);letter-spacing:.08em}
-.category-nav{display:flex;gap:8px;flex-wrap:wrap;padding:13px 0 20px;border-bottom:1px solid var(--line)}
-.category-nav a{border:1px solid var(--line);border-radius:3px;padding:8px 12px;color:var(--muted);font-size:.83rem;text-decoration:none;white-space:nowrap}
+.category-nav{display:flex;gap:6px;flex-wrap:wrap;padding:13px 0 20px;border-bottom:1px solid var(--line)}
+.category-nav a{border:1px solid var(--line);border-radius:3px;padding:8px 9px;color:var(--muted);font-size:.83rem;text-decoration:none;white-space:nowrap}
 .category-nav a:hover,.category-nav a[aria-current=page]{border-color:var(--gold);color:var(--ink);background:#d0ae6c18}
 .hero{display:grid;grid-template-columns:.86fr 1.14fr;gap:48px;align-items:center;padding:54px 0 44px}
 .kicker,.eyebrow{color:var(--gold);font-size:.74rem;letter-spacing:.16em;text-transform:uppercase}
@@ -72,7 +72,7 @@ footer{padding:18px 0 30px;border-top:1px solid var(--line);color:#87918c;font-s
 <body>
 <div class="shell">
   <div class="topline"><span>Big Sim / Model atlas</span><a href="CREDITS.md">Credits and source notes ↗</a></div>
-  <nav class="category-nav" aria-label="Showcase categories"><a href="index.html" aria-current="page">All models</a><a href="people-horses.html">People &amp; horses</a><a href="weapons-artillery.html">Weapons &amp; artillery</a><a href="world-battlefield.html">World &amp; battlefield</a><a href="field-props.html">Field props</a><a href="model-closeups.html">Every model close-up</a><a href="animations.html">Animations</a><a href="formation-drill.html">Formation drill</a><a href="cavalry-crisis.html">Cavalry crisis</a><a href="redcoat-study.html">British Redcoat study</a><a href="media-manifest.json">Media hashes</a></nav>
+  <nav class="category-nav" aria-label="Showcase categories"><a href="index.html" aria-current="page">All models</a><a href="people-horses.html">People &amp; horses</a><a href="weapons-artillery.html">Weapons &amp; artillery</a><a href="world-battlefield.html">World &amp; battlefield</a><a href="field-props.html">Field props</a><a href="model-closeups.html">Every model close-up</a><a href="animations.html">Animations</a><a href="formation-drill.html">Formation drill</a><a href="cavalry-crisis.html">Cavalry crisis</a><a href="redcoat-study.html">British Redcoat study</a></nav>
   <header class="hero">
     <div>
       <div class="kicker">A battlefield assembled in detail</div>
@@ -537,7 +537,7 @@ footer{padding:18px 0 30px;border-top:1px solid var(--line);color:#87918c;font-s
     <div><div class="kicker">Source and runtime</div><h2>Renders show asset appearance.</h2><p>Most cards are Blender source renders. Some base models and village props adapt licensed source work, while the project’s armor, weapons, artillery, terrain, and procedural kits include original Big Sim models. Runtime behavior and performance remain tied to each asset’s Unity review.</p></div>
   </section>
   <section class="credits" id="credits"><div class="kicker">Credits</div><h2>Share the source with the image.</h2><p>The combined Winged Hussar uses adapted head and hand geometry by Andy Woodhead and a horse model by abhayexe. Battlefield portraits also show adapted models by Andy Woodhead, perceval-66, and Timothy Hsu. Village and camp source dressing includes work by Booba Booba, Fri13Day, and Nicholas-3D. The full CC BY 4.0 credits and asset notes are in <a href="CREDITS.md">CREDITS.md</a>.</p></section>
-  <footer><span>Big Sim · Model showcase · <a href="media-manifest.json">Media hash manifest</a></span><span>Source renders · original and adapted assets identified</span></footer>
+  <footer><span>Big Sim · Model showcase</span><span>Source renders · original and adapted assets identified</span></footer>
 </div>
 <script>
 const filters = document.querySelectorAll('[data-filter]');

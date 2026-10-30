@@ -39,20 +39,21 @@
   dialog.innerHTML = `
     <div class="showcase-lightbox__toolbar">
       <h2 class="showcase-lightbox__title" id="showcase-lightbox-title"></h2>
+      <button class="showcase-lightbox__button showcase-lightbox__zoom" type="button" aria-label="Zoom image" aria-pressed="false">Zoom in</button>
       <button class="showcase-lightbox__button showcase-lightbox__close" type="button" aria-label="Close image viewer">
         <span class="showcase-lightbox__close-mark" aria-hidden="true">×</span><span>Close</span>
       </button>
     </div>
     <div class="showcase-lightbox__stage">
       <button class="showcase-lightbox__button showcase-lightbox__step showcase-lightbox__previous" type="button" aria-label="Previous image">←</button>
-      <img class="showcase-lightbox__image" alt="">
+      <img class="showcase-lightbox__image" alt="" role="button" tabindex="0" draggable="false" aria-pressed="false">
       <button class="showcase-lightbox__button showcase-lightbox__step showcase-lightbox__next" type="button" aria-label="Next image">→</button>
     </div>
     <div class="showcase-lightbox__caption">
       <p class="showcase-lightbox__description" id="showcase-lightbox-description"></p>
       <div class="showcase-lightbox__status">
         <span class="showcase-lightbox__counter" aria-live="polite"></span>
-        <span>← / → browse · Esc close</span>
+        <span>← / → browse · zoom to drag · Esc close</span>
       </div>
     </div>`;
 
@@ -60,14 +61,73 @@
   const title = dialog.querySelector(".showcase-lightbox__title");
   const description = dialog.querySelector(".showcase-lightbox__description");
   const counter = dialog.querySelector(".showcase-lightbox__counter");
+  const zoomButton = dialog.querySelector(".showcase-lightbox__zoom");
   const closeButton = dialog.querySelector(".showcase-lightbox__close");
   const previousButton = dialog.querySelector(".showcase-lightbox__previous");
   const nextButton = dialog.querySelector(".showcase-lightbox__next");
+  const stage = dialog.querySelector(".showcase-lightbox__stage");
   let items = [];
   let currentIndex = 0;
   let opener = null;
+  let zoomScale = 1;
+  let panX = 0;
+  let panY = 0;
+  let dragSession = null;
+  let suppressImageClick = false;
 
   const textFor = (element) => element?.textContent?.trim() || "";
+
+  function constrainPan() {
+    const maxX = Math.max(0, (image.offsetWidth * zoomScale - stage.clientWidth) / 2);
+    const maxY = Math.max(0, (image.offsetHeight * zoomScale - stage.clientHeight) / 2);
+    panX = Math.max(-maxX, Math.min(maxX, panX));
+    panY = Math.max(-maxY, Math.min(maxY, panY));
+    image.style.transform = `translate3d(${panX}px, ${panY}px, 0) scale(${zoomScale})`;
+  }
+
+  function updateZoomControls(imageTitle) {
+    const zoomed = zoomScale > 1;
+    image.classList.toggle("is-zoomed", zoomed);
+    image.setAttribute("aria-pressed", String(zoomed));
+    image.setAttribute("aria-label", `${zoomed ? "Reset zoom" : "Zoom image"}: ${imageTitle}`);
+    zoomButton.textContent = zoomed ? "Reset zoom" : "Zoom in";
+    zoomButton.setAttribute("aria-pressed", String(zoomed));
+  }
+
+  function setZoom(nextScale, anchorEvent = null) {
+    if (!image.naturalWidth) return;
+    const previousScale = zoomScale;
+    zoomScale = nextScale > 1 ? 2 : 1;
+    if (zoomScale === 1) {
+      panX = 0;
+      panY = 0;
+      dragSession = null;
+      image.classList.remove("is-dragging");
+    } else if (anchorEvent && previousScale === 1) {
+      const rect = stage.getBoundingClientRect();
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2;
+      panX = (anchorEvent.clientX - centerX) * (1 - zoomScale);
+      panY = (anchorEvent.clientY - centerY) * (1 - zoomScale);
+    } else if (previousScale === 1) {
+      panX = 0;
+      panY = 0;
+    }
+    constrainPan();
+    updateZoomControls(title.textContent);
+  }
+
+  function resetImageView() {
+    zoomScale = 1;
+    panX = 0;
+    panY = 0;
+    dragSession = null;
+    image.classList.remove("is-zoomed", "is-dragging");
+    image.style.transform = "translate3d(0, 0, 0) scale(1)";
+    image.setAttribute("aria-pressed", "false");
+    zoomButton.setAttribute("aria-pressed", "false");
+    zoomButton.textContent = "Zoom in";
+  }
 
   function showImage(index, selectedTrigger = null) {
     if (!items.length) return;
@@ -83,7 +143,9 @@
 
     image.src = item.href;
     image.alt = thumbnail?.alt || imageTitle;
+    image.setAttribute("aria-label", `Zoom image: ${imageTitle}`);
     title.textContent = imageTitle;
+    resetImageView();
     description.textContent = cardDescription;
     description.hidden = !cardDescription;
     counter.textContent = `${currentIndex + 1} of ${items.length}`;
@@ -92,8 +154,63 @@
   }
 
   closeButton.addEventListener("click", () => dialog.close());
+  zoomButton.addEventListener("click", () => setZoom(zoomScale > 1 ? 1 : 2));
   previousButton.addEventListener("click", () => showImage(currentIndex - 1));
   nextButton.addEventListener("click", () => showImage(currentIndex + 1));
+  image.addEventListener("click", (event) => {
+    if (suppressImageClick) {
+      suppressImageClick = false;
+      event.preventDefault();
+      return;
+    }
+    setZoom(zoomScale > 1 ? 1 : 2, event);
+  });
+  image.addEventListener("keydown", (event) => {
+    if (event.key !== "Enter" && event.key !== " ") return;
+    event.preventDefault();
+    setZoom(zoomScale > 1 ? 1 : 2);
+  });
+  image.addEventListener("dragstart", (event) => event.preventDefault());
+  image.addEventListener("pointerdown", (event) => {
+    if (zoomScale <= 1 || event.button !== 0) return;
+    dragSession = {
+      pointerId: event.pointerId,
+      startX: event.clientX,
+      startY: event.clientY,
+      startPanX: panX,
+      startPanY: panY,
+      moved: false,
+    };
+    image.setPointerCapture(event.pointerId);
+  });
+  image.addEventListener("pointermove", (event) => {
+    if (!dragSession || dragSession.pointerId !== event.pointerId) return;
+    const deltaX = event.clientX - dragSession.startX;
+    const deltaY = event.clientY - dragSession.startY;
+    if (!dragSession.moved && Math.hypot(deltaX, deltaY) < 3) return;
+    dragSession.moved = true;
+    event.preventDefault();
+    image.classList.add("is-dragging");
+    panX = dragSession.startPanX + deltaX;
+    panY = dragSession.startPanY + deltaY;
+    constrainPan();
+  });
+  const finishPan = (event) => {
+    if (!dragSession || dragSession.pointerId !== event.pointerId) return;
+    const didMove = dragSession.moved;
+    dragSession = null;
+    image.classList.remove("is-dragging");
+    if (didMove) {
+      suppressImageClick = true;
+      window.setTimeout(() => { suppressImageClick = false; }, 0);
+    }
+    if (image.hasPointerCapture(event.pointerId)) image.releasePointerCapture(event.pointerId);
+  };
+  image.addEventListener("pointerup", finishPan);
+  image.addEventListener("pointercancel", finishPan);
+  window.addEventListener("resize", () => {
+    if (zoomScale > 1) constrainPan();
+  });
   dialog.addEventListener("click", (event) => {
     if (event.target === dialog) dialog.close();
   });
@@ -108,6 +225,7 @@
   });
   dialog.addEventListener("close", () => {
     image.removeAttribute("src");
+    resetImageView();
     if (opener?.isConnected && opener.getClientRects().length) opener.focus({ preventScroll: true });
     opener = null;
   });
@@ -160,4 +278,3 @@
 
   document.body.append(dialog);
 })();
-

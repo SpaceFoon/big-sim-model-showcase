@@ -109,6 +109,28 @@ dialog.showcase-lightbox::backdrop {
   width: auto;
   height: auto;
   object-fit: contain;
+  transform: translate3d(0, 0, 0) scale(1);
+  transform-origin: center;
+  transition: transform 180ms ease;
+  cursor: zoom-in;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.showcase-lightbox__image.is-zoomed {
+  cursor: grab;
+  touch-action: none;
+}
+
+.showcase-lightbox__image.is-dragging {
+  cursor: grabbing;
+  transition: none;
+}
+
+.showcase-lightbox__image:focus-visible {
+  outline: 3px solid #d0ae6c;
+  outline-offset: -3px;
 }
 
 .showcase-lightbox__step {
@@ -202,5 +224,8 @@ dialog.showcase-lightbox::backdrop {
   dialog.showcase-lightbox::backdrop {
     backdrop-filter: none;
   }
-}
 
+  .showcase-lightbox__image {
+    transition: none;
+  }
+}

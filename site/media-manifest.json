@@ -67,7 +67,7 @@
     },
     {
       "kind": "gallery-card",
-      "title": "Blücher sabre",
+      "title": "Bl\u00fccher sabre",
       "source_path": "art/model_showcase/images/blucher-sabre.png",
       "published_path": "images/gallery/blucher-sabre.webp",
       "source_sha256": "9ff409482b59b04456c9d05ad650188c4486e88ab65a39bb0feaa48f50d27aff",
@@ -278,48 +278,48 @@
       "title": "Apothecary shop floor",
       "source_path": "art/city_buildings/previews/rooms/apothecary-shop.png",
       "published_path": "images/gallery/interior-apothecary-shop.webp",
-      "source_sha256": "90d7936f54c3b18b8426e7b634aecbbed6161bbd7d9a9512b61c48f2821fa7ba",
-      "published_sha256": "693558d5df322cbd5f442218980c0d261b27eeba28f21d327930ae8f36fe1eb1"
+      "source_sha256": "770328364351bcbf0056488a01ee0e1f9bd9640d2f5d239be66142d80ef4f6b4",
+      "published_sha256": "78d4714d10c84b39d368fd7218fd4a17efb511cd4d053039ecb58aa9fd1a186b"
     },
     {
       "kind": "gallery-card",
       "title": "Chapel nave",
       "source_path": "art/city_buildings/previews/rooms/chapel-nave.png",
       "published_path": "images/gallery/interior-chapel-nave.webp",
-      "source_sha256": "d6aa1818dd73f9e8b84465f8cbacba4b32688525a7b7eda6346f1820feace723",
-      "published_sha256": "a7f3efe7b3d144c9aebeb6a698cadff83184af9207709095a3aba535dd2c6e4a"
+      "source_sha256": "e81185260ddc0ae447351e9444238eedc55095453382f3032db6cb6bd687fb4a",
+      "published_sha256": "d43c2d998d7230f2b0b0d985e3c1579749cda5edbc2b68787d8ce9f83075b42e"
     },
     {
       "kind": "gallery-card",
       "title": "Inn taproom",
       "source_path": "art/city_buildings/previews/rooms/inn-taproom.png",
       "published_path": "images/gallery/interior-inn-taproom.webp",
-      "source_sha256": "c12a5c480f21cff078f7e5697af0ca6d4c3cb89b35fe60366df96a3a885e81ae",
-      "published_sha256": "dd261f6e77c178f10db01bc70716c839badf6c056ff5c6ebf8e895e731ef3a3a"
+      "source_sha256": "45e04aabb2167fd7a52a4c0f71725a5b9d84d03b3bbdcdfb4d4ba7a6e248d374",
+      "published_sha256": "4de25427c3dfa7fd6457a3f4885951f895aa4a1bae6a6d8b3dea4c46658ee7a6"
     },
     {
       "kind": "gallery-card",
       "title": "Row house Stube",
       "source_path": "art/city_buildings/previews/rooms/row-house-stube.png",
       "published_path": "images/gallery/interior-row-house-stube.webp",
-      "source_sha256": "3b56f3fb0605512230a9fb078f8ee49f780be892843123793e2f50550381df44",
-      "published_sha256": "969a1332021657c7ff81b74218eb907006f8fb1eabbfaad548c85cb70382ea63"
+      "source_sha256": "9a82ff37551faf05faeed9c0d4f45ee75a4a1d7833428962ad97a80b68385752",
+      "published_sha256": "4d7cc2c9479d541d3b09126251a44223845e33c8a07b07d9588f01f5a71ddf49"
     },
     {
       "kind": "gallery-card",
       "title": "Smithy forge bay",
       "source_path": "art/city_buildings/previews/rooms/smithy-forge.png",
       "published_path": "images/gallery/interior-smithy-forge.webp",
-      "source_sha256": "53004e39315fe5f453f1b88f7adf13172821471ec32b4202f64bd19fa50ec2ef",
-      "published_sha256": "1aec1df2ed0de95b220df9fd063e29f44fe254c7e151e95ca6e0106dd77c3c2e"
+      "source_sha256": "d193a1e6b631912beb3d5035751410002d15e8fbe61aae17f158c6dff96a9746",
+      "published_sha256": "3c3d7c2547a801986aaa96551497d122045d4ac7aed3fed807dcfda18e4a6291"
     },
     {
       "kind": "gallery-card",
       "title": "Town hall council room",
       "source_path": "art/city_buildings/previews/rooms/town-hall-council.png",
       "published_path": "images/gallery/interior-town-hall-council.webp",
-      "source_sha256": "46ee6dc2f30603c62b7937bf910c902b86e6e47db56e4139763e81ae89dc34f0",
-      "published_sha256": "8584f4017a62ef3bec16a7079c7f13519b8faadcce04b366b513e1702c0ac10e"
+      "source_sha256": "758b49108671265336b484feb72c54212851819d164b476a63ef890496c20bd7",
+      "published_sha256": "3a3ae6839c13975ce9df6d6305022d4d9446b10b4f6d479e17335994fee9c525"
     },
     {
       "kind": "gallery-card",
@@ -355,7 +355,7 @@
     },
     {
       "kind": "model-closeup",
-      "title": "Blücher Sabre Source",
+      "title": "Bl\u00fccher Sabre Source",
       "source_path": "art/battlefield/imports/blucher-sabre/scene.glb",
       "published_path": "images/gallery/model-closeup-art-battlefield-imports-blucher-sabre-scene.webp",
       "source_sha256": "5693b9dc390530f1a467805b73f0f12c52fc65ff3440822ef09e6ed9113657ec",
@@ -1454,8 +1454,8 @@
       "title": "Town building floor plans",
       "source_path": "art/city_buildings/previews/period-town-interiors.png",
       "published_path": "images/gallery/period-town-floor-plans.webp",
-      "source_sha256": "330828f3e2da78f26d0c495a619c093e52c256cedaffc3867c6d419ff9817625",
-      "published_sha256": "dd872ea3f8557c11bfa692e809ef155f5a6f75632d7163c56395a2b203f02d2d"
+      "source_sha256": "b4ac11f2f01698bf49ac5e5a28ec10988d8aa7926efb7a4e10b5b6b6ac94b8d1",
+      "published_sha256": "9f32486d53cf0ce45115e211e16fcc1c8e0f3d875bce638f6721f3425b0ea4e9"
     },
     {
       "kind": "gallery-card",

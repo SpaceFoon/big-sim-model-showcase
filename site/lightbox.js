@@ -104,7 +104,7 @@
     image.classList.toggle("is-zoomed", zoomed);
     image.setAttribute("aria-pressed", String(zoomed));
     image.setAttribute("aria-label", `${zoomed ? "Reset zoom" : "Zoom image"}: ${title.textContent}`);
-    zoomLevel.value = `${Math.round(zoomScale * 100)}%`;
+    zoomLevel.textContent = `${Math.round(zoomScale * 100)}%`;
     zoomOutButton.disabled = zoomScale <= MIN_ZOOM;
     zoomInButton.disabled = zoomScale >= MAX_ZOOM;
     zoomFitButton.disabled = zoomScale <= MIN_ZOOM;
@@ -140,6 +140,7 @@
     panY = 0;
     dragSession = null;
     pinchSession = null;
+    touchGesturePinched = false;
     image.classList.remove("is-zoomed", "is-dragging");
     image.style.transform = "translate3d(0, 0, 0) scale(1)";
     image.setAttribute("aria-pressed", "false");

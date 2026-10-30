@@ -34,7 +34,7 @@ Battlefield prop and material previews use nine 1K CC0 material sets from Poly H
 
 All listed Sketchfab source models are licensed under [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/). Their source files and license records are retained in `art/battlefield/imports/`; project changes are described in `art/battlefield/THIRD_PARTY.md` and `art/winged_hussar/RIDER_ATTRIBUTION.md`.
 
-The five-view British Redcoat uniform study adapts the body, head, hands, uniform meshes, and rig from **Andy Woodhead**, [Infantry - rigged for UE4/5 - free download](https://sketchfab.com/3d-models/infantry-rigged-for-ue45-free-download-771050587ce248498178aee2c2f88f36), under CC BY 4.0; those close uniform views are weapon-free. A separate open-flank line study retains the source musket and sling on each 52nd (Oxfordshire) Light Infantry private. Both are Blender art studies and are not integrated into gameplay.
+The five-view British Redcoat uniform study adapts the body, head, hands, uniform meshes, and rig from **Andy Woodhead**, [Infantry - rigged for UE4/5 - free download](https://sketchfab.com/3d-models/infantry-rigged-for-ue45-free-download-771050587ce248498178aee2c2f88f36), under CC BY 4.0; those close uniform views are weapon-free. A separate open-flank line study retains the source musket and sling, with each private in a two-hand shoulder-aim pose. Both are Blender art studies and are not integrated into gameplay.
 
 ## Showcase scope
 

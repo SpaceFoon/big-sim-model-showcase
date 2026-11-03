@@ -91,6 +91,14 @@
 
   const textFor = (element) => element?.textContent?.trim() || "";
 
+  function fitImage() {
+    if (!dialog.open || !image.naturalWidth || !stage.clientWidth || !stage.clientHeight) return;
+    const fit = Math.min(stage.clientWidth / image.naturalWidth, stage.clientHeight / image.naturalHeight);
+    image.style.width = (image.naturalWidth * fit) + "px";
+    image.style.height = (image.naturalHeight * fit) + "px";
+    constrainPan();
+  }
+
   function constrainPan() {
     const maxX = Math.max(0, (image.offsetWidth * zoomScale - stage.clientWidth) / 2);
     const maxY = Math.max(0, (image.offsetHeight * zoomScale - stage.clientHeight) / 2);
@@ -172,6 +180,9 @@
     nextButton.hidden = items.length < 2;
   }
 
+  image.addEventListener("load", fitImage);
+  if (typeof ResizeObserver !== "undefined") new ResizeObserver(fitImage).observe(stage);
+
   closeButton.addEventListener("click", () => dialog.close());
   zoomInButton.addEventListener("click", () => setZoom(zoomScale * ZOOM_STEP));
   zoomOutButton.addEventListener("click", () => setZoom(zoomScale / ZOOM_STEP));
@@ -209,7 +220,6 @@
           focalY: (centerY - (rect.top + rect.height / 2) - panY) / zoomScale,
         };
         dragSession = null;
-      pinchSession = null;
         image.classList.remove("is-dragging");
       } else if (activeTouchPointers.size === 1 && zoomScale > MIN_ZOOM) {
         dragSession = {
@@ -315,9 +325,7 @@
     const delta = event.deltaY * unit;
     setZoom(zoomScale * Math.exp(-delta * 0.002), event);
   }, { passive: false });
-  window.addEventListener("resize", () => {
-    if (zoomScale > 1) constrainPan();
-  });
+  window.addEventListener("resize", fitImage);
   dialog.addEventListener("click", (event) => {
     if (event.target === dialog) dialog.close();
   });
@@ -376,6 +384,7 @@
     const selectedTrigger = items[currentIndex].triggers.find((trigger) => trigger.thumbnail === thumbnail);
     showImage(currentIndex, selectedTrigger);
     dialog.showModal();
+    requestAnimationFrame(fitImage);
     closeButton.focus({ preventScroll: true });
   });
 
@@ -389,6 +398,7 @@
     opener = thumbnail;
     showImage(currentIndex);
     dialog.showModal();
+    requestAnimationFrame(fitImage);
     closeButton.focus({ preventScroll: true });
   });
 
